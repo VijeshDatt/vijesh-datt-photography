@@ -21,7 +21,3 @@ mix.js('resources/js/app.js', 'public/js')
     online: false,
   })
   .disableNotifications();
-
-if (mix.inProduction()) {
-  mix.version();
-}
