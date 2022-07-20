@@ -87,7 +87,7 @@
     }
   </style>
   </head>
-  <body>
+  <body style="background-color:#f5ebe0;">
     <div id="app">
       <div class="body">
         <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
