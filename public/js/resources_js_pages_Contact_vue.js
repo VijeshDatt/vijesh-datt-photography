@@ -45,7 +45,7 @@ var render = function render() {
     }
   }, [_vm._v("Contact")]), _vm._v(" "), _c("p", {
     staticClass: "text-center"
-  }, [_vm._v("Coming Soon")])])], 1);
+  }, [_vm._v("Coming Soon...")])])], 1);
 };
 
 var staticRenderFns = [];
