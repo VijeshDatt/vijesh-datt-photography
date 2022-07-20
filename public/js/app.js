@@ -334,7 +334,7 @@ var render = function render() {
       color: "background"
     }
   }, [_c("v-spacer"), _vm._v(" "), _c("v-btn", {
-    staticClass: "mx-2",
+    staticClass: "mx-1",
     attrs: {
       icon: ""
     },
@@ -344,7 +344,7 @@ var render = function render() {
       }
     }
   }, [_c("v-icon", [_vm._v("mdi-home-outline")])], 1), _vm._v(" "), _c("v-btn", {
-    staticClass: "mx-2",
+    staticClass: "mx-1",
     attrs: {
       icon: ""
     },
@@ -354,7 +354,7 @@ var render = function render() {
       }
     }
   }, [_c("v-icon", [_vm._v("mdi-account-outline")])], 1), _vm._v(" "), _c("v-toolbar-title", [_c("v-btn", {
-    staticClass: "mx-5",
+    staticClass: "mx-7",
     attrs: {
       icon: "",
       "x-large": ""
@@ -366,14 +366,13 @@ var render = function render() {
     }
   }, [_c("v-img", {
     attrs: {
-      "lazy-src": "/assets/logos/black_v2.png",
       src: "/assets/logos/black_v2.png",
       contain: "",
       "max-height": "60",
-      "max-width": "100"
+      "max-width": "125"
     }
   })], 1)], 1), _vm._v(" "), _c("v-btn", {
-    staticClass: "mx-2",
+    staticClass: "mx-1",
     attrs: {
       icon: ""
     },
@@ -383,7 +382,7 @@ var render = function render() {
       }
     }
   }, [_c("v-icon", [_vm._v("mdi-image-outline")])], 1), _vm._v(" "), _c("v-btn", {
-    staticClass: "mx-2",
+    staticClass: "mx-1",
     attrs: {
       icon: ""
     },

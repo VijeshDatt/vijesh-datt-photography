@@ -5,25 +5,25 @@
       <!-- <v-app-bar-nav-icon v-if="$vuetify.breakpoint.smAndDown"></v-app-bar-nav-icon> -->
       <v-spacer></v-spacer>
       <!-- Home button -->
-      <v-btn icon class="mx-2" @click="goto('Home')">
+      <v-btn icon class="mx-1" @click="goto('Home')">
         <v-icon>mdi-home-outline</v-icon>
       </v-btn>
       <!-- About Me button -->
-      <v-btn icon class="mx-2" @click="goto('About Me')">
+      <v-btn icon class="mx-1" @click="goto('About Me')">
         <v-icon>mdi-account-outline</v-icon>
       </v-btn>
       <!-- Home/Logo button -->
       <v-toolbar-title>
-        <v-btn icon x-large class="mx-5" @click="goto('Home')">
-          <v-img lazy-src="/assets/logos/black_v2.png" src="/assets/logos/black_v2.png" contain max-height="60" max-width="100"></v-img>
+        <v-btn icon x-large class="mx-7" @click="goto('Home')">
+          <v-img src="/assets/logos/black_v2.png" contain max-height="60" max-width="125"></v-img>
         </v-btn>
       </v-toolbar-title>
       <!-- Gallery button -->
-      <v-btn icon class="mx-2" @click="goto('Gallery')">
+      <v-btn icon class="mx-1" @click="goto('Gallery')">
         <v-icon>mdi-image-outline</v-icon>
       </v-btn>
       <!-- Contact button -->
-      <v-btn icon class="mx-2" @click="goto('Contact')">
+      <v-btn icon class="mx-1" @click="goto('Contact')">
         <v-icon>mdi-email-variant</v-icon>
       </v-btn>
       <v-spacer></v-spacer>
