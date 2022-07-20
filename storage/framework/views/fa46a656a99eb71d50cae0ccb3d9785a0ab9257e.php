@@ -10,6 +10,13 @@
     <link rel="manifest" href="/site.webmanifest">
 
     
+    <meta property="og:url" content="<?php echo e(url('/')); ?>">
+    <meta property="og:type" content="website">
+    <meta property="or:image" content="<?php echo e(url("/assets/images/home/IMG_017.jpg")); ?>">
+    <meta property="or:title" content="Vijesh Datt Photography">
+    <meta property="or:description" content="Giving the world a small view of what Fiji and the Pacific has to offer.">
+
+    
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
