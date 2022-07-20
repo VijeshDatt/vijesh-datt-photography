@@ -121,7 +121,7 @@ var render = function render() {
             attrs: {
               name: "scale-transition"
             }
-          }, [hover && _vm.hasLoaded ? _c("div", {
+          }, [hover && _vm.hasLoaded && _vm.$vuetify.breakpoint.mdAndUp ? _c("div", {
             staticClass: "d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal",
             staticStyle: {
               height: "100%",
