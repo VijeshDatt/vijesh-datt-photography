@@ -83,7 +83,10 @@ var render = function render() {
       _c = _vm._self._c;
 
   return _c("div", [_c("v-container", {
-    staticClass: "fill-height d-flex justify-center"
+    staticClass: "d-flex justify-center",
+    attrs: {
+      fluid: ""
+    }
   }, [_c("v-card", {
     attrs: {
       flat: "",
