@@ -614,6 +614,16 @@ module.exports = "/images/IMG_042.jpg?88738ee23f006972be280d01bd24a69b";
 
 /***/ }),
 
+/***/ "./public/assets/images/home/IMG_043.jpg":
+/*!***********************************************!*\
+  !*** ./public/assets/images/home/IMG_043.jpg ***!
+  \***********************************************/
+/***/ ((module) => {
+
+module.exports = "/images/IMG_043.jpg?79c7bdb7e42a0f9c3382eddbe3bfd238";
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/Home.vue?vue&type=style&index=0&id=b3c5cf30&lang=css&":
 /*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/Home.vue?vue&type=style&index=0&id=b3c5cf30&lang=css& ***!
@@ -779,7 +789,8 @@ var map = {
 	"./IMG_039.jpg": "./public/assets/images/home/IMG_039.jpg",
 	"./IMG_040.jpg": "./public/assets/images/home/IMG_040.jpg",
 	"./IMG_041.jpg": "./public/assets/images/home/IMG_041.jpg",
-	"./IMG_042.jpg": "./public/assets/images/home/IMG_042.jpg"
+	"./IMG_042.jpg": "./public/assets/images/home/IMG_042.jpg",
+	"./IMG_043.jpg": "./public/assets/images/home/IMG_043.jpg"
 };
 
 
