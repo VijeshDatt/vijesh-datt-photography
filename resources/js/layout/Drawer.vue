@@ -23,9 +23,9 @@
           <v-list-item-title class="text-center bigger-font">Gallery</v-list-item-title>
         </v-list-item>
 
-        <v-list-item link exact-path class="my-3" :to="{ name: 'Bookings' }">
+        <!-- <v-list-item link exact-path class="my-3" :to="{ name: 'Bookings' }">
           <v-list-item-title class="text-center bigger-font">Bookings</v-list-item-title>
-        </v-list-item>
+        </v-list-item> -->
 
         <v-list-item link exact-path class="my-3" :to="{ name: 'Contact' }">
           <v-list-item-title class="text-center bigger-font">Contact</v-list-item-title>

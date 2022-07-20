@@ -34,7 +34,18 @@ var render = function render() {
     attrs: {
       fluid: ""
     }
-  }, [_c("h3", [_vm._v("Bookings")])])], 1);
+  }, [_c("h1", {
+    staticClass: "mb-4",
+    "class": {
+      "text-center": _vm.$vuetify.breakpoint.smAndDown
+    },
+    staticStyle: {
+      "font-size": "4rem",
+      "font-weight": "300"
+    }
+  }, [_vm._v("Bookings.")]), _vm._v(" "), _c("p", {
+    staticClass: "text-center"
+  }, [_vm._v("Coming Soon")])])], 1);
 };
 
 var staticRenderFns = [];
