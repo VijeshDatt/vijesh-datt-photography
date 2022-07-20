@@ -19,6 +19,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      background-color: '#f5ebe0';
     }
 
     .spinner {
