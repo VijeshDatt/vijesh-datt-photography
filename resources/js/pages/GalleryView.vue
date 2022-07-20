@@ -10,7 +10,7 @@
               <!-- :lazy-src="image" transition="slide-y-transition" -->
               <v-img contain :lazy-src="`/assets/images/gallery/${folder}/${image.name}`" :src="`/assets/images/gallery/${folder}/${image.name}`" class="my-2 text-center rounded-xl animate__animated animate__zoomIn animate__faster elevation-8">
                 <transition name="scale-transition">
-                  <div v-if="hover" class="d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal" style="height: 100%; cursor: pointer;" @click="openImage(image.name)">
+                  <div v-if="hover && $vuetify.breakpoint.mdAndUp" class="d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal" style="height: 100%; cursor: pointer;" @click="openImage(image.name)">
                     <v-icon class="mdi-48px" dark>mdi-arrow-expand</v-icon>
                   </div>
                 </transition>
