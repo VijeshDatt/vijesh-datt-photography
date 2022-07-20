@@ -12,9 +12,9 @@
     {{-- Open Graph markup --}}
     <meta property="og:url" content="{{ url('/') }}">
     <meta property="og:type" content="website">
-    <meta property="or:image" content="{{ url("/assets/images/home/IMG_017.jpg") }}">
-    <meta property="or:title" content="Vijesh Datt Photography">
-    <meta property="or:description" content="Giving the world a small view of what Fiji and the Pacific has to offer.">
+    <meta property="og:image" content="{{ url("/assets/images/home/IMG_017.jpg") }}">
+    <meta property="og:title" content="Vijesh Datt Photography">
+    <meta property="og:description" content="Giving the world a small view of what Fiji and the Pacific has to offer.">
 
     {{-- <title>Vijesh Datt Photography</title> --}}
 
