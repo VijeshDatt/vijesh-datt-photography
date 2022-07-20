@@ -474,7 +474,7 @@ var opts = {
     dark: false,
     themes: {
       light: {
-        primary: '#37251b',
+        primary: '#361d2e',
         background: '#f5ebe0'
       },
       dark: {

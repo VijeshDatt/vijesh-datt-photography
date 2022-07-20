@@ -58,23 +58,23 @@
 
     @keyframes colors {
       0% {
-        stroke: #37251B;
+        stroke: #361d2e;
       }
 
       25% {
-        stroke: #37251B;
+        stroke: #361d2e;
       }
 
       50% {
-        stroke: #37251B;
+        stroke: #361d2e;
       }
 
       75% {
-        stroke: #37251B;
+        stroke: #361d2e;
       }
 
       100% {
-        stroke: #37251B;
+        stroke: #361d2e;
       }
     }
 
