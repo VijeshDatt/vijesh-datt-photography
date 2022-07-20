@@ -18,7 +18,7 @@ const router = new VueRouter({
   routes: [
     { path: '/', component: Home, name: 'Home', meta: { title: 'Home' } },
     { path: '/about-me', component: AboutMe, name: 'About Me', meta: { title: 'About Me' } },
-    { path: '/bookings', component: Bookings, name: 'Bookings', meta: { title: 'Bookings' } },
+    // { path: '/bookings', component: Bookings, name: 'Bookings', meta: { title: 'Bookings' } },
     { path: '/gallery', component: Gallery, name: 'Gallery', meta: { title: 'Gallery' } },
     { path: '/gallery/:folder', component: GalleryView, name: 'Gallery View', meta: { title: '' } },
     { path: '/contact', component: Contact, name: 'Contact', meta: { title: 'Contact' } },
