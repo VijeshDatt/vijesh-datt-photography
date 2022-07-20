@@ -4,30 +4,30 @@
     <v-list-item>
       <v-list-item-content>
         <v-list-item-title>
-          <v-img lazy-src="/assets/logos/black.png" src="/assets/logos/black.png" contain max-height="150" max-width="100%" class="my-6"></v-img>
+          <v-img lazy-src="/assets/logos/black_v2.png" src="/assets/logos/black_v2.png" contain max-height="100%" max-width="250px" class="my-6"></v-img>
         </v-list-item-title>
       </v-list-item-content>
     </v-list-item>
     <v-divider class="mx-16"></v-divider>
     <v-list nav height="70vh">
-      <v-list-item-group no-action active-class="grey--text text--darken-3">
-        <v-list-item link exact-path :to="{ name: 'Home' }">
+      <v-list-item-group no-action active-class="primary--text">
+        <v-list-item link exact-path v-ripple="ripple" :to="{ name: 'Home' }">
           <v-list-item-title class="text-center bigger-font">Home</v-list-item-title>
         </v-list-item>
 
-        <v-list-item link exact-path class="my-3" :to="{ name: 'About Me' }">
+        <v-list-item link exact-path v-ripple="ripple" class="my-3" :to="{ name: 'About Me' }">
           <v-list-item-title class="text-center bigger-font">About Me</v-list-item-title>
         </v-list-item>
 
-        <v-list-item link exact-path class="my-3" :to="{ name: 'Gallery' }">
+        <v-list-item link exact-path v-ripple="ripple" class="my-3" :to="{ name: 'Gallery' }">
           <v-list-item-title class="text-center bigger-font">Gallery</v-list-item-title>
         </v-list-item>
 
-        <!-- <v-list-item link exact-path class="my-3" :to="{ name: 'Bookings' }">
+        <!-- <v-list-item link exact-path v-ripple="ripple" class="my-3" :to="{ name: 'Bookings' }">
           <v-list-item-title class="text-center bigger-font">Bookings</v-list-item-title>
         </v-list-item> -->
 
-        <v-list-item link exact-path class="my-3" :to="{ name: 'Contact' }">
+        <v-list-item link exact-path v-ripple="ripple" class="my-3" :to="{ name: 'Contact' }">
           <v-list-item-title class="text-center bigger-font">Contact</v-list-item-title>
         </v-list-item>
       </v-list-item-group>
@@ -42,6 +42,7 @@ export default {
     return {
       drawer: false,
       group: null,
+      ripple: { class: 'primary--text' },
     };
   },
 }

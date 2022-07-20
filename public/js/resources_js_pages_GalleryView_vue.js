@@ -2076,7 +2076,8 @@ __webpack_require__.r(__webpack_exports__);
       dialog: false,
       image: null,
       current: 0,
-      max: 0
+      max: 0,
+      key: 0
     };
   },
   computed: {
@@ -2109,6 +2110,13 @@ __webpack_require__.r(__webpack_exports__);
     openImage: function openImage(image) {
       this.image = image;
       this.dialog = true;
+    },
+    redo: function redo() {
+      var _this2 = this;
+
+      this.$nextTick(function () {
+        return _this2.$refs.masonry.reCalculate();
+      });
     }
   },
   mounted: function mounted() {},
@@ -2155,11 +2163,13 @@ var render = function render() {
   }, [_vm._v(" " + _vm._s(_vm.name) + " ")]), _vm._v(" "), _c("v-divider", {
     staticClass: "mx-16"
   }), _vm._v(" "), _vm.images.length > 0 ? _c("masonry", {
+    key: _vm.key,
+    ref: "masonry",
     attrs: {
       cols: {
-        "default": 4,
+        "default": 6,
         960: 1,
-        1264: 2
+        1264: 3
       },
       gutter: 8
     }
@@ -2172,9 +2182,10 @@ var render = function render() {
         fn: function fn(_ref) {
           var hover = _ref.hover;
           return [_c("v-img", {
-            staticClass: "my-2 text-center rounded-xl animate__animated animate__zoomIn animate__faster",
+            staticClass: "my-2 text-center rounded-xl animate__animated animate__zoomIn animate__faster elevation-8",
             attrs: {
               contain: "",
+              "lazy-src": "/assets/images/gallery/".concat(_vm.folder, "/").concat(image.name),
               src: "/assets/images/gallery/".concat(_vm.folder, "/").concat(image.name)
             }
           }, [_c("transition", {

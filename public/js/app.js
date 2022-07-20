@@ -62,7 +62,10 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       drawer: false,
-      group: null
+      group: null,
+      ripple: {
+        "class": 'primary--text'
+      }
     };
   }
 });
@@ -171,11 +174,11 @@ var render = function render() {
   }, [_c("v-list-item", [_c("v-list-item-content", [_c("v-list-item-title", [_c("v-img", {
     staticClass: "my-6",
     attrs: {
-      "lazy-src": "/assets/logos/black.png",
-      src: "/assets/logos/black.png",
+      "lazy-src": "/assets/logos/black_v2.png",
+      src: "/assets/logos/black_v2.png",
       contain: "",
-      "max-height": "150",
-      "max-width": "100%"
+      "max-height": "100%",
+      "max-width": "250px"
     }
   })], 1)], 1)], 1), _vm._v(" "), _c("v-divider", {
     staticClass: "mx-16"
@@ -187,9 +190,15 @@ var render = function render() {
   }, [_c("v-list-item-group", {
     attrs: {
       "no-action": "",
-      "active-class": "grey--text text--darken-3"
+      "active-class": "primary--text"
     }
   }, [_c("v-list-item", {
+    directives: [{
+      name: "ripple",
+      rawName: "v-ripple",
+      value: _vm.ripple,
+      expression: "ripple"
+    }],
     attrs: {
       link: "",
       "exact-path": "",
@@ -200,6 +209,12 @@ var render = function render() {
   }, [_c("v-list-item-title", {
     staticClass: "text-center bigger-font"
   }, [_vm._v("Home")])], 1), _vm._v(" "), _c("v-list-item", {
+    directives: [{
+      name: "ripple",
+      rawName: "v-ripple",
+      value: _vm.ripple,
+      expression: "ripple"
+    }],
     staticClass: "my-3",
     attrs: {
       link: "",
@@ -211,6 +226,12 @@ var render = function render() {
   }, [_c("v-list-item-title", {
     staticClass: "text-center bigger-font"
   }, [_vm._v("About Me")])], 1), _vm._v(" "), _c("v-list-item", {
+    directives: [{
+      name: "ripple",
+      rawName: "v-ripple",
+      value: _vm.ripple,
+      expression: "ripple"
+    }],
     staticClass: "my-3",
     attrs: {
       link: "",
@@ -222,6 +243,12 @@ var render = function render() {
   }, [_c("v-list-item-title", {
     staticClass: "text-center bigger-font"
   }, [_vm._v("Gallery")])], 1), _vm._v(" "), _c("v-list-item", {
+    directives: [{
+      name: "ripple",
+      rawName: "v-ripple",
+      value: _vm.ripple,
+      expression: "ripple"
+    }],
     staticClass: "my-3",
     attrs: {
       link: "",
@@ -447,6 +474,7 @@ var opts = {
     dark: false,
     themes: {
       light: {
+        primary: '#37251b',
         background: '#f5ebe0'
       },
       dark: {

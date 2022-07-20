@@ -4,11 +4,11 @@
       <v-card flat color="transparent">
         <h1 :style="fontSize" class="text-center mb-4"> {{ name }} </h1>
         <v-divider class="mx-16"></v-divider>
-        <masonry :cols="{default: 4, 960: 1, 1264: 2}" :gutter="8" v-if="images.length > 0">
+        <masonry :cols="{default: 6, 960: 1, 1264: 3}" :gutter="8" v-if="images.length > 0" :key="key" ref="masonry">
           <div v-for="(image, index) in images" :key="index">
             <v-hover v-slot="{ hover }">
               <!-- :lazy-src="image" transition="slide-y-transition" -->
-              <v-img contain :src="`/assets/images/gallery/${folder}/${image.name}`" class="my-2 text-center rounded-xl animate__animated animate__zoomIn animate__faster">
+              <v-img contain :lazy-src="`/assets/images/gallery/${folder}/${image.name}`" :src="`/assets/images/gallery/${folder}/${image.name}`" class="my-2 text-center rounded-xl animate__animated animate__zoomIn animate__faster elevation-8">
                 <transition name="scale-transition">
                   <div v-if="hover" class="d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal" style="height: 100%; cursor: pointer;" @click="openImage(image.name)">
                     <v-icon class="mdi-48px" dark>mdi-arrow-expand</v-icon>
@@ -44,6 +44,7 @@ export default {
       image: null,
       current: 0,
       max: 0,
+      key: 0,
     };
   },
 
@@ -82,6 +83,10 @@ export default {
       this.image = image;
       this.dialog = true;
     },
+
+    redo() {
+      this.$nextTick(() => this.$refs.masonry.reCalculate());
+    }
   },
 
   mounted() { },

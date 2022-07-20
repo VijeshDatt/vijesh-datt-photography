@@ -10,6 +10,7 @@ const opts = {
     dark: false,
     themes: {
       light: {
+        primary: '#37251b',
         background: '#f5ebe0'
       },
       dark: {
