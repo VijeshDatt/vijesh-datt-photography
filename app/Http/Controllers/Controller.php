@@ -26,8 +26,15 @@ class Controller extends BaseController
       if (sizeof($files) > 0) {
         foreach ($files as $file) {
           // return preg_split("/gallery\//", $file->getPath());
-          $folder_name = preg_replace("/-/", ' ', preg_split("/gallery\//", $file->getPath())[1]);
-          $folder_path = preg_split("/gallery\//", $file->getPath())[1];
+          try {
+            $folder_name = preg_replace("/-/", ' ', preg_split("/gallery\//", $file->getPath())[1]);
+            $folder_path = preg_split("/gallery\//", $file->getPath())[1];
+          } catch (\Throwable $th) {
+            $folder_name = preg_replace("/-/", ' ', preg_split("/gallery\\\\/", $file->getPath())[1]);
+            $folder_path = preg_split("/gallery\\\\/", $file->getPath())[1];
+          }
+          // $folder_name = preg_replace("/-/", ' ', preg_split("/gallery\//", $file->getPath())[1]);
+          // $folder_path = preg_split("/gallery\//", $file->getPath())[1];
           $info[] = [
             'filename' => $file->getBasename(),
           ];

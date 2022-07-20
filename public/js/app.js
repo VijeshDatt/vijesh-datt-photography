@@ -305,7 +305,17 @@ var render = function render() {
       app: "",
       color: "background"
     }
-  }, [_c("v-spacer"), _vm._v(" "), _c("v-btn", _vm._g(_vm._b({
+  }, [_c("v-spacer"), _vm._v(" "), _c("v-btn", {
+    staticClass: "mx-2",
+    attrs: {
+      icon: ""
+    },
+    on: {
+      click: function click($event) {
+        return _vm["goto"]("Home");
+      }
+    }
+  }, [_c("v-icon", [_vm._v("mdi-home-outline")])], 1), _vm._v(" "), _c("v-btn", {
     staticClass: "mx-2",
     attrs: {
       icon: ""
@@ -315,17 +325,7 @@ var render = function render() {
         return _vm["goto"]("About Me");
       }
     }
-  }, "v-btn", _vm.attrs, false), _vm.on), [_c("v-icon", [_vm._v("mdi-account-outline")])], 1), _vm._v(" "), _c("v-btn", _vm._g(_vm._b({
-    staticClass: "mx-2",
-    attrs: {
-      icon: ""
-    },
-    on: {
-      click: function click($event) {
-        return _vm["goto"]("Gallery");
-      }
-    }
-  }, "v-btn", _vm.attrs, false), _vm.on), [_c("v-icon", [_vm._v("mdi-image-outline")])], 1), _vm._v(" "), _c("v-toolbar-title", [_c("v-btn", _vm._g(_vm._b({
+  }, [_c("v-icon", [_vm._v("mdi-account-outline")])], 1), _vm._v(" "), _c("v-toolbar-title", [_c("v-btn", {
     staticClass: "mx-5",
     attrs: {
       icon: "",
@@ -336,7 +336,7 @@ var render = function render() {
         return _vm["goto"]("Home");
       }
     }
-  }, "v-btn", _vm.attrs, false), _vm.on), [_c("v-img", {
+  }, [_c("v-img", {
     attrs: {
       "lazy-src": "/assets/logos/black.png",
       src: "/assets/logos/black.png",
@@ -344,17 +344,17 @@ var render = function render() {
       "max-height": "60",
       "max-width": "100"
     }
-  })], 1)], 1), _vm._v(" "), _c("v-btn", _vm._g(_vm._b({
+  })], 1)], 1), _vm._v(" "), _c("v-btn", {
     staticClass: "mx-2",
     attrs: {
       icon: ""
     },
     on: {
       click: function click($event) {
-        return _vm["goto"]("Bookings");
+        return _vm["goto"]("Gallery");
       }
     }
-  }, "v-btn", _vm.attrs, false), _vm.on), [_c("v-icon", [_vm._v("mdi-bookmark-plus-outline")])], 1), _vm._v(" "), _c("v-btn", _vm._g(_vm._b({
+  }, [_c("v-icon", [_vm._v("mdi-image-outline")])], 1), _vm._v(" "), _c("v-btn", {
     staticClass: "mx-2",
     attrs: {
       icon: ""
@@ -364,7 +364,7 @@ var render = function render() {
         return _vm["goto"]("Contact");
       }
     }
-  }, "v-btn", _vm.attrs, false), _vm.on), [_c("v-icon", [_vm._v("mdi-email-variant")])], 1), _vm._v(" "), _c("v-spacer")], 1)], 1);
+  }, [_c("v-icon", [_vm._v("mdi-email-variant")])], 1), _vm._v(" "), _c("v-spacer")], 1)], 1);
 };
 
 var staticRenderFns = [];
