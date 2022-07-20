@@ -305,126 +305,66 @@ var render = function render() {
       app: "",
       color: "background"
     }
-  }, [_c("v-spacer"), _vm._v(" "), _c("v-tooltip", {
+  }, [_c("v-spacer"), _vm._v(" "), _c("v-btn", _vm._g(_vm._b({
+    staticClass: "mx-2",
     attrs: {
-      bottom: ""
+      icon: ""
     },
-    scopedSlots: _vm._u([{
-      key: "activator",
-      fn: function fn(_ref) {
-        var on = _ref.on,
-            attrs = _ref.attrs;
-        return [_c("v-btn", _vm._g(_vm._b({
-          staticClass: "mx-2",
-          attrs: {
-            icon: ""
-          },
-          on: {
-            click: function click($event) {
-              return _vm["goto"]("About Me");
-            }
-          }
-        }, "v-btn", attrs, false), on), [_c("v-icon", [_vm._v("mdi-account-outline")])], 1)];
+    on: {
+      click: function click($event) {
+        return _vm["goto"]("About Me");
       }
-    }])
-  }, [_vm._v(" "), _c("span", [_vm._v("About Me")])]), _vm._v(" "), _c("v-tooltip", {
+    }
+  }, "v-btn", _vm.attrs, false), _vm.on), [_c("v-icon", [_vm._v("mdi-account-outline")])], 1), _vm._v(" "), _c("v-btn", _vm._g(_vm._b({
+    staticClass: "mx-2",
     attrs: {
-      bottom: ""
+      icon: ""
     },
-    scopedSlots: _vm._u([{
-      key: "activator",
-      fn: function fn(_ref2) {
-        var on = _ref2.on,
-            attrs = _ref2.attrs;
-        return [_c("v-btn", _vm._g(_vm._b({
-          staticClass: "mx-2",
-          attrs: {
-            icon: ""
-          },
-          on: {
-            click: function click($event) {
-              return _vm["goto"]("Gallery");
-            }
-          }
-        }, "v-btn", attrs, false), on), [_c("v-icon", [_vm._v("mdi-image-outline")])], 1)];
+    on: {
+      click: function click($event) {
+        return _vm["goto"]("Gallery");
       }
-    }])
-  }, [_vm._v(" "), _c("span", [_vm._v("Gallery")])]), _vm._v(" "), _c("v-toolbar-title", [_c("v-tooltip", {
+    }
+  }, "v-btn", _vm.attrs, false), _vm.on), [_c("v-icon", [_vm._v("mdi-image-outline")])], 1), _vm._v(" "), _c("v-toolbar-title", [_c("v-btn", _vm._g(_vm._b({
+    staticClass: "mx-5",
     attrs: {
-      bottom: ""
+      icon: "",
+      "x-large": ""
     },
-    scopedSlots: _vm._u([{
-      key: "activator",
-      fn: function fn(_ref3) {
-        var on = _ref3.on,
-            attrs = _ref3.attrs;
-        return [_c("v-btn", _vm._g(_vm._b({
-          staticClass: "mx-5",
-          attrs: {
-            icon: "",
-            "x-large": ""
-          },
-          on: {
-            click: function click($event) {
-              return _vm["goto"]("Home");
-            }
-          }
-        }, "v-btn", attrs, false), on), [_c("v-img", {
-          attrs: {
-            "lazy-src": "/assets/logos/black.png",
-            src: "/assets/logos/black.png",
-            contain: "",
-            "max-height": "60",
-            "max-width": "100"
-          }
-        })], 1)];
+    on: {
+      click: function click($event) {
+        return _vm["goto"]("Home");
       }
-    }])
-  }, [_vm._v(" "), _c("span", [_vm._v("Home")])])], 1), _vm._v(" "), _c("v-tooltip", {
+    }
+  }, "v-btn", _vm.attrs, false), _vm.on), [_c("v-img", {
     attrs: {
-      bottom: ""
-    },
-    scopedSlots: _vm._u([{
-      key: "activator",
-      fn: function fn(_ref4) {
-        var on = _ref4.on,
-            attrs = _ref4.attrs;
-        return [_c("v-btn", _vm._g(_vm._b({
-          staticClass: "mx-2",
-          attrs: {
-            icon: ""
-          },
-          on: {
-            click: function click($event) {
-              return _vm["goto"]("Bookings");
-            }
-          }
-        }, "v-btn", attrs, false), on), [_c("v-icon", [_vm._v("mdi-bookmark-plus-outline")])], 1)];
-      }
-    }])
-  }, [_vm._v(" "), _c("span", [_vm._v("Booking")])]), _vm._v(" "), _c("v-tooltip", {
+      "lazy-src": "/assets/logos/black.png",
+      src: "/assets/logos/black.png",
+      contain: "",
+      "max-height": "60",
+      "max-width": "100"
+    }
+  })], 1)], 1), _vm._v(" "), _c("v-btn", _vm._g(_vm._b({
+    staticClass: "mx-2",
     attrs: {
-      bottom: ""
+      icon: ""
     },
-    scopedSlots: _vm._u([{
-      key: "activator",
-      fn: function fn(_ref5) {
-        var on = _ref5.on,
-            attrs = _ref5.attrs;
-        return [_c("v-btn", _vm._g(_vm._b({
-          staticClass: "mx-2",
-          attrs: {
-            icon: ""
-          },
-          on: {
-            click: function click($event) {
-              return _vm["goto"]("Contact");
-            }
-          }
-        }, "v-btn", attrs, false), on), [_c("v-icon", [_vm._v("mdi-email-variant")])], 1)];
+    on: {
+      click: function click($event) {
+        return _vm["goto"]("Bookings");
       }
-    }])
-  }, [_vm._v(" "), _c("span", [_vm._v("Contact")])]), _vm._v(" "), _c("v-spacer")], 1)], 1);
+    }
+  }, "v-btn", _vm.attrs, false), _vm.on), [_c("v-icon", [_vm._v("mdi-bookmark-plus-outline")])], 1), _vm._v(" "), _c("v-btn", _vm._g(_vm._b({
+    staticClass: "mx-2",
+    attrs: {
+      icon: ""
+    },
+    on: {
+      click: function click($event) {
+        return _vm["goto"]("Contact");
+      }
+    }
+  }, "v-btn", _vm.attrs, false), _vm.on), [_c("v-icon", [_vm._v("mdi-email-variant")])], 1), _vm._v(" "), _c("v-spacer")], 1)], 1);
 };
 
 var staticRenderFns = [];
