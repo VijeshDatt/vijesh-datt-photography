@@ -331,7 +331,6 @@ var render = function render() {
     attrs: {
       "elevate-on-scroll": "",
       app: "",
-      "hide-on-scroll": "",
       color: "background"
     }
   }, [_c("v-spacer"), _vm._v(" "), _c("v-btn", {
