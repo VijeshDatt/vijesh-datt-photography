@@ -2217,7 +2217,8 @@ var render = function render() {
   }, [_c("v-btn", {
     staticClass: "rounded-lg",
     attrs: {
-      text: ""
+      text: "",
+      color: "primary"
     },
     on: {
       click: function click($event) {

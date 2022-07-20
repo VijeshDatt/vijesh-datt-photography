@@ -169,20 +169,21 @@ var render = function render() {
       fixed: "",
       permanent: "",
       floating: "",
-      color: "background"
+      color: "background",
+      width: "300px"
     }
   }, [_c("v-list-item", [_c("v-list-item-content", [_c("v-list-item-title", [_c("v-img", {
     staticClass: "my-6",
     attrs: {
       "lazy-src": "/assets/logos/black_v2.png",
       src: "/assets/logos/black_v2.png",
-      contain: "",
       "max-height": "100%",
-      "max-width": "250px"
+      width: "300px"
     }
   })], 1)], 1)], 1), _vm._v(" "), _c("v-divider", {
     staticClass: "mx-16"
   }), _vm._v(" "), _c("v-list", {
+    staticClass: "px-md-10",
     attrs: {
       nav: "",
       height: "70vh"

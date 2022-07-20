@@ -1,15 +1,15 @@
 <template>
   <!-- <v-card flat color="background" height="100%" > -->
-  <v-navigation-drawer app :value="true" fixed permanent floating color="background" v-if="$vuetify.breakpoint.mdAndUp">
+  <v-navigation-drawer app :value="true" fixed permanent floating color="background" v-if="$vuetify.breakpoint.mdAndUp" width="300px">
     <v-list-item>
       <v-list-item-content>
         <v-list-item-title>
-          <v-img lazy-src="/assets/logos/black_v2.png" src="/assets/logos/black_v2.png" contain max-height="100%" max-width="250px" class="my-6"></v-img>
+          <v-img lazy-src="/assets/logos/black_v2.png" src="/assets/logos/black_v2.png" max-height="100%" width="300px" class="my-6"></v-img>
         </v-list-item-title>
       </v-list-item-content>
     </v-list-item>
     <v-divider class="mx-16"></v-divider>
-    <v-list nav height="70vh">
+    <v-list nav height="70vh" class="px-md-10">
       <v-list-item-group no-action active-class="primary--text">
         <v-list-item link exact-path v-ripple="ripple" :to="{ name: 'Home' }">
           <v-list-item-title class="text-center bigger-font">Home</v-list-item-title>

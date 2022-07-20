@@ -20,7 +20,7 @@
         </masonry>
 
         <div class="text-center mt-5" v-if="current < max">
-          <v-btn text @click="getImages()" class="rounded-lg"> Load More </v-btn>
+          <v-btn text @click="getImages()" class="rounded-lg" color="primary"> Load More </v-btn>
         </div>
       </v-card>
     </v-container>
