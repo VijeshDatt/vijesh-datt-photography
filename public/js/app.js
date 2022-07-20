@@ -328,8 +328,9 @@ var render = function render() {
 
   return _c("div", [_c("v-app-bar", {
     attrs: {
-      absolute: "",
+      "elevate-on-scroll": "",
       app: "",
+      "hide-on-scroll": "",
       color: "background"
     }
   }, [_c("v-spacer"), _vm._v(" "), _c("v-btn", {
@@ -366,7 +367,7 @@ var render = function render() {
   }, [_c("v-img", {
     attrs: {
       "lazy-src": "/assets/logos/black.png",
-      src: "/assets/logos/black.png",
+      src: "/assets/logos/black_v2.png",
       contain: "",
       "max-height": "60",
       "max-width": "100"

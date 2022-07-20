@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar absolute app color="background">
+    <v-app-bar elevate-on-scroll app hide-on-scroll color="background">
       <!-- Drawer toggle -->
       <!-- <v-app-bar-nav-icon v-if="$vuetify.breakpoint.smAndDown"></v-app-bar-nav-icon> -->
       <v-spacer></v-spacer>
@@ -15,7 +15,7 @@
       <!-- Home/Logo button -->
       <v-toolbar-title>
         <v-btn icon x-large class="mx-5" @click="goto('Home')">
-          <v-img lazy-src="/assets/logos/black.png" src="/assets/logos/black.png" contain max-height="60" max-width="100"></v-img>
+          <v-img lazy-src="/assets/logos/black.png" src="/assets/logos/black_v2.png" contain max-height="60" max-width="100"></v-img>
         </v-btn>
       </v-toolbar-title>
       <!-- Gallery button -->

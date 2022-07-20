@@ -2,7 +2,6 @@
   <v-app>
     <!-- Header, only visible in mobile mode -->
     <nav-header v-if="$vuetify.breakpoint.smAndDown"></nav-header>
-
     <!-- Drawer, visible in every mode except mobile -->
     <nav-drawer></nav-drawer>
     <!-- Main application, including drawer -->
