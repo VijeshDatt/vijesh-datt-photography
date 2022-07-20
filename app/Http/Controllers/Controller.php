@@ -15,7 +15,7 @@ class Controller extends BaseController
 
   public function index()
   {
-    return url('/assets/images/gallery');
+    // return url('/assets/images/gallery');
     $path = url('/assets/images/gallery');
     $subdirectories = File::directories($path);
     $data = array();
