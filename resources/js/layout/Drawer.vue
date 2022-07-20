@@ -12,7 +12,7 @@
     <v-list nav height="70vh" class="px-md-10">
       <v-list-item-group no-action active-class="primary--text">
         <v-list-item link exact-path v-ripple="ripple" :to="{ name: 'Home' }">
-          <v-list-item-title class="text-center bigger-font">Home</v-list-item-title>
+          <v-list-item-title class="text-center bigger-font"> Home </v-list-item-title>
         </v-list-item>
 
         <v-list-item link exact-path v-ripple="ripple" class="my-3" :to="{ name: 'About Me' }">

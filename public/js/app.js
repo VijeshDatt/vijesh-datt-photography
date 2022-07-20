@@ -209,7 +209,7 @@ var render = function render() {
     }
   }, [_c("v-list-item-title", {
     staticClass: "text-center bigger-font"
-  }, [_vm._v("Home")])], 1), _vm._v(" "), _c("v-list-item", {
+  }, [_vm._v(" Home ")])], 1), _vm._v(" "), _c("v-list-item", {
     directives: [{
       name: "ripple",
       rawName: "v-ripple",

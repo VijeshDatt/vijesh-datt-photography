@@ -584,6 +584,36 @@ module.exports = "/images/IMG_039.jpg?08c2ae7877681a7582e540c3488c978b";
 
 /***/ }),
 
+/***/ "./public/assets/images/home/IMG_040.jpg":
+/*!***********************************************!*\
+  !*** ./public/assets/images/home/IMG_040.jpg ***!
+  \***********************************************/
+/***/ ((module) => {
+
+module.exports = "/images/IMG_040.jpg?6e59385b10488def100d8a1a74a2e704";
+
+/***/ }),
+
+/***/ "./public/assets/images/home/IMG_041.jpg":
+/*!***********************************************!*\
+  !*** ./public/assets/images/home/IMG_041.jpg ***!
+  \***********************************************/
+/***/ ((module) => {
+
+module.exports = "/images/IMG_041.jpg?70572348837ba5f09da3bdbaa036aabf";
+
+/***/ }),
+
+/***/ "./public/assets/images/home/IMG_042.jpg":
+/*!***********************************************!*\
+  !*** ./public/assets/images/home/IMG_042.jpg ***!
+  \***********************************************/
+/***/ ((module) => {
+
+module.exports = "/images/IMG_042.jpg?88738ee23f006972be280d01bd24a69b";
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/Home.vue?vue&type=style&index=0&id=b3c5cf30&lang=css&":
 /*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/Home.vue?vue&type=style&index=0&id=b3c5cf30&lang=css& ***!
@@ -746,7 +776,10 @@ var map = {
 	"./IMG_036.jpg": "./public/assets/images/home/IMG_036.jpg",
 	"./IMG_037.jpg": "./public/assets/images/home/IMG_037.jpg",
 	"./IMG_038.jpg": "./public/assets/images/home/IMG_038.jpg",
-	"./IMG_039.jpg": "./public/assets/images/home/IMG_039.jpg"
+	"./IMG_039.jpg": "./public/assets/images/home/IMG_039.jpg",
+	"./IMG_040.jpg": "./public/assets/images/home/IMG_040.jpg",
+	"./IMG_041.jpg": "./public/assets/images/home/IMG_041.jpg",
+	"./IMG_042.jpg": "./public/assets/images/home/IMG_042.jpg"
 };
 
 
