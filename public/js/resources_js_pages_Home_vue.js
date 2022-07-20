@@ -109,6 +109,7 @@ var render = function render() {
             staticClass: "my-0 text-center rounded-xl elevation-16 animate__animated animate__zoomIn animate__faster",
             attrs: {
               contain: "",
+              "lazy-src": image,
               src: image
             },
             on: {
@@ -136,16 +137,7 @@ var render = function render() {
             attrs: {
               dark: ""
             }
-          }, [_vm._v("mdi-arrow-expand")])], 1) : _vm._e()]), _vm._v(" "), _c("transition", {
-            attrs: {
-              name: "fade-transition"
-            }
-          }, [!_vm.hasLoaded ? _c("v-overlay", {
-            attrs: {
-              value: !_vm.hasLoaded,
-              opacity: "0"
-            }
-          }) : _vm._e()], 1)], 1)];
+          }, [_vm._v("mdi-arrow-expand")])], 1) : _vm._e()])], 1)];
         }
       }], null, true)
     })], 1);
