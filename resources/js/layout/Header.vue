@@ -15,7 +15,7 @@
       <!-- Home/Logo button -->
       <v-toolbar-title>
         <v-btn icon x-large class="mx-5" @click="goto('Home')">
-          <v-img lazy-src="/assets/logos/black.png" src="/assets/logos/black_v2.png" contain max-height="60" max-width="100"></v-img>
+          <v-img lazy-src="/assets/logos/black_v2.png" src="/assets/logos/black_v2.png" contain max-height="60" max-width="100"></v-img>
         </v-btn>
       </v-toolbar-title>
       <!-- Gallery button -->

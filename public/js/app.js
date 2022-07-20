@@ -367,7 +367,7 @@ var render = function render() {
     }
   }, [_c("v-img", {
     attrs: {
-      "lazy-src": "/assets/logos/black.png",
+      "lazy-src": "/assets/logos/black_v2.png",
       src: "/assets/logos/black_v2.png",
       contain: "",
       "max-height": "60",
