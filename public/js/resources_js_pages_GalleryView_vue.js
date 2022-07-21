@@ -2212,7 +2212,20 @@ var render = function render() {
         }
       }], null, true)
     })], 1);
-  }), 0) : _vm._e()], 1)], 1), _vm._v(" "), _c("v-dialog", {
+  }), 0) : _vm._e(), _vm._v(" "), _vm.current < _vm.max ? _c("div", {
+    staticClass: "text-center mt-5"
+  }, [_c("v-btn", {
+    staticClass: "rounded-lg",
+    attrs: {
+      text: "",
+      color: "primary"
+    },
+    on: {
+      click: function click($event) {
+        return _vm.getImages();
+      }
+    }
+  }, [_vm._v(" Load More ")])], 1) : _vm._e()], 1)], 1), _vm._v(" "), _c("v-dialog", {
     attrs: {
       "overlay-opacity": "0.8"
     },
