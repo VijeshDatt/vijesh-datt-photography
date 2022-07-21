@@ -4,11 +4,11 @@
       <v-card flat color="transparent">
         <h1 :style="fontSize" class="text-center mb-4"> {{ name }} </h1>
         <v-divider class="mx-16"></v-divider>
-        <masonry :cols="{default: 6, 960: 1, 1264: 3}" :gutter="8" v-if="images.length > 0" :key="key" ref="masonry">
+        <masonry :cols="{default: 5, 960: 1, 1264: 3}" :gutter="24" v-if="images.length > 0" :key="key" ref="masonry">
           <div v-for="(image, index) in images" :key="index">
             <v-hover v-slot="{ hover }">
               <!-- :lazy-src="image" transition="slide-y-transition" -->
-              <v-img contain :lazy-src="`/assets/images/gallery/${folder}/${image.name}`" :src="`/assets/images/gallery/${folder}/${image.name}`" class="my-2 text-center rounded-xl animate__animated animate__zoomIn animate__faster elevation-8">
+              <v-img contain :lazy-src="`/assets/images/gallery/${folder}/${image.name}`" :src="`/assets/images/gallery/${folder}/${image.name}`" class="my-6 text-center rounded-xl animate__animated animate__zoomIn animate__faster elevation-8">
                 <transition name="scale-transition">
                   <div v-if="hover && $vuetify.breakpoint.mdAndUp" class="d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal" style="height: 100%; cursor: pointer;" @click="openImage(image.name)">
                     <v-icon class="mdi-48px" dark>mdi-arrow-expand</v-icon>

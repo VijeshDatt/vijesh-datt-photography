@@ -2167,11 +2167,11 @@ var render = function render() {
     ref: "masonry",
     attrs: {
       cols: {
-        "default": 6,
+        "default": 5,
         960: 1,
         1264: 3
       },
-      gutter: 8
+      gutter: 24
     }
   }, _vm._l(_vm.images, function (image, index) {
     return _c("div", {
@@ -2182,7 +2182,7 @@ var render = function render() {
         fn: function fn(_ref) {
           var hover = _ref.hover;
           return [_c("v-img", {
-            staticClass: "my-2 text-center rounded-xl animate__animated animate__zoomIn animate__faster elevation-8",
+            staticClass: "my-6 text-center rounded-xl animate__animated animate__zoomIn animate__faster elevation-8",
             attrs: {
               contain: "",
               "lazy-src": "/assets/images/gallery/".concat(_vm.folder, "/").concat(image.name),
