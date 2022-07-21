@@ -19,9 +19,9 @@
           </div>
         </masonry>
 
-        <div class="text-center mt-5" v-if="current < max">
+        <!-- <div class="text-center mt-5" v-if="current < max">
           <v-btn text @click="getImages()" class="rounded-lg" color="primary"> Load More </v-btn>
-        </div>
+        </div> -->
       </v-card>
     </v-container>
 

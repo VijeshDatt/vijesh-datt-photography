@@ -15,6 +15,7 @@ mix.js('resources/js/app.js', 'public/js')
   .vue({ processCssUrls: false, })
   .sass('resources/sass/app.scss', 'public/css')
   .browserSync({
+    host: 'localhost:3002',
     proxy: '127.0.0.1:8000',
     post: 8080,
     tunnel: false,

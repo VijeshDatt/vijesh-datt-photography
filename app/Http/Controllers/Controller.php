@@ -55,7 +55,8 @@ class Controller extends BaseController
     $files = \File::allFiles($dir);
 
     $data = array();
-    $count = $request->current > sizeof($files) ? sizeof($files) : $request->current;
+    // $count = $request->current > sizeof($files) ? sizeof($files) : $request->current;
+    $count = sizeof($files);
     for ($i = 0; $i < $count; $i++) {
       $data[] = array('name' => $files[$i]->getFilename());
     }
