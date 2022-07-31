@@ -72,7 +72,7 @@ class Controller extends BaseController
   public function email(Request $request)
   {
     try {
-      Mail::send(new ContactForm($request));
+      Mail::send(new ContactForm($request->all()));
 
       return response("Email sent successfully", 200);
     } catch (\Throwable $th) {
