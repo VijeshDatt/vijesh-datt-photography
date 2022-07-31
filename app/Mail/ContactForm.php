@@ -9,7 +9,6 @@ use Illuminate\Queue\SerializesModels;
 
 class ContactForm extends Mailable implements ShouldQueue
 {
-  use SerializesModels;
   public $data;
 
   /**
