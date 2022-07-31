@@ -40,7 +40,7 @@ return [
       'port' => 465,
       'encryption' => 'ssl',
       'username' => 'info@vijeshdatt.com',
-      'password' => 'miner40niner',
+      'password' => 'Miner40niner',
       'timeout' => null,
       'auth_mode' => null,
     ],
