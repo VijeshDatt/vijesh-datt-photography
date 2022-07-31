@@ -28,6 +28,6 @@ class ContactForm extends Mailable implements ShouldQueue
    */
   public function build()
   {
-    return $this->to('info@vijeshdatt.com')->from($this->data->email, $this->data->name)->subject($this->data->subject)->markdown('email.contactform');
+    return $this->to('info@vijeshdatt.com')->from($this->data['email'], $this->data['name'])->subject($this->data['subject'])->markdown('email.contactform');
   }
 }
