@@ -22,4 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::controller(Controller::class)->group(function () {
   Route::get('/gallery', 'index');
   Route::post('/folder', 'files');
+  Route::post('/email', 'email');
 });

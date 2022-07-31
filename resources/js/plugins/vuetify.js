@@ -11,6 +11,7 @@ const opts = {
     themes: {
       light: {
         primary: '#361d2e',
+        primaryAlt: '#321b2a',
         background: '#f5ebe0',
       },
       dark: {
