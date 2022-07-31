@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactForm;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Mail;
 
 class Controller extends BaseController
 {
@@ -65,5 +67,10 @@ class Controller extends BaseController
       'files' => $data,
       'max' => sizeof($files),
     ];
+  }
+
+  public function email(Request $request)
+  {
+    Mail::send(new ContactForm($request));
   }
 }
