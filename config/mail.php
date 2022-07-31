@@ -92,7 +92,7 @@ return [
     */
 
   'from' => [
-    'address' => 'no-reply@vijeshdatt.com',
+    'address' => 'info@vijeshdatt.com',
     'name' => 'Vijesh Datt Photography',
   ],
 
