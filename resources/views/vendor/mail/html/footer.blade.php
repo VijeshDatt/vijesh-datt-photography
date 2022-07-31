@@ -1,4 +1,4 @@
-<tr>
+{{-- <tr>
   <td>
     <table
       class="footer"
@@ -23,4 +23,4 @@
       </tr>
     </table>
   </td>
-</tr>
+</tr> --}}
