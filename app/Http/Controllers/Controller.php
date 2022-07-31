@@ -71,8 +71,16 @@ class Controller extends BaseController
 
   public function email(Request $request)
   {
+    $data = (object)[
+      'name' => $request->name,
+      'phone' => $request->phone,
+      'email' => $request->email,
+      'subject' => $request->subject,
+      'message' => $request->message,
+    ];
+
     try {
-      Mail::send(new ContactForm($request));
+      Mail::send(new ContactForm($data));
 
       return response("Email sent successfully", 200);
     } catch (\Throwable $th) {
