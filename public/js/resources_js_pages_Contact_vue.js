@@ -2106,6 +2106,8 @@ __webpack_require__.r(__webpack_exports__);
           _this.snackbar = true;
           _this.text = 'Email sent successfully';
           _this.type = 'success';
+
+          _this.clear();
         })["catch"](function (e) {
           _this.snackbar = true;
           _this.text = 'Error occurred, please try again...';

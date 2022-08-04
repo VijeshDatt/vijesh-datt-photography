@@ -145,6 +145,7 @@ export default {
             this.snackbar = true;
             this.text = 'Email sent successfully';
             this.type = 'success';
+            this.clear();
           })
           .catch(e => {
             this.snackbar = true;
