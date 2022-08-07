@@ -2,11 +2,14 @@
   <div>
     <v-container fluid>
       <h1 style="font-size: 4rem; font-weight: 300;" :class="{ 'text-center' : $vuetify.breakpoint.smAndDown }" class="mb-4">Gallery</h1>
-      <p class="text-center" v-if="!loaded">Loading...</p>
+      <div class="d-flex flex-column justify-center align-center" v-if="!loaded">
+        <v-progress-circular indeterminate size="50" width="5" color="primary"></v-progress-circular>
+        <p class="my-2">Loading</p>
+      </div>
       <v-row dense v-else>
         <v-col v-for="(item, index) in images" :key="`main-${index}`" cols="12" md="4" sm="6">
           <v-hover v-slot="{ hover }">
-            <v-card class="mx-3 mb-0 mb-sm-6 animate__animated animate__zoomIn animate__faster" color="transparent" rounded="xl" elevation="8" :style="`animation-delay:${index/50}s`">
+            <v-card class="mx-3 mb-0 mb-sm-6" color="transparent" rounded="xl" elevation="8">
               <v-img :src="`/assets/images/gallery/${item.folder}/cover.jpg`" class="white--text align-end" gradient="to top, rgba(0,0,0,0.75), rgba(0,0,0,0)" height="300px">
                 <v-card-title>
                   <span class="pb-0">{{item.name}}</span>
@@ -43,7 +46,11 @@ export default {
   methods: {
     getFolders() {
       axios
-        .get('/api/gallery')
+        .get('/api/gallery', {
+          onDownloadProgress: event => {
+            console.log(event);
+          }
+        })
         .then(res => {
           this.images = res.data.data;
           this.loaded = true;

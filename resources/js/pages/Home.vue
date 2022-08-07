@@ -5,7 +5,7 @@
         <masonry :cols="{default: 4, 960: 1, 1264: 2}">
           <v-container v-for="(image, index) in images" :key="index">
             <v-hover v-slot="{ hover }">
-              <v-img contain :lazy-src="image" :src="image" class="my-0 text-center rounded-xl elevation-16 animate__animated animate__zoomIn animate__faster" @load="loaded(image)">
+              <v-img contain :lazy-src="image" :src="image" class="my-0 text-center rounded-xl elevation-16" @load="loaded(image)">
                 <transition name="scale-transition">
                   <div v-if="hover && hasLoaded && $vuetify.breakpoint.mdAndUp" class="d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal" style="height: 100%; cursor: pointer;" @click="openImage(image)">
                     <v-icon class="mdi-48px" dark>mdi-arrow-expand</v-icon>

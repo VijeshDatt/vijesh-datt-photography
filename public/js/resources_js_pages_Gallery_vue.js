@@ -2078,7 +2078,11 @@ __webpack_require__.r(__webpack_exports__);
     getFolders: function getFolders() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/gallery').then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/gallery', {
+        onDownloadProgress: function onDownloadProgress(event) {
+          console.log(event);
+        }
+      }).then(function (res) {
         _this.images = res.data.data;
         _this.loaded = true;
       })["catch"](function (e) {
@@ -2122,9 +2126,18 @@ var render = function render() {
       "font-size": "4rem",
       "font-weight": "300"
     }
-  }, [_vm._v("Gallery")]), _vm._v(" "), !_vm.loaded ? _c("p", {
-    staticClass: "text-center"
-  }, [_vm._v("Loading...")]) : _c("v-row", {
+  }, [_vm._v("Gallery")]), _vm._v(" "), !_vm.loaded ? _c("div", {
+    staticClass: "d-flex flex-column justify-center align-center"
+  }, [_c("v-progress-circular", {
+    attrs: {
+      indeterminate: "",
+      size: "50",
+      width: "5",
+      color: "primary"
+    }
+  }), _vm._v(" "), _c("p", {
+    staticClass: "my-2"
+  }, [_vm._v("Loading")])], 1) : _c("v-row", {
     attrs: {
       dense: ""
     }
@@ -2142,8 +2155,7 @@ var render = function render() {
         fn: function fn(_ref) {
           var hover = _ref.hover;
           return [_c("v-card", {
-            staticClass: "mx-3 mb-0 mb-sm-6 animate__animated animate__zoomIn animate__faster",
-            style: "animation-delay:".concat(index / 50, "s"),
+            staticClass: "mx-3 mb-0 mb-sm-6",
             attrs: {
               color: "transparent",
               rounded: "xl",

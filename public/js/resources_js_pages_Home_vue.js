@@ -109,7 +109,7 @@ var render = function render() {
         fn: function fn(_ref) {
           var hover = _ref.hover;
           return [_c("v-img", {
-            staticClass: "my-0 text-center rounded-xl elevation-16 animate__animated animate__zoomIn animate__faster",
+            staticClass: "my-0 text-center rounded-xl elevation-16",
             attrs: {
               contain: "",
               "lazy-src": image,
