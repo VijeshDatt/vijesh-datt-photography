@@ -46,11 +46,7 @@ export default {
   methods: {
     getFolders() {
       axios
-        .get('/api/gallery', {
-          onDownloadProgress: event => {
-            console.log(event);
-          }
-        })
+        .get('/api/gallery')
         .then(res => {
           this.images = res.data.data;
           this.loaded = true;

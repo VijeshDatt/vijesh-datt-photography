@@ -2078,11 +2078,7 @@ __webpack_require__.r(__webpack_exports__);
     getFolders: function getFolders() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/gallery', {
-        onDownloadProgress: function onDownloadProgress(event) {
-          console.log(event);
-        }
-      }).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/gallery').then(function (res) {
         _this.images = res.data.data;
         _this.loaded = true;
       })["catch"](function (e) {
