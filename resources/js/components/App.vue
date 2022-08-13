@@ -59,7 +59,7 @@ export default {
   mounted() {
     this.title = 'Home';
   },
-}
+};
 </script>
 
 <style>
@@ -80,7 +80,8 @@ export default {
   font-weight: 400;
   src: local(""), url("/fonts/inter-v11-latin-regular.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("/fonts/inter-v11-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url("/fonts/inter-v11-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* amatic-sc-700 - latin */
@@ -90,7 +91,8 @@ export default {
   font-weight: 700;
   src: local(""), url("/fonts/amatic-sc-v23-latin-700.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("/fonts/amatic-sc-v23-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url("/fonts/amatic-sc-v23-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* merriweather-regular - latin */
@@ -102,8 +104,10 @@ export default {
   src: local(""),
     url("/fonts/merriweather-sans-v21-latin-regular.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("/fonts/merriweather-sans-v21-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url("/fonts/merriweather-sans-v21-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+
 /* merriweather-sans-700 - latin */
 @font-face {
   font-family: "Merriweather";
@@ -112,7 +116,8 @@ export default {
   src: local(""),
     url("/fonts/merriweather-sans-v21-latin-700.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("/fonts/merriweather-sans-v21-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url("/fonts/merriweather-sans-v21-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* raleway-300 - latin */
@@ -122,8 +127,10 @@ export default {
   font-weight: 300;
   src: local(""), url("/fonts/raleway-v27-latin-300.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("/fonts/raleway-v27-latin-300.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url("/fonts/raleway-v27-latin-300.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+
 /* raleway-regular - latin */
 @font-face {
   font-family: "Raleway";
@@ -131,7 +138,8 @@ export default {
   font-weight: 400;
   src: local(""), url("/fonts/raleway-v27-latin-regular.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("/fonts/raleway-v27-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url("/fonts/raleway-v27-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* html,
@@ -187,8 +195,12 @@ h6 {
   transition: all 150ms cubic-bezier(0.25, 0.8, 0.5, 1), z-index 1ms !important;
 }
 
-.v-main__wrap > div > .container,
-.v-main__wrap > .container {
+.v-main__wrap>div>.container,
+.v-main__wrap>.container {
   width: 97% !important;
+}
+
+.chip {
+  background-color: #faf4ee;
 }
 </style>

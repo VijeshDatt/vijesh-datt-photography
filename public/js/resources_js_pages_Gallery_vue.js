@@ -2151,7 +2151,7 @@ var render = function render() {
         fn: function fn(_ref) {
           var hover = _ref.hover;
           return [_c("v-card", {
-            staticClass: "mx-3 mb-0 mb-sm-6",
+            staticClass: "mx-md-3 mb-6",
             attrs: {
               color: "transparent",
               rounded: "xl",

@@ -2157,10 +2157,43 @@ var render = function render() {
       flat: "",
       color: "transparent"
     }
+  }, [_c("v-row", {
+    attrs: {
+      dense: "",
+      align: "center"
+    }
+  }, [_c("v-col", {
+    attrs: {
+      cols: "12",
+      md: "6"
+    }
+  }, [_c("v-btn", {
+    staticClass: "rounded-lg",
+    attrs: {
+      text: "",
+      block: _vm.$vuetify.breakpoint.smAndDown,
+      color: "primary"
+    },
+    on: {
+      click: function click($event) {
+        return _vm.$router.push({
+          name: "Gallery"
+        });
+      }
+    }
+  }, [_vm.$vuetify.breakpoint.mdAndUp ? _c("v-icon", {
+    attrs: {
+      left: ""
+    }
+  }, [_vm._v("mdi-arrow-left")]) : _vm._e(), _vm._v(" Back to Gallery\n          ")], 1)], 1), _vm._v(" "), _c("v-col", {
+    attrs: {
+      cols: "12",
+      md: "6"
+    }
   }, [_c("h1", {
-    staticClass: "text-center mb-4",
+    staticClass: "text-md-end text-center mb-4",
     style: _vm.fontSize
-  }, [_vm._v(" " + _vm._s(_vm.name) + " ")]), _vm._v(" "), _c("v-divider", {
+  }, [_vm._v(" " + _vm._s(_vm.name) + " ")])])], 1), _vm._v(" "), _c("v-divider", {
     staticClass: "mx-16"
   }), _vm._v(" "), _vm.images.length > 0 ? _c("masonry", {
     key: _vm.key,
@@ -2213,9 +2246,9 @@ var render = function render() {
       }], null, true)
     })], 1);
   }), 0) : _vm._e(), _vm._v(" "), _vm.current < _vm.max ? _c("div", {
-    staticClass: "text-center mt-5"
+    staticClass: "text-center my-10"
   }, [_c("v-btn", {
-    staticClass: "rounded-lg",
+    staticClass: "rounded-lg chip",
     attrs: {
       text: "",
       color: "primary"
@@ -2225,7 +2258,11 @@ var render = function render() {
         return _vm.getImages();
       }
     }
-  }, [_vm._v(" Load More ")])], 1) : _vm._e()], 1)], 1), _vm._v(" "), _c("v-dialog", {
+  }, [_vm._v("\n          Load More\n          "), _c("v-icon", {
+    attrs: {
+      right: ""
+    }
+  }, [_vm._v("mdi-plus")])], 1)], 1) : _vm._e()], 1)], 1), _vm._v(" "), _c("v-dialog", {
     attrs: {
       "overlay-opacity": "0.8"
     },

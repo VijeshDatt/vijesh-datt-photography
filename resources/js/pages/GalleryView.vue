@@ -2,9 +2,18 @@
   <div>
     <v-container fluid>
       <v-card flat color="transparent">
-        <h1 :style="fontSize" class="text-center mb-4"> {{ name }} </h1>
+        <v-row dense align="center">
+          <v-col cols="12" md="6">
+            <v-btn text :block="$vuetify.breakpoint.smAndDown" color="primary" class="rounded-lg" @click="$router.push({ name: 'Gallery' })">
+              <v-icon left v-if="$vuetify.breakpoint.mdAndUp">mdi-arrow-left</v-icon> Back to Gallery
+            </v-btn>
+          </v-col>
+          <v-col cols="12" md="6">
+            <h1 :style="fontSize" class="text-md-end text-center mb-4"> {{ name }} </h1>
+          </v-col>
+        </v-row>
         <v-divider class="mx-16"></v-divider>
-        <masonry :cols="{default: 5, 960: 1, 1264: 3}" :gutter="24" v-if="images.length > 0" :key="key" ref="masonry">
+        <masonry :cols="{ default: 5, 960: 1, 1264: 3 }" :gutter="24" v-if="images.length > 0" :key="key" ref="masonry">
           <div v-for="(image, index) in images" :key="index">
             <v-hover v-slot="{ hover }">
               <!-- :lazy-src="image" transition="slide-y-transition" -->
@@ -19,8 +28,11 @@
           </div>
         </masonry>
 
-        <div class="text-center mt-5" v-if="current < max">
-          <v-btn text @click="getImages()" class="rounded-lg" color="primary"> Load More </v-btn>
+        <div class="text-center my-10" v-if="current < max">
+          <v-btn text @click="getImages()" class="rounded-lg chip" color="primary">
+            Load More
+            <v-icon right>mdi-plus</v-icon>
+          </v-btn>
         </div>
       </v-card>
     </v-container>
@@ -100,7 +112,7 @@ export default {
 
     this.getImages(`/assets/images/gallery/${this.folder}/`);
   },
-}
+};
 </script>
 
 <style>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-container fluid>
-      <h1 style="font-size: 4rem; font-weight: 300;" :class="{ 'text-center' : $vuetify.breakpoint.smAndDown }" class="mb-4">Contact</h1>
+      <h1 style="font-size: 4rem; font-weight: 300;" :class="{ 'text-center': $vuetify.breakpoint.smAndDown }" class="mb-4">Contact</h1>
       <v-row>
         <v-col cols="12" md="6">
           <v-card rounded="lg" elevation="8" class="mx-md-8">
@@ -21,7 +21,7 @@
                     Phone:
                     <v-menu offset-y left transition='scale' rounded='lg' origin='top center' nudgeBottom='5px'>
                       <template v-slot:activator="{ on, attrs }">
-                        <strong><a class="text-decoration-underline" v-bind="attrs" v-on="on"> 711 7310 </a></strong>
+                        <strong><a class="text-decoration-underline" v-bind="attrs" v-on="on"> (+679) 711 7310 </a></strong>
                       </template>
                       <v-list nav>
                         <v-list-item @click="triggerAction('call')" :ripple="ripple">
@@ -118,7 +118,7 @@ export default {
       formItem: {},
       fieldRules: [v => !!v || 'Field is required'],
       emailRules: [
-        v => !!v || 'Email is required',
+        v => !!v || 'Field is required',
         v => /[a-zA-Z0-9._-]@[a-zA-Z0-9-]+\.\w+(\.\w+)?/.test(v) || 'Email is invalid',
       ],
       phoneRules: [
@@ -156,11 +156,11 @@ export default {
     },
 
     triggerAction(action) {
-      if (action == 'call') window.location.href = 'tel:7117310';
-      else if (action == 'sms') window.location.href = 'sms:7117310';
+      if (action == 'call') window.location.href = 'tel:+6797117310';
+      else if (action == 'sms') window.location.href = 'sms:+6797117310';
     },
   },
-}
+};
 </script>
 
 <style>
@@ -173,5 +173,9 @@ export default {
 .scale-enter,
 .scale-leave-to {
   transform: scaleY(0);
+}
+
+.theme--light.v-text-field--outlined>.v-input__control>.v-input__slot {
+  background-color: rgba(0, 0, 0, 0.06) !important;
 }
 </style>

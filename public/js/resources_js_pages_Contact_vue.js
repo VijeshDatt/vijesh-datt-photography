@@ -2079,7 +2079,7 @@ __webpack_require__.r(__webpack_exports__);
         return !!v || 'Field is required';
       }],
       emailRules: [function (v) {
-        return !!v || 'Email is required';
+        return !!v || 'Field is required';
       }, function (v) {
         return /[a-zA-Z0-9._-]@[a-zA-Z0-9-]+\.\w+(\.\w+)?/.test(v) || 'Email is invalid';
       }],
@@ -2116,7 +2116,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     triggerAction: function triggerAction(action) {
-      if (action == 'call') window.location.href = 'tel:7117310';else if (action == 'sms') window.location.href = 'sms:7117310';
+      if (action == 'call') window.location.href = 'tel:+6797117310';else if (action == 'sms') window.location.href = 'sms:+6797117310';
     }
   }
 });
@@ -2219,7 +2219,7 @@ var render = function render() {
             attrs = _ref.attrs;
         return [_c("strong", [_c("a", _vm._g(_vm._b({
           staticClass: "text-decoration-underline"
-        }, "a", attrs, false), on), [_vm._v(" 711 7310 ")])])];
+        }, "a", attrs, false), on), [_vm._v(" (+679) 711 7310 ")])])];
       }
     }])
   }, [_vm._v(" "), _c("v-list", {
@@ -2511,7 +2511,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.scale-enter-active,\n.scale-leave-active {\n  transition: transform 0.1s;\n  transform: scaleY(1);\n}\n.scale-enter,\n.scale-leave-to {\n  transform: scaleY(0);\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.scale-enter-active,\n.scale-leave-active {\n  transition: transform 0.1s;\n  transform: scaleY(1);\n}\n.scale-enter,\n.scale-leave-to {\n  transform: scaleY(0);\n}\n.theme--light.v-text-field--outlined>.v-input__control>.v-input__slot {\n  background-color: rgba(0, 0, 0, 0.06) !important;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
