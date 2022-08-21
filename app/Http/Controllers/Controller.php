@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\ContactForm;
+use Carbon\Carbon;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -22,28 +23,15 @@ class Controller extends BaseController
     $data = array();
 
     foreach ($subdirectories as $subdir) {
-      $files = File::allFiles($subdir);
-      $info = array();
-
-      if (sizeof($files) > 0) {
-        foreach ($files as $file) {
-          // return preg_split("/gallery\//", $file->getPath());
-          try {
-            $folder_name = preg_replace("/-/", ' ', preg_split("/gallery\//", $file->getPath())[1]);
-            $folder_path = preg_split("/gallery\//", $file->getPath())[1];
-          } catch (\Throwable $th) {
-            $folder_name = preg_replace("/-/", ' ', preg_split("/gallery\\\\/", $file->getPath())[1]);
-            $folder_path = preg_split("/gallery\\\\/", $file->getPath())[1];
-          }
-          // $folder_name = preg_replace("/-/", ' ', preg_split("/gallery\//", $file->getPath())[1]);
-          // $folder_path = preg_split("/gallery\//", $file->getPath())[1];
-          $info[] = [
-            'filename' => $file->getBasename(),
-          ];
-        }
-
-        $data[] = array('name' => ucwords($folder_name), 'folder' => $folder_path, 'files' => $info);
+      try {
+        $folder_name = preg_replace("/-/", ' ', preg_split("/gallery\//", $subdir)[1]);
+        $folder_path = preg_split("/gallery\//", $subdir)[1];
+      } catch (\Throwable $th) {
+        $folder_name = preg_replace("/-/", ' ', preg_split("/gallery\\\\/", $subdir)[1]);
+        $folder_path = preg_split("/gallery\\\\/", $subdir)[1];
       }
+
+      $data[] = array('name' => ucwords($folder_name), 'folder' => $folder_path);
     }
 
     return [

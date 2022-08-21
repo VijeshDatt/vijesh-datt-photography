@@ -2318,7 +2318,8 @@ var render = function render() {
     staticClass: "rounded-lg",
     attrs: {
       label: "Name *",
-      outlined: "",
+      dense: "",
+      filled: "",
       rules: _vm.fieldRules,
       counter: "255",
       maxlength: "255"
@@ -2345,7 +2346,8 @@ var render = function render() {
     staticClass: "rounded-lg",
     attrs: {
       label: "Phone Number",
-      outlined: "",
+      dense: "",
+      filled: "",
       counter: "10",
       maxlength: "10",
       type: "tel",
@@ -2366,7 +2368,8 @@ var render = function render() {
     staticClass: "rounded-lg",
     attrs: {
       label: "Email Address *",
-      outlined: "",
+      dense: "",
+      filled: "",
       counter: "255",
       maxlength: "255",
       rules: _vm.emailRules
@@ -2386,7 +2389,8 @@ var render = function render() {
     staticClass: "rounded-lg",
     attrs: {
       label: "Subject *",
-      outlined: "",
+      dense: "",
+      filled: "",
       counter: "255",
       maxlength: "255",
       rules: _vm.fieldRules
@@ -2406,7 +2410,8 @@ var render = function render() {
     staticClass: "rounded-lg",
     attrs: {
       label: "Message *",
-      outlined: "",
+      dense: "",
+      filled: "",
       counter: "1000",
       maxlength: "1000",
       rules: _vm.fieldRules,
@@ -2511,7 +2516,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.scale-enter-active,\n.scale-leave-active {\n  transition: transform 0.1s;\n  transform: scaleY(1);\n}\n.scale-enter,\n.scale-leave-to {\n  transform: scaleY(0);\n}\n.theme--light.v-text-field--outlined>.v-input__control>.v-input__slot {\n  background-color: rgba(0, 0, 0, 0.06) !important;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.scale-enter-active,\n.scale-leave-active {\n  transition: transform 0.1s;\n  transform: scaleY(1);\n}\n.scale-enter,\n.scale-leave-to {\n  transform: scaleY(0);\n}\n.v-textarea.v-text-field--enclosed textarea {\n  margin-top: 20px !important;\n}\n.v-text-field>.v-input__control>.v-input__slot:before,\n.v-text-field>.v-input__control>.v-input__slot:after {\n  border-style: none !important;\n  /* \tborder-radius: 50px !important; */\n}\n\n/* .v-text-field--filled .v-label--active {\n\ttransform: translateY(-10px) scale(0.75) !important;\n} */\n.v-text-field--filled:not(.v-text-field--single-line):not(.v-select) input {\n  margin-top: 19px !important;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

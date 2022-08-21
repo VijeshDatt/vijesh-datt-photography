@@ -2079,7 +2079,9 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/gallery').then(function (res) {
-        _this.images = res.data.data;
+        _this.images = res.data.data.sort(function (a, b) {
+          return a.folder.localeCompare(b.folder);
+        });
         _this.loaded = true;
       })["catch"](function (e) {
         return console.log(e);

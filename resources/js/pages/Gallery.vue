@@ -48,7 +48,7 @@ export default {
       axios
         .get('/api/gallery')
         .then(res => {
-          this.images = res.data.data;
+          this.images = res.data.data.sort((a, b) => a.folder.localeCompare(b.folder));
           this.loaded = true;
         })
         .catch(e => console.log(e));

@@ -63,19 +63,19 @@
               <v-form ref="form" v-model="valid" lazy-validation>
                 <v-row dense>
                   <v-col cols="12" md="6">
-                    <v-text-field v-model="formItem.name" label="Name *" outlined class="rounded-lg" :rules="fieldRules" counter="255" maxlength="255"></v-text-field>
+                    <v-text-field v-model="formItem.name" label="Name *" dense filled class="rounded-lg" :rules="fieldRules" counter="255" maxlength="255"></v-text-field>
                   </v-col>
                   <v-col cols="12" md="6">
-                    <v-text-field v-model="formItem.phone" label="Phone Number" outlined class="rounded-lg" counter="10" maxlength="10" v-mask="'##########'" type="tel" :rules="formItem.phone ? phoneRules : []"></v-text-field>
+                    <v-text-field v-model="formItem.phone" label="Phone Number" dense filled class="rounded-lg" counter="10" maxlength="10" v-mask="'##########'" type="tel" :rules="formItem.phone ? phoneRules : []"></v-text-field>
                   </v-col>
                   <v-col cols="12">
-                    <v-text-field v-model="formItem.email" label="Email Address *" outlined class="rounded-lg" counter="255" maxlength="255" :rules="emailRules"></v-text-field>
+                    <v-text-field v-model="formItem.email" label="Email Address *" dense filled class="rounded-lg" counter="255" maxlength="255" :rules="emailRules"></v-text-field>
                   </v-col>
                   <v-col cols="12">
-                    <v-text-field v-model="formItem.subject" label="Subject *" outlined class="rounded-lg" counter="255" maxlength="255" :rules="fieldRules"></v-text-field>
+                    <v-text-field v-model="formItem.subject" label="Subject *" dense filled class="rounded-lg" counter="255" maxlength="255" :rules="fieldRules"></v-text-field>
                   </v-col>
                   <v-col cols="12">
-                    <v-textarea v-model="formItem.message" label="Message *" outlined class="rounded-lg" counter="1000" maxlength="1000" :rules="fieldRules" auto-grow rows="1"></v-textarea>
+                    <v-textarea v-model="formItem.message" label="Message *" dense filled class="rounded-lg" counter="1000" maxlength="1000" :rules="fieldRules" auto-grow rows="1"></v-textarea>
                   </v-col>
                 </v-row>
               </v-form>
@@ -175,7 +175,21 @@ export default {
   transform: scaleY(0);
 }
 
-.theme--light.v-text-field--outlined>.v-input__control>.v-input__slot {
-  background-color: rgba(0, 0, 0, 0.06) !important;
+.v-textarea.v-text-field--enclosed textarea {
+  margin-top: 20px !important;
+}
+
+.v-text-field>.v-input__control>.v-input__slot:before,
+.v-text-field>.v-input__control>.v-input__slot:after {
+  border-style: none !important;
+  /* 	border-radius: 50px !important; */
+}
+
+/* .v-text-field--filled .v-label--active {
+	transform: translateY(-10px) scale(0.75) !important;
+} */
+
+.v-text-field--filled:not(.v-text-field--single-line):not(.v-select) input {
+  margin-top: 19px !important;
 }
 </style>
