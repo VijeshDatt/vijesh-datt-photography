@@ -135,12 +135,13 @@ var render = function render() {
                 return _vm.openImage(image);
               }
             }
-          }, [_c("v-icon", {
-            staticClass: "mdi-48px",
+          }, [_c("v-img", {
             attrs: {
-              dark: ""
+              src: "/assets/svg/expand.svg",
+              height: "50px",
+              contain: ""
             }
-          }, [_vm._v("mdi-arrow-expand")])], 1) : _vm._e()])], 1)];
+          })], 1) : _vm._e()])], 1)];
         }
       }], null, true)
     })], 1);
@@ -190,7 +191,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.v-card--reveal {\n  align-items: center;\n  top: 0;\n  justify-content: center;\n  opacity: 0.5;\n  position: absolute;\n  width: 100%;\n  border-radius: 24px;\n}\n.v-dialog {\n  box-shadow: none !important;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.v-card--reveal {\n\talign-items: center;\n\ttop: 0;\n\tjustify-content: center;\n\topacity: 0.5;\n\tposition: absolute;\n\twidth: 100%;\n\tborder-radius: 24px;\n}\n.v-dialog {\n\tbox-shadow: none !important;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

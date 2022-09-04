@@ -9,6 +9,9 @@ const opts = {
   theme: {
     dark: false,
     themes: {
+      options: {
+        customProperties: true
+      },
       light: {
         primary: '#361d2e',
         primaryAlt: '#321b2a',
@@ -20,7 +23,7 @@ const opts = {
     }
   },
   icons: {
-    iconfont: 'mdi'
+    iconfont: 'mdi',
   },
 };
 
