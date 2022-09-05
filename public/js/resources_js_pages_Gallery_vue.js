@@ -2171,6 +2171,7 @@ var render = function render() {
           }, [_vm._v(_vm._s(item.name))])]), _vm._v(" "), _c("v-expand-transition", [hover || _vm.$vuetify.breakpoint.smAndDown ? _c("div", [_c("v-card-text", {
             staticClass: "pt-0 text-end"
           }, [_c("v-btn", {
+            staticClass: "rounded-lg",
             attrs: {
               text: "",
               dark: ""
@@ -2185,7 +2186,7 @@ var render = function render() {
                 });
               }
             }
-          }, [_vm._v("\n                      View album "), _c("v-icon", {
+          }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tView album "), _c("v-icon", {
             attrs: {
               right: "",
               dark: ""
@@ -2220,7 +2221,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.bg {\n  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.bg {\n\tbackground-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
