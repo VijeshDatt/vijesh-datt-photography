@@ -135,13 +135,12 @@ var render = function render() {
                 return _vm.openImage(image);
               }
             }
-          }, [_c("v-img", {
+          }, [_c("v-icon", {
+            staticClass: "mdi-48px",
             attrs: {
-              src: "/assets/svg/expand.svg",
-              height: "50px",
-              contain: ""
+              dark: ""
             }
-          })], 1) : _vm._e()])], 1)];
+          }, [_vm._v("mdi-arrow-expand")])], 1) : _vm._e()])], 1)];
         }
       }], null, true)
     })], 1);
