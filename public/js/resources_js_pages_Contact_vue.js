@@ -2154,6 +2154,45 @@ var render = function render() {
     }
   }, [_vm._v("Contact")]), _vm._v(" "), _c("v-row", [_c("v-col", {
     attrs: {
+      cols: "12"
+    }
+  }, [_c("v-card", {
+    staticClass: "mx-md-8",
+    attrs: {
+      rounded: "lg",
+      elevation: "8"
+    }
+  }, [_c("v-card-title", {
+    staticClass: "justify-center"
+  }, [_c("h2", [_vm._v("FAQ")])]), _vm._v(" "), _c("v-divider", {
+    staticClass: "mx-16"
+  }), _vm._v(" "), _c("v-card-text", [_c("v-expansion-panels", {
+    attrs: {
+      flat: "",
+      hover: "",
+      "active-class": "rounded-lg elevation-4"
+    }
+  }, [_c("v-expansion-panel", [_c("v-expansion-panel-header", {
+    staticClass: "rounded-lg",
+    attrs: {
+      "expand-icon": "fa-caret-down"
+    }
+  }, [_c("strong", [_vm._v("Do I do event photography?")])]), _vm._v(" "), _c("v-expansion-panel-content", [_vm._v("\n\t\t\t\t\t\t\t\t\tYes, coverage for events including (but not limited to) birthdays, graduations, receptions, official events and events such as concerts, music festivals and any other events not mentioned. Weddings are not covered.\n\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c("v-expansion-panel", [_c("v-expansion-panel-header", {
+    staticClass: "rounded-lg",
+    attrs: {
+      "expand-icon": "fa-caret-down"
+    }
+  }, [_c("strong", [_vm._v("How much are my charges?")])]), _vm._v(" "), _c("v-expansion-panel-content", [_c("ul", [_c("li", [_vm._v("Birthdays - $250 for 2 hours.")]), _vm._v(" "), _c("li", [_vm._v("Graduations - $80 for 30 minutes.")]), _vm._v(" "), _c("li", [_vm._v("Other events - $150 per hour.")])])])], 1), _vm._v(" "), _c("v-expansion-panel", [_c("v-expansion-panel-header", {
+    staticClass: "rounded-lg",
+    attrs: {
+      "expand-icon": "fa-caret-down"
+    }
+  }, [_c("strong", [_vm._v("Do I do wedding photography?")])]), _vm._v(" "), _c("v-expansion-panel-content", [_vm._v("\n\t\t\t\t\t\t\t\t\tNo, unfortunately since I am hobbyist photographer, I can do only provide photos and not videos at the moment however if you require just a photographer then you may request for a quote or are looking for recommendations for a wedding videographer, you may contact Adarsh Bala at "), _c("strong", [_c("a", {
+    attrs: {
+      href: "https://www.facebook.com/adarshbalaphotography"
+    }
+  }, [_vm._v("Adarsh Bala Photography")])]), _vm._v(" as he specialises in Wedding Photography and Videography\n\t\t\t\t\t\t\t\t")])], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-col", {
+    attrs: {
       cols: "12",
       md: "6"
     }
@@ -2182,79 +2221,14 @@ var render = function render() {
       border: "left",
       elevation: "0",
       color: "primary",
-      text: ""
+      text: "",
+      icon: "fa-envelope"
     }
-  }, [_c("span", {
-    staticClass: "d-flex align-center"
-  }, [_c("span", {
-    staticClass: "mb-n1 mr-3"
-  }, [_c("svg", {
-    staticStyle: {
-      "fill-rule": "evenodd",
-      "clip-rule": "evenodd",
-      "stroke-linecap": "round",
-      "stroke-linejoin": "round"
-    },
-    attrs: {
-      width: "24px",
-      height: "24px",
-      viewBox: "0 0 225 184",
-      version: "1.1",
-      xmlns: "http://www.w3.org/2000/svg",
-      "xmlns:xlink": "http://www.w3.org/1999/xlink",
-      "xml:space": "preserve",
-      "xmlns:serif": "http://www.serif.com/"
-    }
-  }, [_c("g", {
-    attrs: {
-      id: "Layer-1",
-      "serif:id": "Layer 1"
-    }
-  }, [_c("path", {
-    staticStyle: {
-      fill: "none",
-      "fill-rule": "nonzero",
-      stroke: "#361d2e",
-      "stroke-width": "16.67px"
-    },
-    attrs: {
-      d: "M216.667,133.333c-0,23.009 -18.659,41.667 -41.667,41.667l-125,0c-23.013,0 -41.667,-18.658 -41.667,-41.667l0,-83.333c0,-23.013 18.654,-41.667 41.667,-41.667l125,0c23.008,0 41.667,18.655 41.667,41.667l-0,83.333Z"
-    }
-  }), _vm._v(" "), _c("path", {
-    staticStyle: {
-      fill: "none",
-      "fill-rule": "nonzero",
-      stroke: "#361d2e",
-      "stroke-width": "16.67px"
-    },
-    attrs: {
-      d: "M216.667,50l-104.167,58.333l-104.167,-58.333"
-    }
-  }), _vm._v(" "), _c("path", {
-    staticStyle: {
-      fill: "none",
-      "fill-rule": "nonzero",
-      stroke: "#361d2e",
-      "stroke-width": "16.67px"
-    },
-    attrs: {
-      d: "M79.167,93.667l-70.834,39.666"
-    }
-  }), _vm._v(" "), _c("path", {
-    staticStyle: {
-      fill: "none",
-      "fill-rule": "nonzero",
-      stroke: "#361d2e",
-      "stroke-width": "16.67px"
-    },
-    attrs: {
-      d: "M216.667,133.333l-70.829,-39.666"
-    }
-  })])])]), _vm._v(" "), _c("span", [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tEmail: "), _c("strong", [_c("a", {
+  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tEmail: "), _c("strong", [_c("a", {
     attrs: {
       href: "mailto:info@vijeshdatt.com"
     }
-  }, [_vm._v("info@vijeshdatt.com")])])])])])], 1), _vm._v(" "), _c("v-col", {
+  }, [_vm._v("info@vijeshdatt.com")])])])], 1), _vm._v(" "), _c("v-col", {
     attrs: {
       cols: "12",
       md: "6"
@@ -2265,45 +2239,10 @@ var render = function render() {
       border: "left",
       elevation: "0",
       color: "primary",
-      text: ""
+      text: "",
+      icon: "fa-phone"
     }
-  }, [_c("span", {
-    staticClass: "d-flex align-center"
-  }, [_c("span", {
-    staticClass: "mb-n1 mr-3"
-  }, [_c("svg", {
-    staticStyle: {
-      "fill-rule": "evenodd",
-      "clip-rule": "evenodd",
-      "stroke-linecap": "round",
-      "stroke-linejoin": "round"
-    },
-    attrs: {
-      width: "24px",
-      height: "24px",
-      viewBox: "0 0 225 225",
-      version: "1.1",
-      xmlns: "http://www.w3.org/2000/svg",
-      "xmlns:xlink": "http://www.w3.org/1999/xlink",
-      "xml:space": "preserve",
-      "xmlns:serif": "http://www.serif.com/"
-    }
-  }, [_c("g", {
-    attrs: {
-      id: "Layer-1",
-      "serif:id": "Layer 1"
-    }
-  }, [_c("path", {
-    staticStyle: {
-      fill: "none",
-      "fill-rule": "nonzero",
-      stroke: "#361d2e",
-      "stroke-width": "16.67px"
-    },
-    attrs: {
-      d: "M61.072,61.281c-42.405,42.554 -73.65,108.442 -35.571,146.667c2.958,2.971 13.741,11.012 27.096,8.087c15.716,-3.445 60.187,-39.55 33.271,-66.3c-16.471,-16.37 -18.334,-8.354 -21.584,-11.329c-6.229,-5.683 3.363,-28 24.567,-49.271c21.204,-21.287 43.633,-30.416 49.304,-24.154c2.954,3.263 -6.129,6.125 10.342,22.504c27.258,27.084 64.154,-18.166 67.583,-33.945c2.917,-13.4 -5.867,-25.005 -8.825,-27.971c-38.096,-38.242 -103.775,-6.846 -146.183,35.712Z"
-    }
-  })])])]), _vm._v(" "), _c("span", [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tPhone:\n\t\t\t\t\t\t\t\t\t\t\t"), _c("v-menu", {
+  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tPhone:\n\t\t\t\t\t\t\t\t\t"), _c("v-menu", {
     attrs: {
       "offset-y": "",
       left: "",
@@ -2339,7 +2278,7 @@ var render = function render() {
     attrs: {
       left: ""
     }
-  }, [_vm._v("mdi-phone-outline")]), _vm._v(" Call\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")], 1)], 1), _vm._v(" "), _c("v-list-item", {
+  }, [_vm._v("mdi-phone-outline")]), _vm._v(" Call\n\t\t\t\t\t\t\t\t\t\t\t\t")], 1)], 1), _vm._v(" "), _c("v-list-item", {
     attrs: {
       ripple: _vm.ripple
     },
@@ -2352,7 +2291,7 @@ var render = function render() {
     attrs: {
       left: ""
     }
-  }, [_vm._v("mdi-message-text-outline")]), _vm._v(" SMS\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")], 1)], 1)], 1)], 1)], 1)])])], 1), _vm._v(" "), _c("v-col", {
+  }, [_vm._v("mdi-message-text-outline")]), _vm._v(" SMS\n\t\t\t\t\t\t\t\t\t\t\t\t")], 1)], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-col", {
     attrs: {
       cols: "12"
     }
@@ -2362,50 +2301,15 @@ var render = function render() {
       border: "left",
       elevation: "0",
       color: "primary",
-      text: ""
+      text: "",
+      icon: "fa-facebook-f"
     }
-  }, [_c("span", {
-    staticClass: "d-flex align-center"
-  }, [_c("span", {
-    staticClass: "mb-n1 mr-3"
-  }, [_c("svg", {
-    staticStyle: {
-      "fill-rule": "evenodd",
-      "clip-rule": "evenodd",
-      "stroke-linecap": "round",
-      "stroke-linejoin": "round"
-    },
-    attrs: {
-      width: "24px",
-      height: "24px",
-      viewBox: "0 0 134 225",
-      version: "1.1",
-      xmlns: "http://www.w3.org/2000/svg",
-      "xmlns:xlink": "http://www.w3.org/1999/xlink",
-      "xml:space": "preserve",
-      "xmlns:serif": "http://www.serif.com/"
-    }
-  }, [_c("g", {
-    attrs: {
-      id: "Layer-1",
-      "serif:id": "Layer 1"
-    }
-  }, [_c("path", {
-    staticStyle: {
-      fill: "none",
-      "fill-rule": "nonzero",
-      stroke: "#361d2e",
-      "stroke-width": "16.67px"
-    },
-    attrs: {
-      d: "M33.333,133.333l0,83.334l41.667,-0l0,-83.334l29.167,0l-0,-41.666l-29.167,-0l0,-20.834c0,-8.337 9.329,-20.816 20.833,-20.833l29.167,0l0,-41.667l-29.167,0c-34.529,0.013 -62.483,27.98 -62.5,62.5l0,20.834l-25,-0l0,41.666l25,0Z"
-    }
-  })])])]), _vm._v(" "), _c("span", [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tFacebook: "), _c("strong", [_c("a", {
+  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tFacebook: "), _c("strong", [_c("a", {
     attrs: {
       href: "https://www.facebook.com/VijeshDattPhotography",
       target: "_blank"
     }
-  }, [_vm._v("Vijesh Datt Photography")])])])])])], 1), _vm._v(" "), _c("v-col", {
+  }, [_vm._v("Vijesh Datt Photography")])])])], 1), _vm._v(" "), _c("v-col", {
     attrs: {
       cols: "12",
       md: "6"
@@ -2416,89 +2320,15 @@ var render = function render() {
       border: "left",
       elevation: "0",
       color: "primary",
-      text: ""
+      text: "",
+      icon: "fa-instagram"
     }
-  }, [_c("span", {
-    staticClass: "d-flex align-center"
-  }, [_c("span", {
-    staticClass: "mb-n1 mr-3"
-  }, [_c("svg", {
-    staticStyle: {
-      "fill-rule": "evenodd",
-      "clip-rule": "evenodd",
-      "stroke-linecap": "round",
-      "stroke-linejoin": "round"
-    },
-    attrs: {
-      width: "24px",
-      height: "24px",
-      viewBox: "0 0 217 217",
-      version: "1.1",
-      xmlns: "http://www.w3.org/2000/svg",
-      "xmlns:xlink": "http://www.w3.org/1999/xlink",
-      "xml:space": "preserve",
-      "xmlns:serif": "http://www.serif.com/"
-    }
-  }, [_c("g", {
-    attrs: {
-      id: "Layer-1",
-      "serif:id": "Layer 1"
-    }
-  }, [_c("path", {
-    staticStyle: {
-      fill: "none",
-      "fill-rule": "nonzero",
-      stroke: "#361d2e",
-      "stroke-width": "16.67px"
-    },
-    attrs: {
-      d: "M208.333,166.667c0,23.008 -18.658,41.666 -41.666,41.666l-116.667,0c-23.013,0 -41.667,-18.658 -41.667,-41.666l0,-116.667c0,-23.013 18.654,-41.667 41.667,-41.667l116.667,0c23.008,0 41.666,18.654 41.666,41.667l0,116.667Z"
-    }
-  }), _vm._v(" "), _c("path", {
-    staticStyle: {
-      fill: "none",
-      stroke: "#361d2e",
-      "stroke-width": "16.67px"
-    },
-    attrs: {
-      d: "M162.5,108.333c0,-29.895 -24.271,-54.166 -54.167,-54.166c-29.895,-0 -54.166,24.271 -54.166,54.166c-0,29.896 24.271,54.167 54.166,54.167c29.896,0 54.167,-24.271 54.167,-54.167Z"
-    }
-  }), _vm._v(" "), _c("path", {
-    staticStyle: {
-      fill: "none",
-      "fill-rule": "nonzero",
-      stroke: "#361d2e",
-      "stroke-width": "16.67px"
-    },
-    attrs: {
-      d: "M154.167,70.833l54.166,0"
-    }
-  }), _vm._v(" "), _c("path", {
-    staticStyle: {
-      fill: "none",
-      "fill-rule": "nonzero",
-      stroke: "#361d2e",
-      "stroke-width": "16.67px"
-    },
-    attrs: {
-      d: "M8.333,70.833l54.167,0"
-    }
-  }), _vm._v(" "), _c("path", {
-    staticStyle: {
-      fill: "none",
-      "fill-rule": "nonzero",
-      stroke: "#361d2e",
-      "stroke-width": "16.67px"
-    },
-    attrs: {
-      d: "M145.833,66.667l0,-58.334"
-    }
-  })])])]), _vm._v(" "), _c("span", [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tIntagram: "), _c("strong", [_c("a", {
+  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tIntagram: "), _c("strong", [_c("a", {
     attrs: {
       href: "https://www.instagram.com/vijeshdatt/",
       target: "_blank"
     }
-  }, [_vm._v("@vijeshdatt")])])])])])], 1), _vm._v(" "), _c("v-col", {
+  }, [_vm._v("@vijeshdatt")])])])], 1), _vm._v(" "), _c("v-col", {
     attrs: {
       cols: "12",
       md: "6"
@@ -2509,54 +2339,10 @@ var render = function render() {
       border: "left",
       elevation: "0",
       color: "primary",
-      text: ""
+      text: "",
+      icon: "fa-location-dot"
     }
-  }, [_c("span", {
-    staticClass: "d-flex align-center"
-  }, [_c("span", {
-    staticClass: "mb-n1 mr-3"
-  }, [_c("svg", {
-    staticStyle: {
-      "fill-rule": "evenodd",
-      "clip-rule": "evenodd",
-      "stroke-linecap": "round",
-      "stroke-linejoin": "round"
-    },
-    attrs: {
-      width: "24px",
-      height: "24px",
-      viewBox: "0 0 167 225",
-      version: "1.1",
-      xmlns: "http://www.w3.org/2000/svg",
-      "xmlns:xlink": "http://www.w3.org/1999/xlink",
-      "xml:space": "preserve",
-      "xmlns:serif": "http://www.serif.com/"
-    }
-  }, [_c("g", {
-    attrs: {
-      id: "Layer-1",
-      "serif:id": "Layer 1"
-    }
-  }, [_c("path", {
-    staticStyle: {
-      fill: "none",
-      "fill-rule": "nonzero",
-      stroke: "#361d2e",
-      "stroke-width": "16.67px"
-    },
-    attrs: {
-      d: "M158.333,83.333c0,64.584 -54.166,133.334 -75,133.334c-20.833,-0 -75,-68.75 -75,-133.334c0,-41.42 33.58,-75 75,-75c41.421,0 75,33.58 75,75Z"
-    }
-  }), _vm._v(" "), _c("path", {
-    staticStyle: {
-      fill: "none",
-      stroke: "#361d2e",
-      "stroke-width": "16.67px"
-    },
-    attrs: {
-      d: "M120.833,83.333c0,-20.696 -16.803,-37.5 -37.5,-37.5c-20.696,0 -37.5,16.804 -37.5,37.5c0,20.697 16.804,37.5 37.5,37.5c20.697,0 37.5,-16.803 37.5,-37.5Z"
-    }
-  })])])]), _vm._v(" "), _c("span", [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tLocation: "), _c("strong", [_vm._v("Based in Suva, Fiji")])])])])], 1), _vm._v(" "), _c("v-col", {
+  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tLocation: "), _c("strong", [_vm._v("Based in Suva, Fiji")])])], 1), _vm._v(" "), _c("v-col", {
     attrs: {
       cols: "12"
     }
@@ -2807,7 +2593,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.scale-enter-active,\n.scale-leave-active {\n\ttransition: transform 0.1s;\n\ttransform: scaleY(1);\n}\n.scale-enter,\n.scale-leave-to {\n\ttransform: scaleY(0);\n}\n.v-textarea.v-text-field--enclosed textarea {\n\tmargin-top: 20px !important;\n}\n.v-text-field > .v-input__control > .v-input__slot:before,\n.v-text-field > .v-input__control > .v-input__slot:after {\n\tborder-style: none !important;\n\t/* \tborder-radius: 50px !important; */\n}\n\n/* .v-text-field--filled .v-label--active {\n\ttransform: translateY(-10px) scale(0.75) !important;\n} */\n.v-text-field--filled:not(.v-text-field--single-line):not(.v-select) input {\n\tmargin-top: 19px !important;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.scale-enter-active,\n.scale-leave-active {\n\ttransition: transform 0.1s;\n\ttransform: scaleY(1);\n}\n.scale-enter,\n.scale-leave-to {\n\ttransform: scaleY(0);\n}\n.v-textarea.v-text-field--enclosed textarea {\n\tmargin-top: 20px !important;\n}\n.v-text-field > .v-input__control > .v-input__slot:before,\n.v-text-field > .v-input__control > .v-input__slot:after {\n\tborder-style: none !important;\n\t/* \tborder-radius: 50px !important; */\n}\n\n/* .v-text-field--filled .v-label--active {\n\ttransform: translateY(-10px) scale(0.75) !important;\n} */\n.v-text-field--filled:not(.v-text-field--single-line):not(.v-select) input {\n\tmargin-top: 19px !important;\n}\n.v-expansion-panel-header__icon > .v-icon.v-icon {\n\tfont-size: 15px !important;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

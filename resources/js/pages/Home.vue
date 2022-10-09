@@ -65,9 +65,7 @@ export default {
 		loaded(image) {
 			this.loadedImages.push(image);
 			if (this.loadedImages.length == this.images.length) {
-				setTimeout(() => {
-					this.hasLoaded = true;
-				}, 1000);
+				setTimeout(() => this.hasLoaded = true, 1000);
 			}
 		}
 	},

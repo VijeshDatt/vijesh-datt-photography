@@ -25,7 +25,6 @@
     
 
     <!-- Fonts -->
-    
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/animate.min.css">
 
@@ -99,6 +98,10 @@
       }
     }
   </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="/js/jquery.masonryGrid.js"></script>
+  <script src="https://kit.fontawesome.com/e22a1372af.js" crossorigin="anonymous"></script>
+
   </head>
   <body style="background-color:#f5ebe0;">
     <div id="app">
@@ -110,6 +113,7 @@
     </div>
 
     <script src="<?php echo e(mix('/js/app.js')); ?>"></script>
+
   </body>
 </html>
 <?php /**PATH C:\xampp\htdocs\vijesh-datt-photography\resources\views/welcome.blade.php ENDPATH**/ ?>
