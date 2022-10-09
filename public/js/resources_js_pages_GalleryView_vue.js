@@ -2185,7 +2185,7 @@ var render = function render() {
     attrs: {
       left: ""
     }
-  }, [_vm._v("mdi-arrow-left")]) : _vm._e(), _vm._v(" Back to Gallery\n\t\t\t\t\t")], 1)], 1), _vm._v(" "), _c("v-col", {
+  }, [_vm._v("fa-arrow-left")]) : _vm._e(), _vm._v(" Back to Gallery\n\t\t\t\t\t")], 1)], 1), _vm._v(" "), _c("v-col", {
     attrs: {
       cols: "12",
       md: "6"
@@ -2237,18 +2237,20 @@ var render = function render() {
               }
             }
           }, [_c("v-icon", {
-            staticClass: "mdi-48px",
+            staticStyle: {
+              "font-size": "32px"
+            },
             attrs: {
               dark: ""
             }
-          }, [_vm._v("mdi-arrow-expand")])], 1) : _vm._e()])], 1)];
+          }, [_vm._v("fa-up-right-and-down-left-from-center")])], 1) : _vm._e()])], 1)];
         }
       }], null, true)
     })], 1);
   }), 0) : _vm._e(), _vm._v(" "), _vm.current < _vm.max ? _c("div", {
     staticClass: "text-center my-10"
   }, [_c("v-btn", {
-    staticClass: "rounded-lg chip",
+    staticClass: "rounded-lg",
     attrs: {
       text: "",
       color: "primary"
@@ -2262,7 +2264,7 @@ var render = function render() {
     attrs: {
       right: ""
     }
-  }, [_vm._v("mdi-plus")])], 1)], 1) : _vm._e()], 1)], 1), _vm._v(" "), _c("v-dialog", {
+  }, [_vm._v("fa-plus")])], 1)], 1) : _vm._e()], 1)], 1), _vm._v(" "), _c("v-dialog", {
     attrs: {
       "overlay-opacity": "0.8"
     },

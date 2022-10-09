@@ -2191,7 +2191,7 @@ var render = function render() {
               right: "",
               dark: ""
             }
-          }, [_vm._v("mdi-arrow-right")])], 1)], 1)], 1) : _vm._e()])], 1)], 1)];
+          }, [_vm._v("fa-arrow-right")])], 1)], 1)], 1) : _vm._e()])], 1)], 1)];
         }
       }], null, true)
     })], 1);

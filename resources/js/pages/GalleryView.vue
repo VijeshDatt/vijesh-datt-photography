@@ -5,7 +5,7 @@
 				<v-row dense align="center">
 					<v-col cols="12" md="6">
 						<v-btn text :block="$vuetify.breakpoint.smAndDown" color="primary" class="rounded-lg" @click="$router.push({ name: 'Gallery' })">
-							<v-icon left v-if="$vuetify.breakpoint.mdAndUp">mdi-arrow-left</v-icon> Back to Gallery
+							<v-icon left v-if="$vuetify.breakpoint.mdAndUp">fa-arrow-left</v-icon> Back to Gallery
 						</v-btn>
 					</v-col>
 					<v-col cols="12" md="6">
@@ -20,7 +20,7 @@
 							<v-img contain :lazy-src="`/assets/images/gallery/${folder}/${image.name}`" :src="`/assets/images/gallery/${folder}/${image.name}`" class="my-6 text-center rounded-xl animate__animated animate__zoomIn animate__faster elevation-8">
 								<transition name="scale-transition">
 									<div v-if="hover && $vuetify.breakpoint.mdAndUp" class="d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal" style="height: 100%; cursor: pointer;" @click="openImage(image.name)">
-										<v-icon class="mdi-48px" dark>mdi-arrow-expand</v-icon>
+										<v-icon style="font-size: 32px" dark>fa-up-right-and-down-left-from-center</v-icon>
 									</div>
 								</transition>
 							</v-img>
@@ -29,9 +29,9 @@
 				</masonry>
 
 				<div class="text-center my-10" v-if="current < max">
-					<v-btn text @click="getImages()" class="rounded-lg chip" color="primary">
+					<v-btn text @click="getImages()" class="rounded-lg" color="primary">
 						Load More
-						<v-icon right>mdi-plus</v-icon>
+						<v-icon right>fa-plus</v-icon>
 					</v-btn>
 				</div>
 			</v-card>

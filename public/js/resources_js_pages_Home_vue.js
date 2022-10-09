@@ -136,11 +136,13 @@ var render = function render() {
               }
             }
           }, [_c("v-icon", {
-            staticClass: "mdi-48px",
+            staticStyle: {
+              "font-size": "32px"
+            },
             attrs: {
               dark: ""
             }
-          }, [_vm._v("mdi-arrow-expand")])], 1) : _vm._e()])], 1)];
+          }, [_vm._v("fa-up-right-and-down-left-from-center")])], 1) : _vm._e()])], 1)];
         }
       }], null, true)
     })], 1);

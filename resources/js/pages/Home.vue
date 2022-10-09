@@ -8,7 +8,7 @@
 							<v-img contain :lazy-src="image" :src="image" class="my-0 text-center rounded-xl elevation-16" @load="loaded(image)">
 								<transition name="scale-transition">
 									<div v-if="hover && hasLoaded && $vuetify.breakpoint.mdAndUp" class="d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal" style="height: 100%; cursor: pointer;" @click="openImage(image)">
-										<v-icon class="mdi-48px" dark>mdi-arrow-expand</v-icon>
+										<v-icon style="font-size: 32px" dark>fa-up-right-and-down-left-from-center</v-icon>
 									</div>
 								</transition>
 							</v-img>

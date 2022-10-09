@@ -18,7 +18,7 @@
 									<div v-if="hover || $vuetify.breakpoint.smAndDown">
 										<v-card-text class="pt-0 text-end">
 											<v-btn text dark class="rounded-lg" @click="$router.push({ name: 'Gallery View', params: { 'folder': item.folder } })">
-												View album <v-icon right dark>mdi-arrow-right</v-icon>
+												View album <v-icon right dark>fa-arrow-right</v-icon>
 											</v-btn>
 										</v-card-text>
 									</div>
