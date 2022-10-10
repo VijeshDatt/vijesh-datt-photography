@@ -2152,7 +2152,7 @@ var render = function render() {
       "font-size": "4rem",
       "font-weight": "300"
     }
-  }, [_vm._v("Contact")]), _vm._v(" "), _c("v-row", [_c("v-col", {
+  }, [_vm._v(" Contact ")]), _vm._v(" "), _vm.$vuetify.breakpoint.mdAndUp ? _c("v-row", [_c("v-col", {
     attrs: {
       cols: "12"
     }
@@ -2177,7 +2177,7 @@ var render = function render() {
     attrs: {
       "expand-icon": "fa-caret-down"
     }
-  }, [_c("strong", [_vm._v("Do I do event photography?")])]), _vm._v(" "), _c("v-expansion-panel-content", [_vm._v("\n\t\t\t\t\t\t\t\t\tYes, coverage for events including (but not limited to) birthdays, graduations, receptions, official events and events such as concerts, music festivals and any other events not mentioned. Weddings are not covered.\n\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c("v-expansion-panel", [_c("v-expansion-panel-header", {
+  }, [_c("strong", [_vm._v("Do I do event photography?")])]), _vm._v(" "), _c("v-expansion-panel-content", [_vm._v("\n                  Yes, coverage for events including (but not limited to) birthdays, graduations, receptions, official events and events such as concerts, music festivals and any other events not mentioned. Weddings are not covered.\n                ")])], 1), _vm._v(" "), _c("v-expansion-panel", [_c("v-expansion-panel-header", {
     staticClass: "rounded-lg",
     attrs: {
       "expand-icon": "fa-caret-down"
@@ -2187,11 +2187,11 @@ var render = function render() {
     attrs: {
       "expand-icon": "fa-caret-down"
     }
-  }, [_c("strong", [_vm._v("Do I do wedding photography?")])]), _vm._v(" "), _c("v-expansion-panel-content", [_vm._v("\n\t\t\t\t\t\t\t\t\tNo, unfortunately since I am hobbyist photographer, I can do only provide photos and not videos at the moment however if you require just a photographer then you may request for a quote or are looking for recommendations for a wedding videographer, you may contact Adarsh Bala at "), _c("strong", [_c("a", {
+  }, [_c("strong", [_vm._v("Do I do wedding photography?")])]), _vm._v(" "), _c("v-expansion-panel-content", [_vm._v("\n                  No, unfortunately since I am hobbyist photographer, I can do only provide photos and not videos at the moment however if you require just a photographer then you may request for a quote or are looking for recommendations for a wedding videographer, you may contact Adarsh Bala at "), _c("strong", [_c("a", {
     attrs: {
       href: "https://www.facebook.com/adarshbalaphotography"
     }
-  }, [_vm._v("Adarsh Bala Photography")])]), _vm._v(" as he specialises in Wedding Photography and Videography\n\t\t\t\t\t\t\t\t")])], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-col", {
+  }, [_vm._v("Adarsh Bala Photography")])]), _vm._v(" as he specialises in Wedding Photography and Videography\n                ")])], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-col", {
     attrs: {
       cols: "12",
       md: "6"
@@ -2224,7 +2224,7 @@ var render = function render() {
       text: "",
       icon: "fa-envelope"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tEmail: "), _c("strong", [_c("a", {
+  }, [_vm._v("\n                  Email: "), _c("strong", [_c("a", {
     attrs: {
       href: "mailto:info@vijeshdatt.com"
     }
@@ -2242,7 +2242,7 @@ var render = function render() {
       text: "",
       icon: "fa-phone"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tPhone:\n\t\t\t\t\t\t\t\t\t"), _c("v-menu", {
+  }, [_vm._v("\n                  Phone:\n                  "), _c("v-menu", {
     attrs: {
       "offset-y": "",
       left: "",
@@ -2260,7 +2260,7 @@ var render = function render() {
           staticClass: "text-decoration-underline"
         }, "a", attrs, false), on), [_vm._v(" (+679) 711 7310 ")])])];
       }
-    }])
+    }], null, false, 493550062)
   }, [_vm._v(" "), _c("v-list", {
     attrs: {
       nav: ""
@@ -2278,7 +2278,7 @@ var render = function render() {
     attrs: {
       left: ""
     }
-  }, [_vm._v("mdi-phone-outline")]), _vm._v(" Call\n\t\t\t\t\t\t\t\t\t\t\t\t")], 1)], 1), _vm._v(" "), _c("v-list-item", {
+  }, [_vm._v("mdi-phone-outline")]), _vm._v(" Call\n                        ")], 1)], 1), _vm._v(" "), _c("v-list-item", {
     attrs: {
       ripple: _vm.ripple
     },
@@ -2291,7 +2291,7 @@ var render = function render() {
     attrs: {
       left: ""
     }
-  }, [_vm._v("mdi-message-text-outline")]), _vm._v(" SMS\n\t\t\t\t\t\t\t\t\t\t\t\t")], 1)], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-col", {
+  }, [_vm._v("mdi-message-text-outline")]), _vm._v(" SMS\n                        ")], 1)], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-col", {
     attrs: {
       cols: "12"
     }
@@ -2304,7 +2304,7 @@ var render = function render() {
       text: "",
       icon: "fa-facebook-f"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tFacebook: "), _c("strong", [_c("a", {
+  }, [_vm._v("\n                  Facebook: "), _c("strong", [_c("a", {
     attrs: {
       href: "https://www.facebook.com/VijeshDattPhotography",
       target: "_blank"
@@ -2323,7 +2323,7 @@ var render = function render() {
       text: "",
       icon: "fa-instagram"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tIntagram: "), _c("strong", [_c("a", {
+  }, [_vm._v("\n                  Intagram: "), _c("strong", [_c("a", {
     attrs: {
       href: "https://www.instagram.com/vijeshdatt/",
       target: "_blank"
@@ -2342,7 +2342,7 @@ var render = function render() {
       text: "",
       icon: "fa-location-dot"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tLocation: "), _c("strong", [_vm._v("Based in Suva, Fiji")])])], 1), _vm._v(" "), _c("v-col", {
+  }, [_vm._v("\n                  Location: "), _c("strong", [_vm._v("Based in Suva, Fiji")])])], 1), _vm._v(" "), _c("v-col", {
     attrs: {
       cols: "12"
     }
@@ -2353,9 +2353,9 @@ var render = function render() {
       elevation: "0",
       type: "info",
       text: "",
-      icon: "mdi-information-variant"
+      icon: "fa-info"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tDue to photography being a hobby and due to my actual job timings, I don't take photography jobs outside of Suva (even Lami and Nausori is out of the way), unless it's the weekend and the requirements are not heavy.\n\t\t\t\t\t\t\t\t")])], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-col", {
+  }, [_vm._v("\n                  Due to photography being a hobby and due to my actual job timings, I don't take photography jobs outside of Suva (even Lami and Nausori is out of the way), unless it's the weekend and the requirements are not heavy.\n                ")])], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-col", {
     attrs: {
       cols: "12",
       md: "6"
@@ -2508,8 +2508,7 @@ var render = function render() {
     }
   }, [_c("v-col", {
     attrs: {
-      cols: "12",
-      md: "6"
+      cols: "6"
     }
   }, [_c("v-btn", {
     staticClass: "rounded-lg",
@@ -2521,14 +2520,13 @@ var render = function render() {
     on: {
       click: _vm.send
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tSend "), _c("v-icon", {
+  }, [_vm._v("\n                  Send "), _c("v-icon", {
     attrs: {
       right: ""
     }
-  }, [_vm._v("mdi-send-outline")])], 1)], 1), _vm._v(" "), _c("v-col", {
+  }, [_vm._v("fa-paper-plane")])], 1)], 1), _vm._v(" "), _c("v-col", {
     attrs: {
-      cols: "12",
-      md: "6"
+      cols: "6"
     }
   }, [_c("v-btn", {
     staticClass: "rounded-lg",
@@ -2540,11 +2538,383 @@ var render = function render() {
     on: {
       click: _vm.clear
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tClear Form "), _c("v-icon", {
+  }, [_vm._v("\n                  Clear "), _c("v-icon", {
     attrs: {
       right: ""
     }
-  }, [_vm._v("mdi-delete-empty-outline")])], 1)], 1)], 1)], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-snackbar", {
+  }, [_vm._v("fa-trash")])], 1)], 1)], 1)], 1)], 1)], 1)], 1) : _c("div", [_c("v-expansion-panels", {
+    staticClass: "rounded-lg",
+    attrs: {
+      flat: "",
+      "active-class": "rounded-lg elevation-4"
+    }
+  }, [_c("v-expansion-panel", [_c("v-expansion-panel-header", {
+    staticClass: "rounded-lg",
+    attrs: {
+      "expand-icon": "fa-caret-down"
+    }
+  }, [_c("strong", [_vm._v("FAQ")])]), _vm._v(" "), _c("v-expansion-panel-content", [_c("v-card", {
+    attrs: {
+      flat: ""
+    }
+  }, [_c("v-card-text", {
+    staticClass: "px-0"
+  }, [_c("v-expansion-panels", {
+    attrs: {
+      flat: "",
+      "active-class": "rounded-lg elevation-4"
+    }
+  }, [_c("v-expansion-panel", [_c("v-expansion-panel-header", {
+    staticClass: "rounded-lg",
+    attrs: {
+      "expand-icon": "fa-caret-down"
+    }
+  }, [_c("strong", [_vm._v("Do I do event photography?")])]), _vm._v(" "), _c("v-expansion-panel-content", [_vm._v("\n                      Yes, coverage for events including (but not limited to) birthdays, graduations, receptions, official events and events such as concerts, music festivals and any other events not mentioned. Weddings are not covered.\n                    ")])], 1), _vm._v(" "), _c("v-expansion-panel", [_c("v-expansion-panel-header", {
+    staticClass: "rounded-lg",
+    attrs: {
+      "expand-icon": "fa-caret-down"
+    }
+  }, [_c("strong", [_vm._v("How much are my charges?")])]), _vm._v(" "), _c("v-expansion-panel-content", [_c("ul", [_c("li", [_vm._v("Birthdays - $250 for 2 hours.")]), _vm._v(" "), _c("li", [_vm._v("Graduations - $80 for 30 minutes.")]), _vm._v(" "), _c("li", [_vm._v("Other events - $150 per hour.")])])])], 1), _vm._v(" "), _c("v-expansion-panel", [_c("v-expansion-panel-header", {
+    staticClass: "rounded-lg",
+    attrs: {
+      "expand-icon": "fa-caret-down"
+    }
+  }, [_c("strong", [_vm._v("Do I do wedding photography?")])]), _vm._v(" "), _c("v-expansion-panel-content", [_vm._v("\n                      No, unfortunately since I am hobbyist photographer, I can do only provide photos and not videos at the moment however if you require just a photographer then you may request for a quote or are looking for recommendations for a wedding videographer, you may contact Adarsh Bala at "), _c("strong", [_c("a", {
+    attrs: {
+      href: "https://www.facebook.com/adarshbalaphotography"
+    }
+  }, [_vm._v("Adarsh Bala Photography")])]), _vm._v(" as he specialises in Wedding Photography and Videography\n                    ")])], 1)], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-expansion-panel", [_c("v-expansion-panel-header", {
+    staticClass: "rounded-lg",
+    attrs: {
+      "expand-icon": "fa-caret-down"
+    }
+  }, [_c("strong", [_vm._v("Information")])]), _vm._v(" "), _c("v-expansion-panel-content", [_c("v-row", {
+    attrs: {
+      dense: ""
+    }
+  }, [_c("v-col", {
+    attrs: {
+      cols: "12",
+      md: "6"
+    }
+  }, [_c("v-alert", {
+    staticClass: "rounded-lg",
+    attrs: {
+      border: "left",
+      elevation: "0",
+      color: "primary",
+      text: "",
+      icon: "fa-envelope"
+    }
+  }, [_vm._v("\n                  Email: "), _c("strong", [_c("a", {
+    attrs: {
+      href: "mailto:info@vijeshdatt.com"
+    }
+  }, [_vm._v("info@vijeshdatt.com")])])])], 1), _vm._v(" "), _c("v-col", {
+    attrs: {
+      cols: "12",
+      md: "6"
+    }
+  }, [_c("v-alert", {
+    staticClass: "rounded-lg",
+    attrs: {
+      border: "left",
+      elevation: "0",
+      color: "primary",
+      text: "",
+      icon: "fa-phone"
+    }
+  }, [_vm._v("\n                  Phone:\n                  "), _c("v-menu", {
+    attrs: {
+      "offset-y": "",
+      left: "",
+      transition: "scale",
+      rounded: "lg",
+      origin: "top center",
+      nudgeBottom: "5px"
+    },
+    scopedSlots: _vm._u([{
+      key: "activator",
+      fn: function fn(_ref2) {
+        var on = _ref2.on,
+            attrs = _ref2.attrs;
+        return [_c("strong", [_c("a", _vm._g(_vm._b({
+          staticClass: "text-decoration-underline"
+        }, "a", attrs, false), on), [_vm._v(" (+679) 711 7310 ")])])];
+      }
+    }])
+  }, [_vm._v(" "), _c("v-list", {
+    attrs: {
+      nav: ""
+    }
+  }, [_c("v-list-item", {
+    attrs: {
+      ripple: _vm.ripple
+    },
+    on: {
+      click: function click($event) {
+        return _vm.triggerAction("call");
+      }
+    }
+  }, [_c("v-list-item-title", [_c("v-icon", {
+    attrs: {
+      left: ""
+    }
+  }, [_vm._v("mdi-phone-outline")]), _vm._v(" Call\n                        ")], 1)], 1), _vm._v(" "), _c("v-list-item", {
+    attrs: {
+      ripple: _vm.ripple
+    },
+    on: {
+      click: function click($event) {
+        return _vm.triggerAction("sms");
+      }
+    }
+  }, [_c("v-list-item-title", [_c("v-icon", {
+    attrs: {
+      left: ""
+    }
+  }, [_vm._v("mdi-message-text-outline")]), _vm._v(" SMS\n                        ")], 1)], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-col", {
+    attrs: {
+      cols: "12"
+    }
+  }, [_c("v-alert", {
+    staticClass: "rounded-lg",
+    attrs: {
+      border: "left",
+      elevation: "0",
+      color: "primary",
+      text: "",
+      icon: "fa-facebook-f"
+    }
+  }, [_vm._v("\n                  Facebook: "), _c("strong", [_c("a", {
+    attrs: {
+      href: "https://www.facebook.com/VijeshDattPhotography",
+      target: "_blank"
+    }
+  }, [_vm._v("Vijesh Datt Photography")])])])], 1), _vm._v(" "), _c("v-col", {
+    attrs: {
+      cols: "12",
+      md: "6"
+    }
+  }, [_c("v-alert", {
+    staticClass: "rounded-lg",
+    attrs: {
+      border: "left",
+      elevation: "0",
+      color: "primary",
+      text: "",
+      icon: "fa-instagram"
+    }
+  }, [_vm._v("\n                  Intagram: "), _c("strong", [_c("a", {
+    attrs: {
+      href: "https://www.instagram.com/vijeshdatt/",
+      target: "_blank"
+    }
+  }, [_vm._v("@vijeshdatt")])])])], 1), _vm._v(" "), _c("v-col", {
+    attrs: {
+      cols: "12",
+      md: "6"
+    }
+  }, [_c("v-alert", {
+    staticClass: "rounded-lg",
+    attrs: {
+      border: "left",
+      elevation: "0",
+      color: "primary",
+      text: "",
+      icon: "fa-location-dot"
+    }
+  }, [_vm._v("\n                  Location: "), _c("strong", [_vm._v("Based in Suva, Fiji")])])], 1), _vm._v(" "), _c("v-col", {
+    attrs: {
+      cols: "12"
+    }
+  }, [_c("v-alert", {
+    staticClass: "rounded-lg",
+    attrs: {
+      border: "left",
+      elevation: "0",
+      type: "info",
+      text: "",
+      icon: "fa-info"
+    }
+  }, [_vm._v("\n                  Due to photography being a hobby and due to my actual job timings, I don't take photography jobs outside of Suva (even Lami and Nausori is out of the way), unless it's the weekend and the requirements are not heavy.\n                ")])], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-expansion-panel", [_c("v-expansion-panel-header", {
+    staticClass: "rounded-lg",
+    attrs: {
+      "expand-icon": "fa-caret-down"
+    }
+  }, [_c("strong", [_vm._v("Contact Form")])]), _vm._v(" "), _c("v-expansion-panel-content", [_c("p", {
+    staticClass: "text-center"
+  }, [_vm._v("Fields with * are required")]), _vm._v(" "), _c("v-form", {
+    ref: "form",
+    attrs: {
+      "lazy-validation": ""
+    },
+    model: {
+      value: _vm.valid,
+      callback: function callback($$v) {
+        _vm.valid = $$v;
+      },
+      expression: "valid"
+    }
+  }, [_c("v-row", {
+    attrs: {
+      dense: ""
+    }
+  }, [_c("v-col", {
+    attrs: {
+      cols: "12"
+    }
+  }, [_c("v-text-field", {
+    staticClass: "rounded-lg",
+    attrs: {
+      label: "Name *",
+      dense: "",
+      filled: "",
+      rules: _vm.fieldRules,
+      counter: "255",
+      maxlength: "255"
+    },
+    model: {
+      value: _vm.formItem.name,
+      callback: function callback($$v) {
+        _vm.$set(_vm.formItem, "name", $$v);
+      },
+      expression: "formItem.name"
+    }
+  })], 1), _vm._v(" "), _c("v-col", {
+    attrs: {
+      cols: "12"
+    }
+  }, [_c("v-text-field", {
+    directives: [{
+      name: "mask",
+      rawName: "v-mask",
+      value: "##########",
+      expression: "'##########'"
+    }],
+    staticClass: "rounded-lg",
+    attrs: {
+      label: "Phone Number",
+      dense: "",
+      filled: "",
+      counter: "10",
+      maxlength: "10",
+      type: "tel",
+      rules: _vm.formItem.phone ? _vm.phoneRules : []
+    },
+    model: {
+      value: _vm.formItem.phone,
+      callback: function callback($$v) {
+        _vm.$set(_vm.formItem, "phone", $$v);
+      },
+      expression: "formItem.phone"
+    }
+  })], 1), _vm._v(" "), _c("v-col", {
+    attrs: {
+      cols: "12"
+    }
+  }, [_c("v-text-field", {
+    staticClass: "rounded-lg",
+    attrs: {
+      label: "Email Address *",
+      dense: "",
+      filled: "",
+      counter: "255",
+      maxlength: "255",
+      rules: _vm.emailRules
+    },
+    model: {
+      value: _vm.formItem.email,
+      callback: function callback($$v) {
+        _vm.$set(_vm.formItem, "email", $$v);
+      },
+      expression: "formItem.email"
+    }
+  })], 1), _vm._v(" "), _c("v-col", {
+    attrs: {
+      cols: "12"
+    }
+  }, [_c("v-text-field", {
+    staticClass: "rounded-lg",
+    attrs: {
+      label: "Subject *",
+      dense: "",
+      filled: "",
+      counter: "255",
+      maxlength: "255",
+      rules: _vm.fieldRules
+    },
+    model: {
+      value: _vm.formItem.subject,
+      callback: function callback($$v) {
+        _vm.$set(_vm.formItem, "subject", $$v);
+      },
+      expression: "formItem.subject"
+    }
+  })], 1), _vm._v(" "), _c("v-col", {
+    attrs: {
+      cols: "12"
+    }
+  }, [_c("v-textarea", {
+    staticClass: "rounded-lg",
+    attrs: {
+      label: "Message *",
+      dense: "",
+      filled: "",
+      counter: "1000",
+      maxlength: "1000",
+      rules: _vm.fieldRules,
+      "auto-grow": "",
+      rows: "1"
+    },
+    model: {
+      value: _vm.formItem.message,
+      callback: function callback($$v) {
+        _vm.$set(_vm.formItem, "message", $$v);
+      },
+      expression: "formItem.message"
+    }
+  })], 1)], 1)], 1), _vm._v(" "), _c("v-row", {
+    attrs: {
+      dense: ""
+    }
+  }, [_c("v-col", {
+    attrs: {
+      cols: "6"
+    }
+  }, [_c("v-btn", {
+    staticClass: "rounded-lg",
+    attrs: {
+      block: "",
+      color: "success",
+      disabled: !_vm.valid
+    },
+    on: {
+      click: _vm.send
+    }
+  }, [_vm._v("\n                  Send "), _c("v-icon", {
+    attrs: {
+      right: ""
+    }
+  }, [_vm._v("fa-paper-plane")])], 1)], 1), _vm._v(" "), _c("v-col", {
+    attrs: {
+      cols: "6"
+    }
+  }, [_c("v-btn", {
+    staticClass: "rounded-lg",
+    attrs: {
+      block: "",
+      text: "",
+      color: "error"
+    },
+    on: {
+      click: _vm.clear
+    }
+  }, [_vm._v("\n                  Clear "), _c("v-icon", {
+    attrs: {
+      right: ""
+    }
+  }, [_vm._v("fa-trash")])], 1)], 1)], 1)], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-snackbar", {
     attrs: {
       top: "",
       right: _vm.$vuetify.breakpoint.mdAndUp,
@@ -2567,7 +2937,7 @@ var render = function render() {
       left: "",
       color: _vm.type
     }
-  }, [_vm._v(" " + _vm._s(_vm.type == "success" ? "mdi-checkbox-marked-circle-outline" : "mdi-alert-circle-outline") + " ")]), _vm._v(" " + _vm._s(_vm.text) + "\n\t")], 1)], 1);
+  }, [_vm._v(" " + _vm._s(_vm.type == "success" ? "mdi-checkbox-marked-circle-outline" : "mdi-alert-circle-outline") + " ")]), _vm._v(" " + _vm._s(_vm.text) + "\n  ")], 1)], 1);
 };
 
 var staticRenderFns = [];
@@ -2593,7 +2963,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.scale-enter-active,\n.scale-leave-active {\n\ttransition: transform 0.1s;\n\ttransform: scaleY(1);\n}\n.scale-enter,\n.scale-leave-to {\n\ttransform: scaleY(0);\n}\n.v-textarea.v-text-field--enclosed textarea {\n\tmargin-top: 20px !important;\n}\n.v-text-field > .v-input__control > .v-input__slot:before,\n.v-text-field > .v-input__control > .v-input__slot:after {\n\tborder-style: none !important;\n\t/* \tborder-radius: 50px !important; */\n}\n\n/* .v-text-field--filled .v-label--active {\n\ttransform: translateY(-10px) scale(0.75) !important;\n} */\n.v-text-field--filled:not(.v-text-field--single-line):not(.v-select) input {\n\tmargin-top: 19px !important;\n}\n.v-expansion-panel-header__icon > .v-icon.v-icon {\n\tfont-size: 15px !important;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.scale-enter-active,\n.scale-leave-active {\n  transition: transform 0.1s;\n  transform: scaleY(1);\n}\n.scale-enter,\n.scale-leave-to {\n  transform: scaleY(0);\n}\n.v-textarea.v-text-field--enclosed textarea {\n  margin-top: 20px !important;\n}\n.v-text-field>.v-input__control>.v-input__slot:before,\n.v-text-field>.v-input__control>.v-input__slot:after {\n  border-style: none !important;\n  /* \tborder-radius: 50px !important; */\n}\n\n/* .v-text-field--filled .v-label--active {\n\ttransform: translateY(-10px) scale(0.75) !important;\n} */\n.v-text-field--filled:not(.v-text-field--single-line):not(.v-select) input {\n  margin-top: 19px !important;\n}\n.v-expansion-panel-header__icon>.v-icon.v-icon {\n  font-size: 15px !important;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

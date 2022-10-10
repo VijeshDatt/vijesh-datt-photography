@@ -20,7 +20,7 @@
 							<v-img contain :lazy-src="`/assets/images/gallery/${folder}/${image.name}`" :src="`/assets/images/gallery/${folder}/${image.name}`" class="my-6 text-center rounded-xl animate__animated animate__zoomIn animate__faster elevation-8">
 								<transition name="scale-transition">
 									<div v-if="hover && $vuetify.breakpoint.mdAndUp" class="d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal" style="height: 100%; cursor: pointer;" @click="openImage(image.name)">
-										<v-icon style="font-size: 32px" dark>fa-up-right-and-down-left-from-center</v-icon>
+										<v-icon size="32" dark>fa-up-right-and-down-left-from-center</v-icon>
 									</div>
 								</transition>
 							</v-img>
@@ -61,14 +61,6 @@ export default {
 	},
 
 	computed: {
-		calculateWidth() {
-			let breakpoint = this.$vuetify.breakpoint;
-
-			if (breakpoint.lgAndUp) return '20vw';
-			else if (breakpoint.mdOnly) return '35vw';
-			else if (breakpoint.smAndDown) return '90vw';
-		},
-
 		fontSize() {
 			return this.$vuetify.breakpoint.smAndDown ? 'font-weight: 400 !important; font-size: 2rem;' : 'font-weight: 300 !important; font-size: 4rem;';
 		}
@@ -120,7 +112,7 @@ export default {
 	align-items: center;
 	top: 0;
 	justify-content: center;
-	opacity: 0.5;
+	opacity: 0.75;
 	position: absolute;
 	width: 100%;
 	border-radius: 24px;

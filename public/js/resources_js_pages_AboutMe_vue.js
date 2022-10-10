@@ -100,21 +100,15 @@ var render = function render() {
       rounded: "xl"
     }
   }, [_c("v-card-title", {
-    staticClass: "text-h3",
-    "class": {
-      "text-center": _vm.$vuetify.breakpoint.smAndDown
-    }
-  }, [_vm._v(" About Me - Vijesh ")]), _vm._v(" "), _c("v-card-text", [_vm._v(" Born and raised in Suva, Fiji. Was always interested in photography but never had the means to pursue it. Finally saved up for a year and bought myself a basic entry level camera and have been fortunate enough to be getting opportunities to grow with this hobby. ")]), _vm._v(" "), _c("v-divider", {
+    staticClass: "text-h3 justify-center"
+  }, [_vm._v(" About Me - Vijesh ")]), _vm._v(" "), _c("v-card-text", [_vm._v("\n          Born and raised in Suva, Fiji. Was always interested in photography but never had the means to pursue it. Finally saved up for a year and bought myself a basic entry level camera and have been fortunate enough to be getting opportunities to grow with this hobby.\n        ")]), _vm._v(" "), _c("v-divider", {
     staticClass: "mx-16"
   }), _vm._v(" "), _c("v-card-text", [_c("h3", {
-    staticClass: "text-h4 mb-4 black--text",
-    "class": {
-      "text-center": _vm.$vuetify.breakpoint.smAndDown
-    },
+    staticClass: "text-h4 mb-4 black--text text-center",
     staticStyle: {
       "font-size": "1rem"
     }
-  }, [_vm._v("Gear")]), _vm._v(" "), _c("p", [_vm._v("\n\t\t\t\t\t\tCamera(s): Canon 90D, Canon 1300D "), _c("br"), _vm._v("\n\t\t\t\t\t\tLenses: Canon 40mm (f/2.8), SIGMA 18-35mm (f/1.8), SIGMA 24-70mm (f/2.8) "), _c("br"), _vm._v("\n\t\t\t\t\t\tOther gear(s): Godox VING V860IIC with S-Type Bowens softbox, 72mm ND-Filter (K&F Concept)\n\t\t\t\t\t")])])], 1)], 1)], 1)], 1);
+  }, [_vm._v("Gear")]), _vm._v(" "), _c("p", [_vm._v("\n            Camera(s): Canon 90D, Canon 1300D "), _c("br"), _vm._v("\n            Lenses: Canon 40mm (f/2.8), SIGMA 18-35mm (f/1.8), SIGMA 24-70mm (f/2.8) "), _c("br"), _vm._v("\n            Other gear(s): Godox VING V860IIC with S-Type Bowens softbox, 72mm ND-Filter (K&F Concept), Godox AD 400Pro\n          ")])])], 1)], 1)], 1)], 1);
 };
 
 var staticRenderFns = [];
@@ -139,7 +133,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.v-application .text-h3,\n.v-application .text-h4 {\n\tfont-family: \"Raleway\", Helvetica, sans-serif !important;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.v-application .text-h3,\n.v-application .text-h4 {\n  font-family: \"Raleway\", Helvetica, sans-serif !important;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

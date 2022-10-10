@@ -9,7 +9,7 @@
       </v-list-item-content>
     </v-list-item>
     <v-divider class="mx-16"></v-divider>
-    <v-list nav height="70vh" class="px-md-10">
+    <v-list nav class="px-md-10 ">
       <v-list-item-group no-action active-class="primary--text">
         <v-list-item link exact-path v-ripple="ripple" :to="{ name: 'Home' }">
           <v-list-item-title class="text-center bigger-font"> Home </v-list-item-title>
@@ -24,8 +24,8 @@
         </v-list-item>
 
         <!-- <v-list-item link exact-path v-ripple="ripple" class="my-3" :to="{ name: 'Bookings' }">
-          <v-list-item-title class="text-center bigger-font">Bookings</v-list-item-title>
-        </v-list-item> -->
+                <v-list-item-title class="text-center bigger-font">Bookings</v-list-item-title>
+              </v-list-item> -->
 
         <v-list-item link exact-path v-ripple="ripple" class="my-3" :to="{ name: 'Contact' }">
           <v-list-item-title class="text-center bigger-font">Contact</v-list-item-title>
@@ -45,7 +45,7 @@ export default {
       ripple: { class: 'primary--text' },
     };
   },
-}
+};
 </script>
 
 <style>
@@ -55,7 +55,8 @@ export default {
 }
 
 .bigger-font {
-  font-family: "Merriweather", Helvetica, sans-serif !important;
-  font-size: 1.1rem !important;
+  font-family: "Inter", Helvetica, sans-serif !important;
+  font-size: 1.3rem !important;
+  font-weight: 500;
 }
 </style>
