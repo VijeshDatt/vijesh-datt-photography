@@ -98,8 +98,6 @@
       }
     }
   </style>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="/js/jquery.masonryGrid.js"></script>
   <script src="https://kit.fontawesome.com/e22a1372af.js" crossorigin="anonymous"></script>
 
   </head>
