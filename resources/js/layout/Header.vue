@@ -6,11 +6,11 @@
       <v-spacer></v-spacer>
       <!-- Home button -->
       <v-btn icon class="mx-1" @click="goto('Home')">
-        <v-icon>mdi-home-outline</v-icon>
+        <v-icon size="18">fa-house</v-icon>
       </v-btn>
       <!-- About Me button -->
       <v-btn icon class="mx-1" @click="goto('About Me')">
-        <v-icon>mdi-account-outline</v-icon>
+        <v-icon size="18">fa-user</v-icon>
       </v-btn>
       <!-- Home/Logo button -->
       <v-toolbar-title>
@@ -20,11 +20,11 @@
       </v-toolbar-title>
       <!-- Gallery button -->
       <v-btn icon class="mx-1" @click="goto('Gallery')">
-        <v-icon>mdi-image-outline</v-icon>
+        <v-icon size="18">fa-images</v-icon>
       </v-btn>
       <!-- Contact button -->
       <v-btn icon class="mx-1" @click="goto('Contact')">
-        <v-icon>mdi-email-variant</v-icon>
+        <v-icon size="18">fa-envelope</v-icon>
       </v-btn>
       <v-spacer></v-spacer>
     </v-app-bar>
@@ -43,8 +43,9 @@ export default {
       this.$router.push({ name: name });
     }
   },
-}
+};
 </script>
 
 <style>
+
 </style>

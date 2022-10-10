@@ -342,7 +342,11 @@ var render = function render() {
         return _vm["goto"]("Home");
       }
     }
-  }, [_c("v-icon", [_vm._v("mdi-home-outline")])], 1), _vm._v(" "), _c("v-btn", {
+  }, [_c("v-icon", {
+    attrs: {
+      size: "18"
+    }
+  }, [_vm._v("fa-house")])], 1), _vm._v(" "), _c("v-btn", {
     staticClass: "mx-1",
     attrs: {
       icon: ""
@@ -352,7 +356,11 @@ var render = function render() {
         return _vm["goto"]("About Me");
       }
     }
-  }, [_c("v-icon", [_vm._v("mdi-account-outline")])], 1), _vm._v(" "), _c("v-toolbar-title", [_c("v-btn", {
+  }, [_c("v-icon", {
+    attrs: {
+      size: "18"
+    }
+  }, [_vm._v("fa-user")])], 1), _vm._v(" "), _c("v-toolbar-title", [_c("v-btn", {
     staticClass: "mx-7",
     attrs: {
       icon: "",
@@ -380,7 +388,11 @@ var render = function render() {
         return _vm["goto"]("Gallery");
       }
     }
-  }, [_c("v-icon", [_vm._v("mdi-image-outline")])], 1), _vm._v(" "), _c("v-btn", {
+  }, [_c("v-icon", {
+    attrs: {
+      size: "18"
+    }
+  }, [_vm._v("fa-images")])], 1), _vm._v(" "), _c("v-btn", {
     staticClass: "mx-1",
     attrs: {
       icon: ""
@@ -390,7 +402,11 @@ var render = function render() {
         return _vm["goto"]("Contact");
       }
     }
-  }, [_c("v-icon", [_vm._v("mdi-email-variant")])], 1), _vm._v(" "), _c("v-spacer")], 1)], 1);
+  }, [_c("v-icon", {
+    attrs: {
+      size: "18"
+    }
+  }, [_vm._v("fa-envelope")])], 1), _vm._v(" "), _c("v-spacer")], 1)], 1);
 };
 
 var staticRenderFns = [];
