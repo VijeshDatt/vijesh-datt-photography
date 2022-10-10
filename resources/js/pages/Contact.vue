@@ -64,13 +64,13 @@
                       </template>
                       <v-list nav>
                         <v-list-item @click="triggerAction('call')" :ripple="ripple">
-                          <v-list-item-title>
-                            <v-icon left>mdi-phone-outline</v-icon> Call
+                          <v-list-item-title class="d-flex align-center">
+                            <v-icon left size="15" class="mr-4">fa-phone</v-icon> Call
                           </v-list-item-title>
                         </v-list-item>
                         <v-list-item @click="triggerAction('sms')" :ripple="ripple">
-                          <v-list-item-title>
-                            <v-icon left>mdi-message-text-outline</v-icon> SMS
+                          <v-list-item-title class="d-flex align-center">
+                            <v-icon left size="15" class="mr-4">fa-message</v-icon> SMS
                           </v-list-item-title>
                         </v-list-item>
                       </v-list>
@@ -205,13 +205,13 @@
                       </template>
                       <v-list nav>
                         <v-list-item @click="triggerAction('call')" :ripple="ripple">
-                          <v-list-item-title>
-                            <v-icon left>mdi-phone-outline</v-icon> Call
+                          <v-list-item-title class="d-flex align-center">
+                            <v-icon left size="15" class="mr-4">fa-phone</v-icon> Call
                           </v-list-item-title>
                         </v-list-item>
                         <v-list-item @click="triggerAction('sms')" :ripple="ripple">
-                          <v-list-item-title>
-                            <v-icon left>mdi-message-text-outline</v-icon> SMS
+                          <v-list-item-title class="d-flex align-center">
+                            <v-icon left size="15" class="mr-4">fa-message</v-icon> SMS
                           </v-list-item-title>
                         </v-list-item>
                       </v-list>

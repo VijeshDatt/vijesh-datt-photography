@@ -2274,11 +2274,15 @@ var render = function render() {
         return _vm.triggerAction("call");
       }
     }
-  }, [_c("v-list-item-title", [_c("v-icon", {
+  }, [_c("v-list-item-title", {
+    staticClass: "d-flex align-center"
+  }, [_c("v-icon", {
+    staticClass: "mr-4",
     attrs: {
-      left: ""
+      left: "",
+      size: "15"
     }
-  }, [_vm._v("mdi-phone-outline")]), _vm._v(" Call\n                        ")], 1)], 1), _vm._v(" "), _c("v-list-item", {
+  }, [_vm._v("fa-phone")]), _vm._v(" Call\n                        ")], 1)], 1), _vm._v(" "), _c("v-list-item", {
     attrs: {
       ripple: _vm.ripple
     },
@@ -2287,11 +2291,15 @@ var render = function render() {
         return _vm.triggerAction("sms");
       }
     }
-  }, [_c("v-list-item-title", [_c("v-icon", {
+  }, [_c("v-list-item-title", {
+    staticClass: "d-flex align-center"
+  }, [_c("v-icon", {
+    staticClass: "mr-4",
     attrs: {
-      left: ""
+      left: "",
+      size: "15"
     }
-  }, [_vm._v("mdi-message-text-outline")]), _vm._v(" SMS\n                        ")], 1)], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-col", {
+  }, [_vm._v("fa-message")]), _vm._v(" SMS\n                        ")], 1)], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-col", {
     attrs: {
       cols: "12"
     }
@@ -2656,11 +2664,15 @@ var render = function render() {
         return _vm.triggerAction("call");
       }
     }
-  }, [_c("v-list-item-title", [_c("v-icon", {
+  }, [_c("v-list-item-title", {
+    staticClass: "d-flex align-center"
+  }, [_c("v-icon", {
+    staticClass: "mr-4",
     attrs: {
-      left: ""
+      left: "",
+      size: "15"
     }
-  }, [_vm._v("mdi-phone-outline")]), _vm._v(" Call\n                        ")], 1)], 1), _vm._v(" "), _c("v-list-item", {
+  }, [_vm._v("fa-phone")]), _vm._v(" Call\n                        ")], 1)], 1), _vm._v(" "), _c("v-list-item", {
     attrs: {
       ripple: _vm.ripple
     },
@@ -2669,11 +2681,15 @@ var render = function render() {
         return _vm.triggerAction("sms");
       }
     }
-  }, [_c("v-list-item-title", [_c("v-icon", {
+  }, [_c("v-list-item-title", {
+    staticClass: "d-flex align-center"
+  }, [_c("v-icon", {
+    staticClass: "mr-4",
     attrs: {
-      left: ""
+      left: "",
+      size: "15"
     }
-  }, [_vm._v("mdi-message-text-outline")]), _vm._v(" SMS\n                        ")], 1)], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-col", {
+  }, [_vm._v("fa-message")]), _vm._v(" SMS\n                        ")], 1)], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-col", {
     attrs: {
       cols: "12"
     }
