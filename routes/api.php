@@ -15,12 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-  return $request->user();
-});
-
 Route::controller(Controller::class)->group(function () {
-  Route::get('/gallery', 'index');
+  Route::get('/home', 'index');
+  Route::get('/gallery', 'gallery');
   Route::post('/folder', 'files');
   Route::post('/email', 'email');
 });

@@ -4,6 +4,7 @@ import vuetify from './plugins/vuetify';
 import router from './router';
 import VueMasonry from 'vue-masonry-css';
 import VueMask from 'v-mask';
+import VueMasonryWall from 'vue-masonry-wall';
 
 import { genericMixin } from './mixins/genericMixins';
 
@@ -13,6 +14,7 @@ window._ = require('lodash');
 
 Vue.use(VueMasonry);
 Vue.use(VueMask);
+Vue.use(VueMasonryWall);
 
 new Vue({
   router,
