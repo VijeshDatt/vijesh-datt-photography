@@ -16,21 +16,6 @@ class Controller extends BaseController
 {
   // use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-  public function index()
-  {
-    $path = public_path('/assets/images/home');
-    $allFiles = File::allFiles($path);
-    $files = array();
-    foreach ($allFiles as $file) {
-      [$width, $height] = getimagesize($file);
-      $files[] = array('filename' => $file->getFilename(), 'width' => $width, 'height' => $height);
-    }
-
-    return [
-      'data' => collect($files)->shuffle(),
-    ];
-  }
-
   public function gallery()
   {
     $path = public_path('/assets/images/gallery/');
