@@ -1,96 +1,111 @@
 <template>
-	<div>
-		<v-container fluid class="d-flex justify-center">
-			<v-card flat color="transparent">
-				<masonry :cols="{default: 4, 960: 1, 1264: 2}">
-					<v-container v-for="(image, index) in images" :key="index">
-						<v-hover v-slot="{ hover }">
-							<v-img contain :lazy-src="image" :src="image" class="my-0 text-center rounded-xl elevation-16" @load="loaded(image)">
-								<transition name="scale-transition">
-									<div v-if="hover && hasLoaded && $vuetify.breakpoint.mdAndUp" class="d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal" style="height: 100%; cursor: pointer;" @click="openImage(image)">
-										<v-icon size="32" dark>fa-up-right-and-down-left-from-center</v-icon>
-									</div>
-								</transition>
-							</v-img>
-						</v-hover>
-					</v-container>
-				</masonry>
-			</v-card>
-		</v-container>
+  <div>
+    <v-container fluid class="d-flex justify-center">
+      <v-card flat color="transparent">
+        <masonry :cols="{ default: 4, 960: 1, 1264: 2 }">
+          <v-container v-for="(image, index) in images" :key="index">
+            <v-hover v-slot="{ hover }">
+              <v-img contain :lazy-src="`https://via.placeholder.com/${image.width}x${image.height}/f5ebe0?text=Loading`" :src="image.image" class="my-0 text-center rounded-xl elevation-16" @load="loaded(image.image)">
+                <transition name="scale-transition">
+                  <div v-if="hover && hasLoaded && $vuetify.breakpoint.mdAndUp" class="d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal" style="height: 100%; cursor: pointer;" @click="openImage(image.image)">
+                    <v-icon size="32" dark>fa-up-right-and-down-left-from-center</v-icon>
+                  </div>
+                </transition>
+              </v-img>
+            </v-hover>
+          </v-container>
+        </masonry>
+      </v-card>
+    </v-container>
 
-		<!-- Dialog for zoom -->
-		<v-dialog v-model="dialog" overlay-opacity="0.8">
-			<v-img :src="image" contain max-height="90vh" @click="close"></v-img>
-		</v-dialog>
-	</div>
+    <!-- Dialog for zoom -->
+    <v-dialog v-model="dialog" overlay-opacity="0.8">
+      <v-img :src="image" contain max-height="90vh" @click="close"></v-img>
+    </v-dialog>
+  </div>
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
-	data() {
-		return {
-			images: [],
-			loadedImages: [],
-			dialog: false,
-			image: null,
-			hasLoaded: false,
-		};
-	},
+  data() {
+    return {
+      images: [],
+      loadedImages: [],
+      dialog: false,
+      image: null,
+      hasLoaded: false,
+    };
+  },
 
-	computed: {
-		mainSize() {
-			return this.$vuetify.breakpoint.mdAndUp ? 'font-size: 5rem;' : 'font-size: 3rem;';
-		},
-	},
+  computed: {
+    mainSize() {
+      return this.$vuetify.breakpoint.mdAndUp ? 'font-size: 5rem;' : 'font-size: 3rem;';
+    },
+  },
 
-	methods: {
-		close() {
-			this.dialog = false;
-			// this.image = null;
-		},
+  methods: {
+    close() {
+      this.dialog = false;
+      // this.image = null;
+    },
 
-		getHomeImages() {
-			const images = require.context('/assets/images/home/', false, /^\.\/.*$/);
-			const shuffled = images.keys().sort(() => Math.random() - 0.5);
-			shuffled.forEach(name => {
-				this.images.push(`/assets/images/home/${name.substring(2)}`);
-			});
-		},
+    getHomeImages() {
+      const images = require.context('/assets/images/home/', false, /^\.\/.*$/);
+      const shuffled = images.keys().sort(() => Math.random() - 0.5);
+      shuffled.forEach(name => {
+        this.images.push(`/assets/images/home/${name.substring(2)}`);
+      });
+    },
 
-		openImage(image) {
-			this.image = image;
-			this.dialog = true;
-		},
+    fetchImages() {
+      axios
+        .get('/api/home')
+        .then(res => {
+          const shuffled = res.data.images.sort(() => Math.random() - 0.5);
+          shuffled.forEach(e => {
+            this.images.push({ image: `/assets/images/home/${e.name}`, width: e.width, height: e.height });
+          });
+        })
+        .catch(e => console.log(e));
+    },
 
-		loaded(image) {
-			this.loadedImages.push(image);
-			if (this.loadedImages.length == this.images.length) {
-				setTimeout(() => this.hasLoaded = true, 1000);
-			}
-		}
-	},
+    openImage(image) {
+      this.image = image;
+      this.dialog = true;
+    },
 
-	mounted() { },
+    loaded(image) {
+      this.loadedImages.push(image);
+      if (this.loadedImages.length == this.images.length) {
+        setTimeout(() => this.hasLoaded = true, 1000);
+      }
+    }
+  },
 
-	created() {
-		this.getHomeImages();
-	},
-}
+  mounted() { },
+
+  created() {
+    // this.getHomeImages();
+    this.fetchImages();
+  },
+};
 </script>
 
 <style>
 .v-card--reveal {
-	align-items: center;
-	top: 0;
-	justify-content: center;
-	opacity: 0.75;
-	position: absolute;
-	width: 100%;
-	border-radius: 24px;
+  align-items: center;
+  top: 0;
+  justify-content: center;
+  opacity: 0.75;
+  position: absolute;
+  width: 100%;
+  border-radius: 24px;
 }
 
 .v-dialog {
-	box-shadow: none !important;
+  box-shadow: none !important;
 }
 </style>
 

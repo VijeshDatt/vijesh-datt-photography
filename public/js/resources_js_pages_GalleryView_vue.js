@@ -2191,14 +2191,14 @@ var render = function render() {
     style: _vm.fontSize
   }, [_vm._v(" " + _vm._s(_vm.name) + " ")])])], 1), _vm._v(" "), _c("v-divider", {
     staticClass: "mx-16"
-  }), _vm._v(" "), _vm.images.length > 0 ? _c("masonry", {
+  }), _vm._v(" "), _c("v-container", [_vm.images.length > 0 ? _c("masonry", {
     key: _vm.key,
     ref: "masonry",
     attrs: {
       cols: {
-        "default": 4,
+        "default": 3,
         960: 1,
-        1264: 3
+        1264: 2
       },
       gutter: 24
     }
@@ -2241,7 +2241,7 @@ var render = function render() {
         }
       }], null, true)
     })], 1);
-  }), 0) : _vm._e(), _vm._v(" "), _vm.current < _vm.max ? _c("div", {
+  }), 0) : _vm._e()], 1), _vm._v(" "), _vm.current < _vm.max ? _c("div", {
     staticClass: "text-center my-10"
   }, [_c("v-btn", {
     staticClass: "rounded-lg",

@@ -14,7 +14,21 @@ use Illuminate\Support\Facades\Mail;
 
 class Controller extends BaseController
 {
-  // use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+  public function home()
+  {
+    $path = public_path('/assets/images/home/');
+    $files = File::allFiles($path);
+    $data = array();
+
+    foreach ($files as $file) {
+      [$width, $height] = getimagesize($file);
+      $data[] = array('name' => $file->getFilename(), 'width' => $width, 'height' => $height);
+    }
+
+    return [
+      'images' => $data,
+    ];
+  }
 
   public function gallery()
   {

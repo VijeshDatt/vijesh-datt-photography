@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::controller(Controller::class)->group(function () {
+  Route::get('/home', 'home');
   Route::get('/gallery', 'gallery');
   Route::post('/folder', 'files');
   Route::post('/email', 'email');
