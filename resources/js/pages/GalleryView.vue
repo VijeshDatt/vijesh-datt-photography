@@ -3,17 +3,17 @@
     <v-container fluid>
       <v-card flat color="transparent">
         <v-row dense align="center">
-          <v-col cols="12" md="6">
+          <v-col cols="12" md="3">
             <v-btn text :block="$vuetify.breakpoint.smAndDown" color="primary" class="rounded-lg" @click="$router.push({ name: 'Gallery' })">
               <v-icon left v-if="$vuetify.breakpoint.mdAndUp">fa-arrow-left</v-icon> Back to Gallery
             </v-btn>
           </v-col>
-          <v-col cols="12" md="6">
+          <v-col cols="12" md="9">
             <h1 :style="fontSize" class="text-md-end text-center mb-4"> {{ name }} </h1>
           </v-col>
         </v-row>
         <v-divider class="mx-16"></v-divider>
-        <v-container>
+        <v-container fluid>
           <masonry :cols="{ default: 3, 960: 1, 1264: 2 }" :gutter="24" v-if="images.length > 0" :key="key" ref="masonry">
             <div v-for="(image, index) in images" :key="index">
               <v-hover v-slot="{ hover }">
