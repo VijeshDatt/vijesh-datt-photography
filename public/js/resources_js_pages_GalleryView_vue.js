@@ -2161,7 +2161,7 @@ var render = function render() {
   }, [_c("v-col", {
     attrs: {
       cols: "12",
-      md: "6"
+      md: "3"
     }
   }, [_c("v-btn", {
     staticClass: "rounded-lg",
@@ -2184,19 +2184,23 @@ var render = function render() {
   }, [_vm._v("fa-arrow-left")]) : _vm._e(), _vm._v(" Back to Gallery\n          ")], 1)], 1), _vm._v(" "), _c("v-col", {
     attrs: {
       cols: "12",
-      md: "6"
+      md: "9"
     }
   }, [_c("h1", {
     staticClass: "text-md-end text-center mb-4",
     style: _vm.fontSize
   }, [_vm._v(" " + _vm._s(_vm.name) + " ")])])], 1), _vm._v(" "), _c("v-divider", {
     staticClass: "mx-16"
-  }), _vm._v(" "), _c("v-container", [_vm.images.length > 0 ? _c("masonry", {
+  }), _vm._v(" "), _c("v-container", {
+    attrs: {
+      fluid: ""
+    }
+  }, [_vm.images.length > 0 ? _c("masonry", {
     key: _vm.key,
     ref: "masonry",
     attrs: {
       cols: {
-        "default": 3,
+        "default": 4,
         960: 1,
         1264: 2
       },
