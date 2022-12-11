@@ -14,10 +14,10 @@
         </v-row>
         <v-divider class="mx-16"></v-divider>
         <v-container fluid>
-          <masonry :cols="{ default: 4, 960: 1, 1264: 2 }" :gutter="24" v-if="images.length > 0" :key="key" ref="masonry">
+          <masonry :cols="{ default: 6, 960: 1, 1264: 3 }" :gutter="24" v-if="images.length > 0" :key="key" ref="masonry">
             <div v-for="(image, index) in images" :key="index">
               <v-hover v-slot="{ hover }">
-                <v-img contain :lazy-src="`/assets/images/gallery/${folder}/${image.name}`" :src="`/assets/images/gallery/${folder}/${image.name}`" class="my-6 text-center rounded-xl  elevation-8">
+                <v-img contain :lazy-src="`/assets/images/gallery/${folder}/${image.name}`" :src="`/assets/images/gallery/${folder}/${image.name}`" :class="{ 'zoom': hover }" class="my-6 text-center rounded-xl transition-swing elevation-8">
                   <transition name="scale-transition">
                     <div v-if="hover && $vuetify.breakpoint.mdAndUp" class="d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal" style="height: 100%; cursor: pointer;" @click="openImage(image.name)">
                       <v-icon size="32" dark>fa-up-right-and-down-left-from-center</v-icon>

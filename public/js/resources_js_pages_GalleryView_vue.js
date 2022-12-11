@@ -2200,9 +2200,9 @@ var render = function render() {
     ref: "masonry",
     attrs: {
       cols: {
-        "default": 4,
+        "default": 6,
         960: 1,
-        1264: 2
+        1264: 3
       },
       gutter: 24
     }
@@ -2215,7 +2215,10 @@ var render = function render() {
         fn: function fn(_ref) {
           var hover = _ref.hover;
           return [_c("v-img", {
-            staticClass: "my-6 text-center rounded-xl elevation-8",
+            staticClass: "my-6 text-center rounded-xl transition-swing elevation-8",
+            "class": {
+              zoom: hover
+            },
             attrs: {
               contain: "",
               "lazy-src": "/assets/images/gallery/".concat(_vm.folder, "/").concat(image.name),

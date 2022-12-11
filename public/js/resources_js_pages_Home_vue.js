@@ -2106,7 +2106,7 @@ __webpack_require__.r(__webpack_exports__);
           return Math.random() - 0.5;
         });
         shuffled.forEach(function (e) {
-          _this2.images.push({
+          return _this2.images.push({
             image: "/assets/images/home/".concat(e.name),
             width: e.width,
             height: e.height
@@ -2170,7 +2170,7 @@ var render = function render() {
   }, [_c("masonry", {
     attrs: {
       cols: {
-        "default": 4,
+        "default": 6,
         960: 1,
         1264: 2
       }
@@ -2184,10 +2184,13 @@ var render = function render() {
         fn: function fn(_ref) {
           var hover = _ref.hover;
           return [_c("v-img", {
-            staticClass: "my-0 text-center rounded-xl elevation-16",
+            staticClass: "transition-swing my-0 text-center rounded-xl elevation-16",
+            "class": {
+              zoom: hover
+            },
             attrs: {
               contain: "",
-              "lazy-src": "https://via.placeholder.com/".concat(image.width, "x").concat(image.height, "/f5ebe0?text=Loading"),
+              "lazy-src": "https://via.placeholder.com/".concat(image.width, "x").concat(image.height, "/f5ebe0?text="),
               src: image.image
             },
             on: {

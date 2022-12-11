@@ -2157,10 +2157,13 @@ var render = function render() {
             attrs: {
               color: "transparent",
               rounded: "xl",
-              elevation: "8"
+              elevation: "6"
             }
           }, [_c("v-img", {
-            staticClass: "white--text align-end",
+            staticClass: "transition-swing white--text align-end",
+            "class": {
+              zoom: hover
+            },
             attrs: {
               src: "/assets/images/gallery/".concat(item.folder, "/cover.jpg"),
               gradient: "to top, rgba(0,0,0,0.75), rgba(0,0,0,0)",
@@ -2186,7 +2189,7 @@ var render = function render() {
                 });
               }
             }
-          }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tView album "), _c("v-icon", {
+          }, [_vm._v("\n                      View album "), _c("v-icon", {
             attrs: {
               right: "",
               dark: ""
@@ -2221,7 +2224,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.bg {\n\tbackground-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.bg {\n  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
