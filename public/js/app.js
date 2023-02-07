@@ -242,7 +242,35 @@ var render = function render() {
     }
   }, [_c("v-list-item-title", {
     staticClass: "text-center bigger-font"
-  }, [_vm._v("Gallery")])], 1), _vm._v(" "), _c("v-list-item", {
+  }, [_vm._v("Gallery")])], 1), _vm._v(" "), _c("v-tooltip", {
+    attrs: {
+      right: ""
+    },
+    scopedSlots: _vm._u([{
+      key: "activator",
+      fn: function fn(_ref) {
+        var on = _ref.on,
+            attrs = _ref.attrs;
+        return [_c("v-list-item", _vm._g(_vm._b({
+          directives: [{
+            name: "ripple",
+            rawName: "v-ripple",
+            value: _vm.ripple,
+            expression: "ripple"
+          }],
+          staticClass: "my-3",
+          attrs: {
+            link: "",
+            "exact-path": "",
+            href: "https://vijeshdatt.picfair.com/",
+            target: "_blank"
+          }
+        }, "v-list-item", attrs, false), on), [_c("v-list-item-title", {
+          staticClass: "text-center bigger-font"
+        }, [_vm._v("PicFair")])], 1)];
+      }
+    }], null, false, 1692259234)
+  }, [_vm._v(" "), _c("span", [_vm._v("Want to buy my photos? Well now you can using PicFair")])]), _vm._v(" "), _c("v-list-item", {
     directives: [{
       name: "ripple",
       rawName: "v-ripple",

@@ -2124,7 +2124,43 @@ var render = function render() {
       "font-size": "4rem",
       "font-weight": "300"
     }
-  }, [_vm._v("Gallery")]), _vm._v(" "), !_vm.loaded ? _c("div", {
+  }, [_vm._v("Gallery")]), _vm._v(" "), _c("v-alert", {
+    staticClass: "rounded-lg",
+    attrs: {
+      text: "",
+      type: "info",
+      icon: "fa-info"
+    }
+  }, [_c("v-row", {
+    attrs: {
+      align: "center"
+    }
+  }, [_c("v-col", {
+    attrs: {
+      cols: "12",
+      md: "10"
+    }
+  }, [_c("span", [_vm._v("Want to buy any of my photos? Well now you can using PicFair, you can purchase digital copies and even order prints.")])]), _vm._v(" "), _c("v-col", {
+    staticClass: "d-flex justify-end",
+    attrs: {
+      cols: "12",
+      md: "2"
+    }
+  }, [_c("v-btn", {
+    staticClass: "rounded-lg",
+    attrs: {
+      depressed: "",
+      color: "info",
+      block: _vm.$vuetify.breakpoint.smAndDown,
+      href: "https://vijeshdatt.picfair.com/",
+      target: "_blank"
+    }
+  }, [_c("v-icon", {
+    attrs: {
+      small: "",
+      left: ""
+    }
+  }, [_vm._v("fa-link")]), _vm._v("\n            PicFair Store\n          ")], 1)], 1)], 1)], 1), _vm._v(" "), !_vm.loaded ? _c("div", {
     staticClass: "d-flex flex-column justify-center align-center"
   }, [_c("v-progress-circular", {
     attrs: {

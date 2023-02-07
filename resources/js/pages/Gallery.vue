@@ -2,6 +2,21 @@
   <div>
     <v-container fluid>
       <h1 style="font-size: 4rem; font-weight: 300;" :class="{ 'text-center': $vuetify.breakpoint.smAndDown }" class="mb-4">Gallery</h1>
+
+      <v-alert class="rounded-lg" text type="info" icon="fa-info">
+        <v-row align="center">
+          <v-col cols="12" md="10">
+            <span>Want to buy any of my photos? Well now you can using PicFair, you can purchase digital copies and even order prints.</span>
+          </v-col>
+          <v-col cols="12" md="2" class="d-flex justify-end">
+            <v-btn class="rounded-lg" depressed color="info" :block="$vuetify.breakpoint.smAndDown" href="https://vijeshdatt.picfair.com/" target="_blank">
+              <v-icon small left>fa-link</v-icon>
+              PicFair Store
+            </v-btn>
+          </v-col>
+        </v-row>
+      </v-alert>
+
       <div class="d-flex flex-column justify-center align-center" v-if="!loaded">
         <v-progress-circular indeterminate size="50" width="5" color="primary"></v-progress-circular>
         <p class="my-2">Loading</p>

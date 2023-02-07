@@ -23,6 +23,15 @@
           <v-list-item-title class="text-center bigger-font">Gallery</v-list-item-title>
         </v-list-item>
 
+        <v-tooltip right>
+          <template v-slot:activator="{ on, attrs }">
+            <v-list-item link exact-path v-ripple="ripple" class="my-3" href="https://vijeshdatt.picfair.com/" target="_blank" v-on="on" v-bind="attrs">
+              <v-list-item-title class="text-center bigger-font">PicFair</v-list-item-title>
+            </v-list-item>
+          </template>
+          <span>Want to buy my photos? Well now you can using PicFair</span>
+        </v-tooltip>
+
         <!-- <v-list-item link exact-path v-ripple="ripple" class="my-3" :to="{ name: 'Bookings' }">
                 <v-list-item-title class="text-center bigger-font">Bookings</v-list-item-title>
               </v-list-item> -->
