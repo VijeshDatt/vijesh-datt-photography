@@ -16,7 +16,7 @@ class Controller extends BaseController
 {
   public function home()
   {
-    return public_path();
+    return \File::allFiles(public_path());
     // $path = public_path('/assets/images/home/');
     $path = 'assets/images/home/';
     $files = File::allFiles($path);
