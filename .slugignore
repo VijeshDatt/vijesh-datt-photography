@@ -3,6 +3,7 @@
 /public/storage
 /public/js
 /public/mounts
+/public/assets
 /storage/*.key
 /vendor
 .env
