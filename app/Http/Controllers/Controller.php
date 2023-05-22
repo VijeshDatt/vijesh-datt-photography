@@ -17,13 +17,14 @@ class Controller extends BaseController
   public function home()
   {
     // $path = public_path('/assets/images/home/');
-    $path = public_path('/assets/images/home/');
+    $path = 'assets/images/home/';
     $files = File::allFiles($path);
     $data = array();
 
     foreach ($files as $file) {
-      [$width, $height] = getimagesize($file);
-      $data[] = array('name' => $file->getFilename(), 'width' => $width, 'height' => $height);
+      // [$width, $height] = getimagesize($file);
+      // $data[] = array('name' => $file->getFilename(), 'width' => $width, 'height' => $height);
+      $data[] = $file->getFilename();
     }
 
     return [
