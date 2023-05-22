@@ -16,9 +16,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/white/favicon-16x16.png" media="(prefers-color-scheme: dark)">
 
     {{-- Open Graph markup --}}
-    <meta property="og:url" content="{{ url('/') }}">
+    {{-- <meta property="og:url" content="{{ url('/') }}"> --}}
+    <meta property="og:url" content="/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="{{ url("/assets/images/seo/seo-image-2.jpg") }}">
+    {{-- <meta property="og:image" content="{{ url("/assets/images/seo/seo-image-2.jpg") }}"> --}}
+    <meta property="og:image" content="/assets/images/seo/seo-image-2.jpg">
     <meta property="og:title" content="Vijesh Datt Photography">
     <meta property="og:description" content="Giving the world a small view of what Fiji and the Pacific has to offer.">
 
@@ -110,7 +112,8 @@
       </div>
     </div>
 
-    <script src="js/app.js"></script>
+    {{-- <script src="{{ mix('/js/app.js') }}"></script> --}}
+    <script src="/js/app.js"></script>
 
   </body>
 </html>
