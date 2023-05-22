@@ -1,1 +1,1 @@
-web: npm run prod
+web: heroku-php-apache2 public/
