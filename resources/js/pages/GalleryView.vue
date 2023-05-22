@@ -6,11 +6,14 @@
           <v-col cols="12" md="3">
             <v-btn text :block="$vuetify.breakpoint.smAndDown" color="primary" class="rounded-lg" @click="$router.push({ name: 'Gallery' })"> <v-icon left v-if="$vuetify.breakpoint.mdAndUp">fa-arrow-left</v-icon> Back to Gallery </v-btn>
           </v-col>
+
           <v-col cols="12" md="9">
             <h1 :style="fontSize" class="text-md-end text-center mb-4">{{ name }}</h1>
           </v-col>
         </v-row>
+
         <v-divider class="mx-16"></v-divider>
+
         <v-container fluid>
           <masonry :cols="{ default: 3, 960: 1, 1264: 3 }" :gutter="24" v-if="images.length > 0" :key="key" ref="masonry">
             <div v-for="(image, index) in images" :key="index">
@@ -18,7 +21,7 @@
                 <v-img contain :lazy-src="`/assets/images/gallery/${folder}/${image.name}`" :src="`/assets/images/gallery/${folder}/${image.name}`" :class="{ zoom: hover }" class="my-6 text-center rounded-xl transition-swing elevation-8">
                   <transition name="scale-transition">
                     <div v-if="hover && $vuetify.breakpoint.mdAndUp" class="d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal" style="height: 100%; cursor: pointer" @click="openImage(image.name)">
-                      <v-icon size="32" dark>fa-up-right-and-down-left-from-center</v-icon>
+                      <v-icon size="32" dark>fa-magnifying-glass-plus</v-icon>
                     </div>
                   </transition>
                 </v-img>

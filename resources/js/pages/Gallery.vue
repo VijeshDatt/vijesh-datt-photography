@@ -7,10 +7,12 @@
         <template #prepend>
           <v-icon class="mx-4 mt-n1 info--text">fa-info</v-icon>
         </template>
+
         <v-row align="center">
           <v-col cols="12" md="10">
             <span>Want to buy any of my photos? Well now you can using PicFair, you can purchase digital copies and even order prints.</span>
           </v-col>
+
           <v-col cols="12" md="2" class="d-flex justify-end">
             <v-btn class="rounded-lg" depressed color="info" :block="$vuetify.breakpoint.smAndDown" href="https://vijeshdatt.picfair.com/" target="_blank">
               <v-icon small left>fa-link</v-icon>
@@ -24,6 +26,7 @@
         <v-progress-circular indeterminate size="50" width="5" color="primary"></v-progress-circular>
         <p class="my-2">Loading</p>
       </div>
+
       <v-row dense v-else>
         <v-col v-for="(item, index) in images" :key="`main-${index}`" cols="12" md="4" sm="6">
           <v-hover v-slot="{ hover }">
@@ -32,6 +35,7 @@
                 <v-card-title>
                   <span class="pb-0">{{ item.name }}</span>
                 </v-card-title>
+
                 <v-expand-transition>
                   <div v-if="hover || $vuetify.breakpoint.smAndDown">
                     <v-card-text class="pt-0 text-end">

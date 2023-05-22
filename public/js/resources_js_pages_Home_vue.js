@@ -2208,7 +2208,7 @@ var render = function render() {
               size: "32",
               dark: ""
             }
-          }, [_vm._v("fa-up-right-and-down-left-from-center")])], 1) : _vm._e()])], 1)];
+          }, [_vm._v("fa-magnifying-glass-plus")])], 1) : _vm._e()])], 1)];
         }
       }], null, true)
     })], 1);
