@@ -29,7 +29,6 @@
 import axios from "axios";
 import { storage } from "../plugins/firebase";
 import { ref, listAll, getDownloadURL } from "firebase/storage";
-const listRef = ref(storage, "home");
 
 export default {
   data() {
@@ -57,18 +56,12 @@ export default {
     },
 
     getHomeImages() {
-      listAll(listRef)
+      listAll(ref(storage, "home"))
         .then((res) => {
-          res.items.forEach((itemRef) => {
-            // All the items under listRef.
-            getDownloadURL(ref(storage, `gs://${itemRef.bucket}/${itemRef.fullPath}`)).then((download_url) => this.images.push(download_url));
-          });
-          this.images = this.images.sort(() => Math.random() - 0.5);
+          res.items.forEach((itemRef) => getDownloadURL(ref(storage, `gs://${itemRef.bucket}/${itemRef.fullPath}`)).then((download_url) => this.images.push(download_url)));
           this.hasLoaded = true;
         })
-        .catch((error) => {
-          // Uh-oh, an error occurred!
-        });
+        .catch((error) => console.log(error));
     },
 
     // fetchImages() {

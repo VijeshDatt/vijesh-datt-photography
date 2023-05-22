@@ -7967,7 +7967,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var listRef = (0,firebase_storage__WEBPACK_IMPORTED_MODULE_2__.ref)(_plugins_firebase__WEBPACK_IMPORTED_MODULE_1__.storage, "home");
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -7991,18 +7990,15 @@ var listRef = (0,firebase_storage__WEBPACK_IMPORTED_MODULE_2__.ref)(_plugins_fir
     getHomeImages: function getHomeImages() {
       var _this = this;
 
-      (0,firebase_storage__WEBPACK_IMPORTED_MODULE_2__.listAll)(listRef).then(function (res) {
+      (0,firebase_storage__WEBPACK_IMPORTED_MODULE_2__.listAll)((0,firebase_storage__WEBPACK_IMPORTED_MODULE_2__.ref)(_plugins_firebase__WEBPACK_IMPORTED_MODULE_1__.storage, "home")).then(function (res) {
         res.items.forEach(function (itemRef) {
-          // All the items under listRef.
-          (0,firebase_storage__WEBPACK_IMPORTED_MODULE_2__.getDownloadURL)((0,firebase_storage__WEBPACK_IMPORTED_MODULE_2__.ref)(_plugins_firebase__WEBPACK_IMPORTED_MODULE_1__.storage, "gs://".concat(itemRef.bucket, "/").concat(itemRef.fullPath))).then(function (download_url) {
+          return (0,firebase_storage__WEBPACK_IMPORTED_MODULE_2__.getDownloadURL)((0,firebase_storage__WEBPACK_IMPORTED_MODULE_2__.ref)(_plugins_firebase__WEBPACK_IMPORTED_MODULE_1__.storage, "gs://".concat(itemRef.bucket, "/").concat(itemRef.fullPath))).then(function (download_url) {
             return _this.images.push(download_url);
           });
         });
-        _this.images = _this.images.sort(function () {
-          return Math.random() - 0.5;
-        });
         _this.hasLoaded = true;
-      })["catch"](function (error) {// Uh-oh, an error occurred!
+      })["catch"](function (error) {
+        return console.log(error);
       });
     },
     // fetchImages() {
