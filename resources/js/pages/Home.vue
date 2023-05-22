@@ -2,7 +2,7 @@
   <div>
     <v-container fluid class="d-flex justify-center">
       <v-card flat color="transparent">
-        <masonry :cols="{ default: 3, 960: 1, 1264: 2 }">
+        <masonry :cols="{ default: 3, 960: 1, 1264: 2 }" v-if="hasLoaded">
           <v-container v-for="(image, index) in images" :key="index">
             <v-hover v-slot="{ hover }">
               <v-img contain :lazy-src="image" :src="image" :class="{ zoom: hover }" class="transition-swing my-0 text-center rounded-xl elevation-16" @load="loaded(image)">
@@ -27,6 +27,9 @@
 
 <script>
 import axios from "axios";
+import { storage } from "../plugins/firebase";
+import { ref, listAll, getDownloadURL } from "firebase/storage";
+const listRef = ref(storage, "home");
 
 export default {
   data() {
@@ -45,6 +48,8 @@ export default {
     },
   },
 
+  watch: {},
+
   methods: {
     close() {
       this.dialog = false;
@@ -52,9 +57,18 @@ export default {
     },
 
     getHomeImages() {
-      // const images = require.context("/assets/images/home/", false, /^\.\/.*$/);
-      // const shuffled = images.keys().sort(() => Math.random() - 0.5);
-      // shuffled.forEach((name) => this.images.push(`/assets/images/home/${name.substring(2)}`));
+      listAll(listRef)
+        .then((res) => {
+          res.items.forEach((itemRef) => {
+            // All the items under listRef.
+            getDownloadURL(ref(storage, `gs://${itemRef.bucket}/${itemRef.fullPath}`)).then((download_url) => this.images.push(download_url));
+          });
+          this.images = this.images.sort(() => Math.random() - 0.5);
+          this.hasLoaded = true;
+        })
+        .catch((error) => {
+          // Uh-oh, an error occurred!
+        });
     },
 
     // fetchImages() {
