@@ -16,7 +16,12 @@ class Controller extends BaseController
 {
   public function home()
   {
-    return \File::allFiles(public_path());
+    $files = \File::allFiles(public_path());
+    $temp = array();
+    foreach ($files as $file) {
+      $temp = pathinfo($file);
+    }
+
     // $path = public_path('/assets/images/home/');
     $path = 'assets/images/home/';
     $files = File::allFiles($path);
