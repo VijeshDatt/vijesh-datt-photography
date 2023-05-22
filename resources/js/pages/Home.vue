@@ -52,9 +52,9 @@ export default {
     },
 
     getHomeImages() {
-      const images = require.context("/assets/images/home/", false, /^\.\/.*$/);
-      const shuffled = images.keys().sort(() => Math.random() - 0.5);
-      shuffled.forEach((name) => this.images.push(`/assets/images/home/${name.substring(2)}`));
+      // const images = require.context("/assets/images/home/", false, /^\.\/.*$/);
+      // const shuffled = images.keys().sort(() => Math.random() - 0.5);
+      // shuffled.forEach((name) => this.images.push(`/assets/images/home/${name.substring(2)}`));
     },
 
     // fetchImages() {
