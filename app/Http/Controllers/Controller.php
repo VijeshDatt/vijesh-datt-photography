@@ -19,7 +19,7 @@ class Controller extends BaseController
     $files = \File::allFiles(public_path());
     $temp = array();
     foreach ($files as $file) {
-      $temp = pathinfo($file);
+      $temp[] = pathinfo($file);
     }
 
     // $path = public_path('/assets/images/home/');
