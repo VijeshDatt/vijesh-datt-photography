@@ -21,6 +21,7 @@ class Controller extends BaseController
     foreach ($files as $file) {
       $temp[] = pathinfo($file);
     }
+    return $temp;
 
     // $path = public_path('/assets/images/home/');
     $path = 'assets/images/home/';
