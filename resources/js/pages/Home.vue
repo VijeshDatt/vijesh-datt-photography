@@ -1,40 +1,14 @@
 <template>
   <div>
-    <v-container
-      fluid
-      class="d-flex justify-center"
-    >
-      <v-card
-        flat
-        color="transparent"
-      >
-        <masonry :cols="{ default: 6, 960: 1, 1264: 2 }">
-          <v-container
-            v-for="(image, index) in images"
-            :key="index"
-          >
+    <v-container fluid class="d-flex justify-center">
+      <v-card flat color="transparent">
+        <masonry :cols="{ default: 3, 960: 1, 1264: 2 }">
+          <v-container v-for="(image, index) in images" :key="index">
             <v-hover v-slot="{ hover }">
-              <!-- <v-img contain :lazy-src="`https://via.placeholder.com/${image.width}x${image.height}/f5ebe0?text=''`" :src="image.image" :class="{ 'zoom': hover }" class="transition-swing my-0 text-center rounded-xl elevation-16" @load="loaded(image.image)"> -->
-              <v-img
-                contain
-                :lazy-src="image.image"
-                :src="image.image"
-                :class="{ zoom: hover }"
-                class="transition-swing my-0 text-center rounded-xl elevation-16"
-                @load="loaded(image.image)"
-              >
+              <v-img contain :lazy-src="image" :src="image" :class="{ zoom: hover }" class="transition-swing my-0 text-center rounded-xl elevation-16" @load="loaded(image)">
                 <transition name="scale-transition">
-                  <div
-                    v-if="hover && hasLoaded && $vuetify.breakpoint.mdAndUp"
-                    class="d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal"
-                    style="height: 100%; cursor: pointer"
-                    @click="openImage(image.image)"
-                  >
-                    <v-icon
-                      size="32"
-                      dark
-                      >fa-up-right-and-down-left-from-center</v-icon
-                    >
+                  <div v-if="hover && hasLoaded && $vuetify.breakpoint.mdAndUp" class="d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal" style="height: 100%; cursor: pointer" @click="openImage(image)">
+                    <v-icon size="32" dark>fa-up-right-and-down-left-from-center</v-icon>
                   </div>
                 </transition>
               </v-img>
@@ -45,16 +19,8 @@
     </v-container>
 
     <!-- Dialog for zoom -->
-    <v-dialog
-      v-model="dialog"
-      overlay-opacity="0.8"
-    >
-      <v-img
-        :src="image"
-        contain
-        max-height="90vh"
-        @click="close"
-      ></v-img>
+    <v-dialog v-model="dialog" overlay-opacity="0.8">
+      <v-img :src="image" contain max-height="90vh" @click="close"></v-img>
     </v-dialog>
   </div>
 </template>
@@ -85,23 +51,21 @@ export default {
       // this.image = null;
     },
 
-    // getHomeImages() {
-    //   const images = require.context('/assets/images/home/', false, /^\.\/.*$/);
-    //   const shuffled = images.keys().sort(() => Math.random() - 0.5);
-    //   shuffled.forEach(name => {
-    //     this.images.push(`/assets/images/home/${name.substring(2)}`);
-    //   });
-    // },
-
-    fetchImages() {
-      axios
-        .get("/api/home")
-        .then((res) => {
-          const shuffled = res.data.images.sort(() => Math.random() - 0.5);
-          shuffled.forEach((e) => this.images.push({ image: `/assets/images/home/${e.name}`, width: e.width, height: e.height }));
-        })
-        .catch((e) => console.log(e));
+    getHomeImages() {
+      const images = require.context("/assets/images/home/", false, /^\.\/.*$/);
+      const shuffled = images.keys().sort(() => Math.random() - 0.5);
+      shuffled.forEach((name) => this.images.push(`/assets/images/home/${name.substring(2)}`));
     },
+
+    // fetchImages() {
+    //   axios
+    //     .get("/api/home")
+    //     .then((res) => {
+    //       const shuffled = res.data.images.sort(() => Math.random() - 0.5);
+    //       shuffled.forEach((e) => this.images.push({ image: `/assets/images/home/${e.name}`, width: e.width, height: e.height }));
+    //     })
+    //     .catch((e) => console.log(e));
+    // },
 
     openImage(image) {
       this.image = image;
@@ -119,8 +83,8 @@ export default {
   mounted() {},
 
   created() {
-    // this.getHomeImages();
-    this.fetchImages();
+    this.getHomeImages();
+    // this.fetchImages();
   },
 };
 </script>

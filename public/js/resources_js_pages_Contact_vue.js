@@ -2072,24 +2072,24 @@ __webpack_require__.r(__webpack_exports__);
     return {
       valid: true,
       snackbar: false,
-      text: '',
-      type: 'success',
+      text: "",
+      type: "success",
       formItem: {},
       fieldRules: [function (v) {
-        return !!v || 'Field is required';
+        return !!v || "Field is required";
       }],
       emailRules: [function (v) {
-        return !!v || 'Field is required';
+        return !!v || "Field is required";
       }, function (v) {
-        return /[a-zA-Z0-9._-]@[a-zA-Z0-9-]+\.\w+(\.\w+)?/.test(v) || 'Email is invalid';
+        return /[a-zA-Z0-9._-]@[a-zA-Z0-9-]+\.\w+(\.\w+)?/.test(v) || "Email is invalid";
       }],
       phoneRules: [function (v) {
-        return !!v || 'Number is required';
+        return !!v || "Number is required";
       }, function (v) {
-        return /[0-9]{7}/.test(v) || 'Not a valid Phone Number';
+        return /[0-9]{7}/.test(v) || "Not a valid Phone Number";
       }],
       ripple: {
-        "class": 'primary--text'
+        "class": "primary--text"
       }
     };
   },
@@ -2102,21 +2102,21 @@ __webpack_require__.r(__webpack_exports__);
 
       if (this.$refs.form.validate()) {
         // console.log('success');
-        axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/email', this.formItem).then(function (res) {
+        axios__WEBPACK_IMPORTED_MODULE_0___default().post("/api/email", this.formItem).then(function (res) {
           _this.snackbar = true;
-          _this.text = 'Email sent successfully';
-          _this.type = 'success';
+          _this.text = "Email sent successfully";
+          _this.type = "success";
 
           _this.clear();
         })["catch"](function (e) {
           _this.snackbar = true;
-          _this.text = 'Error occurred, please try again...';
-          _this.type = 'error';
+          _this.text = "Error occurred, please try again...";
+          _this.type = "error";
         });
       }
     },
     triggerAction: function triggerAction(action) {
-      if (action == 'call') window.location.href = 'tel:+6797117310';else if (action == 'sms') window.location.href = 'sms:+6797117310';
+      if (action == "call") window.location.href = "tel:+6797117310";else if (action == "sms") window.location.href = "sms:+6797117310";
     }
   }
 });
@@ -2132,8 +2132,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */   render: () => (/* binding */ render),
+/* harmony export */   staticRenderFns: () => (/* binding */ staticRenderFns)
 /* harmony export */ });
 var render = function render() {
   var _vm = this,
@@ -2152,7 +2152,7 @@ var render = function render() {
       "font-size": "4rem",
       "font-weight": "300"
     }
-  }, [_vm._v(" Contact ")]), _vm._v(" "), _vm.$vuetify.breakpoint.mdAndUp ? _c("v-row", [_c("v-col", {
+  }, [_vm._v("Contact")]), _vm._v(" "), _vm.$vuetify.breakpoint.mdAndUp ? _c("v-row", [_c("v-col", {
     attrs: {
       cols: "12"
     }
@@ -2177,7 +2177,7 @@ var render = function render() {
     attrs: {
       "expand-icon": "fa-caret-down"
     }
-  }, [_c("strong", [_vm._v("Do I do event photography?")])]), _vm._v(" "), _c("v-expansion-panel-content", [_vm._v("\n                  Yes, coverage for events including (but not limited to) birthdays, graduations, receptions, official events and events such as concerts, music festivals and any other events not mentioned. Weddings are not covered.\n                ")])], 1), _vm._v(" "), _c("v-expansion-panel", [_c("v-expansion-panel-header", {
+  }, [_c("strong", [_vm._v("Do I do event photography?")])]), _vm._v(" "), _c("v-expansion-panel-content", [_vm._v(" Yes, coverage for events including (but not limited to) birthdays, graduations, receptions, official events and events such as concerts, music festivals and any other events not mentioned. Weddings are not covered. ")])], 1), _vm._v(" "), _c("v-expansion-panel", [_c("v-expansion-panel-header", {
     staticClass: "rounded-lg",
     attrs: {
       "expand-icon": "fa-caret-down"
@@ -2282,7 +2282,7 @@ var render = function render() {
       left: "",
       size: "15"
     }
-  }, [_vm._v("fa-phone")]), _vm._v(" Call\n                        ")], 1)], 1), _vm._v(" "), _c("v-list-item", {
+  }, [_vm._v("fa-phone")]), _vm._v(" Call ")], 1)], 1), _vm._v(" "), _c("v-list-item", {
     attrs: {
       ripple: _vm.ripple
     },
@@ -2299,7 +2299,7 @@ var render = function render() {
       left: "",
       size: "15"
     }
-  }, [_vm._v("fa-message")]), _vm._v(" SMS\n                        ")], 1)], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-col", {
+  }, [_vm._v("fa-message")]), _vm._v(" SMS ")], 1)], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-col", {
     attrs: {
       cols: "12"
     }
@@ -2350,7 +2350,7 @@ var render = function render() {
       text: "",
       icon: "fa-location-dot"
     }
-  }, [_vm._v("\n                  Location: "), _c("strong", [_vm._v("Based in Suva, Fiji")])])], 1), _vm._v(" "), _c("v-col", {
+  }, [_vm._v(" Location: "), _c("strong", [_vm._v("Based in Suva, Fiji")])])], 1), _vm._v(" "), _c("v-col", {
     attrs: {
       cols: "12"
     }
@@ -2360,10 +2360,18 @@ var render = function render() {
       border: "left",
       elevation: "0",
       type: "info",
-      text: "",
-      icon: "fa-info"
-    }
-  }, [_vm._v("\n                  Due to photography being a hobby and due to my actual job timings, I don't take photography jobs outside of Suva (even Lami and Nausori is out of the way), unless it's the weekend and the requirements are not heavy.\n                ")])], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-col", {
+      text: ""
+    },
+    scopedSlots: _vm._u([{
+      key: "prepend",
+      fn: function fn() {
+        return [_c("v-icon", {
+          staticClass: "ml-4 mr-5 mt-n1 info--text"
+        }, [_vm._v("fa-info")])];
+      },
+      proxy: true
+    }], null, false, 203806919)
+  }, [_vm._v("\n\n                  Due to photography being a hobby and due to my actual job timings, I don't take photography jobs outside of Suva (even Lami and Nausori is out of the way), unless it's the weekend and the requirements are not heavy.\n                ")])], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-col", {
     attrs: {
       cols: "12",
       md: "6"
@@ -2528,7 +2536,7 @@ var render = function render() {
     on: {
       click: _vm.send
     }
-  }, [_vm._v("\n                  Send "), _c("v-icon", {
+  }, [_vm._v(" Send "), _c("v-icon", {
     attrs: {
       right: ""
     }
@@ -2546,7 +2554,7 @@ var render = function render() {
     on: {
       click: _vm.clear
     }
-  }, [_vm._v("\n                  Clear "), _c("v-icon", {
+  }, [_vm._v(" Clear "), _c("v-icon", {
     attrs: {
       right: ""
     }
@@ -2577,7 +2585,7 @@ var render = function render() {
     attrs: {
       "expand-icon": "fa-caret-down"
     }
-  }, [_c("strong", [_vm._v("Do I do event photography?")])]), _vm._v(" "), _c("v-expansion-panel-content", [_vm._v("\n                      Yes, coverage for events including (but not limited to) birthdays, graduations, receptions, official events and events such as concerts, music festivals and any other events not mentioned. Weddings are not covered.\n                    ")])], 1), _vm._v(" "), _c("v-expansion-panel", [_c("v-expansion-panel-header", {
+  }, [_c("strong", [_vm._v("Do I do event photography?")])]), _vm._v(" "), _c("v-expansion-panel-content", [_vm._v(" Yes, coverage for events including (but not limited to) birthdays, graduations, receptions, official events and events such as concerts, music festivals and any other events not mentioned. Weddings are not covered. ")])], 1), _vm._v(" "), _c("v-expansion-panel", [_c("v-expansion-panel-header", {
     staticClass: "rounded-lg",
     attrs: {
       "expand-icon": "fa-caret-down"
@@ -2672,7 +2680,7 @@ var render = function render() {
       left: "",
       size: "15"
     }
-  }, [_vm._v("fa-phone")]), _vm._v(" Call\n                        ")], 1)], 1), _vm._v(" "), _c("v-list-item", {
+  }, [_vm._v("fa-phone")]), _vm._v(" Call ")], 1)], 1), _vm._v(" "), _c("v-list-item", {
     attrs: {
       ripple: _vm.ripple
     },
@@ -2689,7 +2697,7 @@ var render = function render() {
       left: "",
       size: "15"
     }
-  }, [_vm._v("fa-message")]), _vm._v(" SMS\n                        ")], 1)], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-col", {
+  }, [_vm._v("fa-message")]), _vm._v(" SMS ")], 1)], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-col", {
     attrs: {
       cols: "12"
     }
@@ -2740,7 +2748,7 @@ var render = function render() {
       text: "",
       icon: "fa-location-dot"
     }
-  }, [_vm._v("\n                  Location: "), _c("strong", [_vm._v("Based in Suva, Fiji")])])], 1), _vm._v(" "), _c("v-col", {
+  }, [_vm._v(" Location: "), _c("strong", [_vm._v("Based in Suva, Fiji")])])], 1), _vm._v(" "), _c("v-col", {
     attrs: {
       cols: "12"
     }
@@ -2753,7 +2761,7 @@ var render = function render() {
       text: "",
       icon: "fa-info"
     }
-  }, [_vm._v("\n                  Due to photography being a hobby and due to my actual job timings, I don't take photography jobs outside of Suva (even Lami and Nausori is out of the way), unless it's the weekend and the requirements are not heavy.\n                ")])], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-expansion-panel", [_c("v-expansion-panel-header", {
+  }, [_vm._v(" Due to photography being a hobby and due to my actual job timings, I don't take photography jobs outside of Suva (even Lami and Nausori is out of the way), unless it's the weekend and the requirements are not heavy. ")])], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-expansion-panel", [_c("v-expansion-panel-header", {
     staticClass: "rounded-lg",
     attrs: {
       "expand-icon": "fa-caret-down"
@@ -2908,7 +2916,7 @@ var render = function render() {
     on: {
       click: _vm.send
     }
-  }, [_vm._v("\n                  Send "), _c("v-icon", {
+  }, [_vm._v(" Send "), _c("v-icon", {
     attrs: {
       right: ""
     }
@@ -2926,7 +2934,7 @@ var render = function render() {
     on: {
       click: _vm.clear
     }
-  }, [_vm._v("\n                  Clear "), _c("v-icon", {
+  }, [_vm._v(" Clear "), _c("v-icon", {
     attrs: {
       right: ""
     }
@@ -2979,7 +2987,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.scale-enter-active,\n.scale-leave-active {\n  transition: transform 0.1s;\n  transform: scaleY(1);\n}\n.scale-enter,\n.scale-leave-to {\n  transform: scaleY(0);\n}\n.v-textarea.v-text-field--enclosed textarea {\n  margin-top: 20px !important;\n}\n.v-text-field>.v-input__control>.v-input__slot:before,\n.v-text-field>.v-input__control>.v-input__slot:after {\n  border-style: none !important;\n  /* \tborder-radius: 50px !important; */\n}\n\n/* .v-text-field--filled .v-label--active {\n\ttransform: translateY(-10px) scale(0.75) !important;\n} */\n.v-text-field--filled:not(.v-text-field--single-line):not(.v-select) input {\n  margin-top: 19px !important;\n}\n.v-expansion-panel-header__icon>.v-icon.v-icon {\n  font-size: 15px !important;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.scale-enter-active,\r\n.scale-leave-active {\r\n  transition: transform 0.1s;\r\n  transform: scaleY(1);\n}\n.scale-enter,\r\n.scale-leave-to {\r\n  transform: scaleY(0);\n}\n.v-textarea.v-text-field--enclosed textarea {\r\n  margin-top: 20px !important;\n}\n.v-text-field > .v-input__control > .v-input__slot:before,\r\n.v-text-field > .v-input__control > .v-input__slot:after {\r\n  border-style: none !important;\r\n  /* \tborder-radius: 50px !important; */\n}\r\n\r\n/* .v-text-field--filled .v-label--active {\r\n\ttransform: translateY(-10px) scale(0.75) !important;\r\n} */\n.v-text-field--filled:not(.v-text-field--single-line):not(.v-select) input {\r\n  margin-top: 19px !important;\n}\n.v-expansion-panel-header__icon > .v-icon.v-icon {\r\n  font-size: 15px !important;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3276,8 +3284,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_template_id_01b3a6b2___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_template_id_01b3a6b2___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   render: () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_template_id_01b3a6b2___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   staticRenderFns: () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_template_id_01b3a6b2___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_template_id_01b3a6b2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Contact.vue?vue&type=template&id=01b3a6b2& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/Contact.vue?vue&type=template&id=01b3a6b2&");
 
@@ -3304,7 +3312,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"axios@^0.21","name":"axios","escapedName":"axios","rawSpec":"^0.21","saveSpec":null,"fetchSpec":"^0.21"},"_requiredBy":["#DEV:/"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_shasum":"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575","_spec":"axios@^0.21","_where":"C:\\\\Users\\\\Vijesh\\\\Documents\\\\Website\\\\vd-website","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundleDependencies":false,"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"deprecated":false,"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
+module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://axios-http.com","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.14.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]}');
 
 /***/ })
 

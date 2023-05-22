@@ -4,22 +4,20 @@
       <v-card flat color="transparent">
         <v-row dense align="center">
           <v-col cols="12" md="3">
-            <v-btn text :block="$vuetify.breakpoint.smAndDown" color="primary" class="rounded-lg" @click="$router.push({ name: 'Gallery' })">
-              <v-icon left v-if="$vuetify.breakpoint.mdAndUp">fa-arrow-left</v-icon> Back to Gallery
-            </v-btn>
+            <v-btn text :block="$vuetify.breakpoint.smAndDown" color="primary" class="rounded-lg" @click="$router.push({ name: 'Gallery' })"> <v-icon left v-if="$vuetify.breakpoint.mdAndUp">fa-arrow-left</v-icon> Back to Gallery </v-btn>
           </v-col>
           <v-col cols="12" md="9">
-            <h1 :style="fontSize" class="text-md-end text-center mb-4"> {{ name }} </h1>
+            <h1 :style="fontSize" class="text-md-end text-center mb-4">{{ name }}</h1>
           </v-col>
         </v-row>
         <v-divider class="mx-16"></v-divider>
         <v-container fluid>
-          <masonry :cols="{ default: 6, 960: 1, 1264: 3 }" :gutter="24" v-if="images.length > 0" :key="key" ref="masonry">
+          <masonry :cols="{ default: 3, 960: 1, 1264: 3 }" :gutter="24" v-if="images.length > 0" :key="key" ref="masonry">
             <div v-for="(image, index) in images" :key="index">
               <v-hover v-slot="{ hover }">
-                <v-img contain :lazy-src="`/assets/images/gallery/${folder}/${image.name}`" :src="`/assets/images/gallery/${folder}/${image.name}`" :class="{ 'zoom': hover }" class="my-6 text-center rounded-xl transition-swing elevation-8">
+                <v-img contain :lazy-src="`/assets/images/gallery/${folder}/${image.name}`" :src="`/assets/images/gallery/${folder}/${image.name}`" :class="{ zoom: hover }" class="my-6 text-center rounded-xl transition-swing elevation-8">
                   <transition name="scale-transition">
-                    <div v-if="hover && $vuetify.breakpoint.mdAndUp" class="d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal" style="height: 100%; cursor: pointer;" @click="openImage(image.name)">
+                    <div v-if="hover && $vuetify.breakpoint.mdAndUp" class="d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal" style="height: 100%; cursor: pointer" @click="openImage(image.name)">
                       <v-icon size="32" dark>fa-up-right-and-down-left-from-center</v-icon>
                     </div>
                   </transition>
@@ -45,7 +43,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from "axios";
 
 export default {
   data() {
@@ -63,8 +61,8 @@ export default {
 
   computed: {
     fontSize() {
-      return this.$vuetify.breakpoint.smAndDown ? 'font-weight: 400 !important; font-size: 2rem;' : 'font-weight: 300 !important; font-size: 4rem;';
-    }
+      return this.$vuetify.breakpoint.smAndDown ? "font-weight: 400 !important; font-size: 2rem;" : "font-weight: 300 !important; font-size: 4rem;";
+    },
   },
 
   methods: {
@@ -76,12 +74,12 @@ export default {
     getImages() {
       this.current += 50;
       axios
-        .post('/api/folder', { folder: this.folder, current: this.current })
-        .then(res => {
+        .post("/api/folder", { folder: this.folder, current: this.current })
+        .then((res) => {
           this.max = res.data.max;
           this.images = res.data.files;
         })
-        .catch(e => console.log(e));
+        .catch((e) => console.log(e));
     },
 
     openImage(image) {
@@ -91,16 +89,16 @@ export default {
 
     redo() {
       this.$nextTick(() => this.$refs.masonry.reCalculate());
-    }
+    },
   },
 
-  mounted() { },
+  mounted() {},
 
   created() {
     // console.log(this.$route.params.folder, this.$route.params.name);
     this.folder = this.$route.params.folder;
     // this.name = this.$route.params.name;
-    this.name = _.startCase(_.split(this.folder, '-').join(' '));
+    this.name = _.startCase(_.split(this.folder, "-").join(" "));
     document.title = `${this.name} | Vijesh Datt Photography`;
 
     this.getImages(`/assets/images/gallery/${this.folder}/`);
