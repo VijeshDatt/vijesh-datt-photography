@@ -2,19 +2,15 @@
   <v-app>
     <!-- Header, only visible in mobile mode -->
     <nav-header v-if="$vuetify.breakpoint.smAndDown"></nav-header>
+
     <!-- Drawer, visible in every mode except mobile -->
     <nav-drawer></nav-drawer>
+
     <!-- Main application, including drawer -->
     <v-main class="background">
-      <!-- <v-row class="fill-height"> -->
-      <!-- <v-col cols="2" v-if="$vuetify.breakpoint.mdAndUp">
-        </v-col>
-        <v-col :cols="$vuetify.breakpoint.mdAndUp ? 10 : 12"> -->
       <transition :name="transition" mode="out-in" appear>
         <router-view></router-view>
       </transition>
-      <!-- </v-col> -->
-      <!-- </v-row> -->
     </v-main>
 
     <!-- Footer -->
@@ -23,41 +19,41 @@
 </template>
 
 <script>
-import Header from '../layout/Header';
-import Drawer from '../layout/Drawer';
-import Footer from '../layout/Footer';
+import Header from "../layout/Header";
+import Drawer from "../layout/Drawer";
+import Footer from "../layout/Footer";
 
 export default {
   components: {
-    'nav-header': Header,
-    'nav-drawer': Drawer,
-    'base-footer': Footer,
+    "nav-header": Header,
+    "nav-drawer": Drawer,
+    "base-footer": Footer,
   },
 
   data() {
     return {
-      title: '',
-      transition: 'slide-y-transition'
+      title: "",
+      transition: "slide-y-transition",
     };
   },
 
   watch: {
     $route(to, from) {
       // Change transition based on route
-      if (to.name == 'Gallery View' && from.name == 'Gallery') this.transition = 'scroll-x-reverse-transition';
-      else if (to.name == 'Gallery' && from.name == 'Gallery View') this.transition = 'scroll-x-transition';
-      else this.transition = 'slide-y-transition';
+      if (to.name == "Gallery View" && from.name == "Gallery") this.transition = "scroll-x-reverse-transition";
+      else if (to.name == "Gallery" && from.name == "Gallery View") this.transition = "scroll-x-transition";
+      else this.transition = "slide-y-transition";
 
       this.title = to.meta.title;
     },
 
     title() {
       document.title = `${this.title} | Vijesh Datt Photography`;
-    }
+    },
   },
 
   mounted() {
-    this.title = 'Home';
+    this.title = "Home";
   },
 };
 </script>
@@ -68,9 +64,7 @@ export default {
   font-family: "Euphoria Script";
   font-style: normal;
   font-weight: 400;
-  src: local(""),
-    url("/fonts/euphoria-script-v14-latin-regular.woff2") format("woff2"),
-    url("/fonts/euphoria-script-v14-latin-regular.woff") format("woff");
+  src: local(""), url("/fonts/euphoria-script-v14-latin-regular.woff2") format("woff2"), url("/fonts/euphoria-script-v14-latin-regular.woff") format("woff");
 }
 
 /* inter-regular - latin */
@@ -78,9 +72,7 @@ export default {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: local(""), url("/fonts/inter-v11-latin-regular.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url("/fonts/inter-v11-latin-regular.woff") format("woff");
+  src: local(""), url("/fonts/inter-v11-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/fonts/inter-v11-latin-regular.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -89,9 +81,7 @@ export default {
   font-family: "Amatic SC";
   font-style: normal;
   font-weight: 700;
-  src: local(""), url("/fonts/amatic-sc-v23-latin-700.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url("/fonts/amatic-sc-v23-latin-700.woff") format("woff");
+  src: local(""), url("/fonts/amatic-sc-v23-latin-700.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/fonts/amatic-sc-v23-latin-700.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -101,10 +91,7 @@ export default {
   font-family: "Merriweather";
   font-style: normal;
   font-weight: 400;
-  src: local(""),
-    url("/fonts/merriweather-sans-v21-latin-regular.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url("/fonts/merriweather-sans-v21-latin-regular.woff") format("woff");
+  src: local(""), url("/fonts/merriweather-sans-v21-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/fonts/merriweather-sans-v21-latin-regular.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -113,10 +100,7 @@ export default {
   font-family: "Merriweather";
   font-style: normal;
   font-weight: 700;
-  src: local(""),
-    url("/fonts/merriweather-sans-v21-latin-700.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url("/fonts/merriweather-sans-v21-latin-700.woff") format("woff");
+  src: local(""), url("/fonts/merriweather-sans-v21-latin-700.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/fonts/merriweather-sans-v21-latin-700.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -125,9 +109,7 @@ export default {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 300;
-  src: local(""), url("/fonts/raleway-v27-latin-300.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url("/fonts/raleway-v27-latin-300.woff") format("woff");
+  src: local(""), url("/fonts/raleway-v27-latin-300.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/fonts/raleway-v27-latin-300.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -136,9 +118,7 @@ export default {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
-  src: local(""), url("/fonts/raleway-v27-latin-regular.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url("/fonts/raleway-v27-latin-regular.woff") format("woff");
+  src: local(""), url("/fonts/raleway-v27-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/fonts/raleway-v27-latin-regular.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -186,8 +166,8 @@ h6 {
   user-select: none;
 }
 
-.v-main__wrap>div>.container,
-.v-main__wrap>.container {
+.v-main__wrap > div > .container,
+.v-main__wrap > .container {
   width: 97% !important;
 }
 
