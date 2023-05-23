@@ -31,7 +31,7 @@
         <v-col v-for="(item, index) in images" :key="`main-${index}`" cols="12" md="4" sm="6">
           <v-hover v-slot="{ hover }">
             <v-card class="mx-md-3 mb-6" color="transparent" rounded="xl" elevation="6">
-              <v-img :src="`/assets/images/gallery/${item.folder}/cover.jpg`" :class="{ zoom: hover }" class="transition-swing white--text align-end" gradient="to top, rgba(0,0,0,0.75), rgba(0,0,0,0)" height="300px">
+              <v-img :src="item.cover" :class="{ zoom: hover }" class="transition-swing white--text align-end" gradient="to top, rgba(0,0,0,0.75), rgba(0,0,0,0)" height="300px">
                 <v-card-title>
                   <span class="pb-0">{{ item.name }}</span>
                 </v-card-title>
@@ -39,7 +39,7 @@
                 <v-expand-transition>
                   <div v-if="hover || $vuetify.breakpoint.smAndDown">
                     <v-card-text class="pt-0 text-end">
-                      <v-btn text dark class="rounded-lg" @click="$router.push({ name: 'Gallery View', params: { folder: item.folder } })"> View album <v-icon right dark>fa-arrow-right</v-icon> </v-btn>
+                      <v-btn text dark class="rounded-lg" @click="$router.push({ name: 'Gallery View', params: { folder: item.path } })"> View album <v-icon right dark>fa-arrow-right</v-icon> </v-btn>
                     </v-card-text>
                   </div>
                 </v-expand-transition>
@@ -54,6 +54,9 @@
 
 <script>
 import axios from "axios";
+import { storage } from "../plugins/firebase";
+import { ref, listAll, getDownloadURL } from "firebase/storage";
+const galleryRef = ref(storage, "gallery");
 
 export default {
   data() {
@@ -64,14 +67,21 @@ export default {
   },
 
   methods: {
-    getFolders() {
-      axios
-        .get("/api/gallery")
+    async getFolders() {
+      listAll(galleryRef)
         .then((res) => {
-          this.images = res.data.data.sort((a, b) => a.folder.localeCompare(b.folder));
-          this.loaded = true;
+          res.prefixes.forEach((folderRef) => {
+            getDownloadURL(ref(storage, `gs://${folderRef.bucket}/${folderRef.fullPath}/cover.jpg`)).then((download_url) => {
+              this.images.push({
+                path: folderRef.name,
+                name: _.startCase(folderRef.name.split("-")),
+                cover: download_url,
+              });
+            });
+          });
         })
-        .catch((e) => console.log(e));
+        .catch((error) => console.log(error))
+        .finally(() => (this.loaded = true));
     },
   },
 

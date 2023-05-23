@@ -31,7 +31,7 @@
 
 <script>
 import { storage } from "../plugins/firebase";
-import { ref, getDownloadURL, listAll } from "firebase/storage";
+import { ref, getDownloadURL } from "firebase/storage";
 const aboutRef = ref(storage, "about/about.jpg");
 
 export default {

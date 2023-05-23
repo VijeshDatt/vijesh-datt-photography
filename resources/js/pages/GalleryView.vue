@@ -18,9 +18,9 @@
           <masonry :cols="{ default: 3, 960: 1, 1264: 3 }" :gutter="24" v-if="images.length > 0" :key="key" ref="masonry">
             <div v-for="(image, index) in images" :key="index">
               <v-hover v-slot="{ hover }">
-                <v-img contain :lazy-src="`/assets/images/gallery/${folder}/${image.name}`" :src="`/assets/images/gallery/${folder}/${image.name}`" :class="{ zoom: hover }" class="my-6 text-center rounded-xl transition-swing elevation-8">
+                <v-img contain :lazy-src="image" :src="image" :class="{ zoom: hover }" class="my-6 text-center rounded-xl transition-swing elevation-8">
                   <transition name="scale-transition">
-                    <div v-if="hover && $vuetify.breakpoint.mdAndUp" class="d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal" style="height: 100%; cursor: pointer" @click="openImage(image.name)">
+                    <div v-if="hover && $vuetify.breakpoint.mdAndUp" class="d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal" style="height: 100%; cursor: pointer" @click="openImage(image)">
                       <v-icon size="32" dark>fa-magnifying-glass-plus</v-icon>
                     </div>
                   </transition>
@@ -29,24 +29,18 @@
             </div>
           </masonry>
         </v-container>
-
-        <div class="text-center my-10" v-if="current < max">
-          <v-btn text @click="getImages()" class="rounded-lg" color="primary">
-            Load More
-            <v-icon right>fa-plus</v-icon>
-          </v-btn>
-        </div>
       </v-card>
     </v-container>
 
     <v-dialog v-model="dialog" overlay-opacity="0.8">
-      <v-img :src="`/assets/images/gallery/${folder}/${image}`" contain max-height="90vh" @click="close"></v-img>
+      <v-img :src="image" contain max-height="90vh" @click="close"></v-img>
     </v-dialog>
   </div>
 </template>
 
 <script>
-import axios from "axios";
+import { storage } from "../plugins/firebase";
+import { ref, listAll, getDownloadURL } from "firebase/storage";
 
 export default {
   data() {
@@ -71,18 +65,16 @@ export default {
   methods: {
     close() {
       this.dialog = false;
-      // this.image = null;
+      this.image = null;
     },
 
     getImages() {
-      this.current += 50;
-      axios
-        .post("/api/folder", { folder: this.folder, current: this.current })
+      listAll(ref(storage, `gallery/${this.folder}`))
         .then((res) => {
-          this.max = res.data.max;
-          this.images = res.data.files;
+          res.items.forEach((itemRef) => getDownloadURL(ref(storage, `gs://${itemRef.bucket}/${itemRef.fullPath}`)).then((download_url) => this.images.push(download_url)));
         })
-        .catch((e) => console.log(e));
+        .catch((error) => console.log(error))
+        .finally(() => (this.hasLoaded = true));
     },
 
     openImage(image) {
@@ -98,13 +90,11 @@ export default {
   mounted() {},
 
   created() {
-    // console.log(this.$route.params.folder, this.$route.params.name);
     this.folder = this.$route.params.folder;
-    // this.name = this.$route.params.name;
     this.name = _.startCase(_.split(this.folder, "-").join(" "));
     document.title = `${this.name} | Vijesh Datt Photography`;
 
-    this.getImages(`/assets/images/gallery/${this.folder}/`);
+    this.getImages();
   },
 };
 </script>
