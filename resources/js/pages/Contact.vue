@@ -5,7 +5,7 @@
 
       <v-row v-if="$vuetify.breakpoint.mdAndUp">
         <!-- FAQ -->
-        <v-col cols="12" md="6">
+        <v-col cols="12">
           <v-card rounded="lg" elevation="8" class="mx-md-8">
             <v-card-title class="justify-center">
               <h2>FAQ</h2>
@@ -113,7 +113,7 @@
         </v-col>
 
         <!-- Contact Form -->
-        <!-- <v-col cols="12" md="6">
+        <v-col cols="12" md="6">
           <v-card rounded="lg" elevation="8" class="mx-md-8">
             <v-card-title class="justify-center">
               <h2>Contact Form</h2>
@@ -149,7 +149,7 @@
             <v-card-actions>
               <v-row dense>
                 <v-col cols="6">
-                  <v-btn block class="rounded-lg" color="success" @click="send" :disabled="!valid"> Send <v-icon right>fa-paper-plane</v-icon> </v-btn>
+                  <v-btn block class="rounded-lg" color="success" @click="send" :disabled="!valid || isLoading" :loading="isLoading"> Send <v-icon right>fa-paper-plane</v-icon> </v-btn>
                 </v-col>
 
                 <v-col cols="6">
@@ -158,7 +158,7 @@
               </v-row>
             </v-card-actions>
           </v-card>
-        </v-col> -->
+        </v-col>
       </v-row>
 
       <div v-else>
@@ -256,7 +256,7 @@
             </v-expansion-panel-content>
           </v-expansion-panel>
 
-          <!-- <v-expansion-panel>
+          <v-expansion-panel>
             <v-expansion-panel-header expand-icon="fa-caret-down" class="rounded-lg"> <strong>Contact Form</strong> </v-expansion-panel-header>
 
             <v-expansion-panel-content>
@@ -287,20 +287,26 @@
 
               <v-row dense>
                 <v-col cols="6">
-                  <v-btn block class="rounded-lg" color="success" @click="send" :disabled="!valid"> Send <v-icon right>fa-paper-plane</v-icon> </v-btn>
+                  <v-btn block class="rounded-lg" color="success" @click="send()" :disabled="!valid || isLoading" :loading="isLoading">
+                    Send
+                    <v-icon right>fa-paper-plane</v-icon>
+                  </v-btn>
                 </v-col>
 
                 <v-col cols="6">
-                  <v-btn block class="rounded-lg" text color="error" @click="clear"> Clear <v-icon right>fa-trash</v-icon> </v-btn>
+                  <v-btn block class="rounded-lg" text color="error" @click="clear">
+                    Clear
+                    <v-icon right>fa-trash</v-icon>
+                  </v-btn>
                 </v-col>
               </v-row>
             </v-expansion-panel-content>
-          </v-expansion-panel> -->
+          </v-expansion-panel>
         </v-expansion-panels>
       </div>
     </v-container>
 
-    <v-snackbar v-model="snackbar" top :right="$vuetify.breakpoint.mdAndUp" app text outlined :color="type" rounded="lg" :transition="$vuetify.breakpoint.mdAndUp ? 'slide-x-reverse-transition' : 'slide-y-transition'">
+    <v-snackbar v-model="snackbar" top :right="$vuetify.breakpoint.mdAndUp" app text outlined :color="type" rounded="lg" :transition="$vuetify.breakpoint.mdAndUp ? 'slide-x-reverse-transition' : 'slide-y-transition'" class="mt-md-6">
       <v-icon left :color="type"> {{ type == "success" ? "mdi-checkbox-marked-circle-outline" : "mdi-alert-circle-outline" }} </v-icon> {{ text }}
     </v-snackbar>
   </div>
@@ -323,6 +329,7 @@ export default {
       ripple: {
         class: "primary--text",
       },
+      isLoading: false,
     };
   },
 
@@ -333,6 +340,7 @@ export default {
 
     send() {
       if (this.$refs.form.validate()) {
+        this.isLoading = true;
         axios
           .post("/api/email", this.formItem)
           .then((res) => {
@@ -345,7 +353,8 @@ export default {
             this.snackbar = true;
             this.text = "Error occurred, please try again...";
             this.type = "error";
-          });
+          })
+          .finally(() => (this.isLoading = false));
       }
     },
 

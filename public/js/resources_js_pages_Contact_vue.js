@@ -2090,7 +2090,8 @@ __webpack_require__.r(__webpack_exports__);
       }],
       ripple: {
         "class": "primary--text"
-      }
+      },
+      isLoading: false
     };
   },
   methods: {
@@ -2101,6 +2102,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       if (this.$refs.form.validate()) {
+        this.isLoading = true;
         axios__WEBPACK_IMPORTED_MODULE_0___default().post("/api/email", this.formItem).then(function (res) {
           _this.snackbar = true;
           _this.text = "Email sent successfully";
@@ -2111,6 +2113,8 @@ __webpack_require__.r(__webpack_exports__);
           _this.snackbar = true;
           _this.text = "Error occurred, please try again...";
           _this.type = "error";
+        })["finally"](function () {
+          return _this.isLoading = false;
         });
       }
     },
@@ -2153,8 +2157,7 @@ var render = function render() {
     }
   }, [_vm._v("Contact")]), _vm._v(" "), _vm.$vuetify.breakpoint.mdAndUp ? _c("v-row", [_c("v-col", {
     attrs: {
-      cols: "12",
-      md: "6"
+      cols: "12"
     }
   }, [_c("v-card", {
     staticClass: "mx-md-8",
@@ -2371,7 +2374,195 @@ var render = function render() {
       },
       proxy: true
     }], null, false, 203806919)
-  }, [_vm._v("\n\n                  Due to photography being a hobby and due to my actual job timings, I don't take photography jobs outside of Suva (even Lami and Nausori is out of the way), unless it's the weekend and the requirements are not heavy.\n                ")])], 1)], 1)], 1)], 1)], 1)], 1) : _c("div", [_c("v-expansion-panels", {
+  }, [_vm._v("\n\n                  Due to photography being a hobby and due to my actual job timings, I don't take photography jobs outside of Suva (even Lami and Nausori is out of the way), unless it's the weekend and the requirements are not heavy.\n                ")])], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-col", {
+    attrs: {
+      cols: "12",
+      md: "6"
+    }
+  }, [_c("v-card", {
+    staticClass: "mx-md-8",
+    attrs: {
+      rounded: "lg",
+      elevation: "8"
+    }
+  }, [_c("v-card-title", {
+    staticClass: "justify-center"
+  }, [_c("h2", [_vm._v("Contact Form")])]), _vm._v(" "), _c("v-divider", {
+    staticClass: "mx-16"
+  }), _vm._v(" "), _c("v-card-text", [_c("p", [_vm._v("Fields with * are required")]), _vm._v(" "), _c("v-form", {
+    ref: "form",
+    attrs: {
+      "lazy-validation": ""
+    },
+    model: {
+      value: _vm.valid,
+      callback: function callback($$v) {
+        _vm.valid = $$v;
+      },
+      expression: "valid"
+    }
+  }, [_c("v-row", {
+    attrs: {
+      dense: ""
+    }
+  }, [_c("v-col", {
+    attrs: {
+      cols: "12",
+      md: "6"
+    }
+  }, [_c("v-text-field", {
+    staticClass: "rounded-lg",
+    attrs: {
+      label: "Name *",
+      dense: "",
+      filled: "",
+      rules: _vm.fieldRules,
+      counter: "255",
+      maxlength: "255"
+    },
+    model: {
+      value: _vm.formItem.name,
+      callback: function callback($$v) {
+        _vm.$set(_vm.formItem, "name", $$v);
+      },
+      expression: "formItem.name"
+    }
+  })], 1), _vm._v(" "), _c("v-col", {
+    attrs: {
+      cols: "12",
+      md: "6"
+    }
+  }, [_c("v-text-field", {
+    directives: [{
+      name: "mask",
+      rawName: "v-mask",
+      value: "##########",
+      expression: "'##########'"
+    }],
+    staticClass: "rounded-lg",
+    attrs: {
+      label: "Phone Number",
+      dense: "",
+      filled: "",
+      counter: "10",
+      maxlength: "10",
+      type: "tel",
+      rules: _vm.formItem.phone ? _vm.phoneRules : []
+    },
+    model: {
+      value: _vm.formItem.phone,
+      callback: function callback($$v) {
+        _vm.$set(_vm.formItem, "phone", $$v);
+      },
+      expression: "formItem.phone"
+    }
+  })], 1), _vm._v(" "), _c("v-col", {
+    attrs: {
+      cols: "12"
+    }
+  }, [_c("v-text-field", {
+    staticClass: "rounded-lg",
+    attrs: {
+      label: "Email Address *",
+      dense: "",
+      filled: "",
+      counter: "255",
+      maxlength: "255",
+      rules: _vm.emailRules
+    },
+    model: {
+      value: _vm.formItem.email,
+      callback: function callback($$v) {
+        _vm.$set(_vm.formItem, "email", $$v);
+      },
+      expression: "formItem.email"
+    }
+  })], 1), _vm._v(" "), _c("v-col", {
+    attrs: {
+      cols: "12"
+    }
+  }, [_c("v-text-field", {
+    staticClass: "rounded-lg",
+    attrs: {
+      label: "Subject *",
+      dense: "",
+      filled: "",
+      counter: "255",
+      maxlength: "255",
+      rules: _vm.fieldRules
+    },
+    model: {
+      value: _vm.formItem.subject,
+      callback: function callback($$v) {
+        _vm.$set(_vm.formItem, "subject", $$v);
+      },
+      expression: "formItem.subject"
+    }
+  })], 1), _vm._v(" "), _c("v-col", {
+    attrs: {
+      cols: "12"
+    }
+  }, [_c("v-textarea", {
+    staticClass: "rounded-lg",
+    attrs: {
+      label: "Message *",
+      dense: "",
+      filled: "",
+      counter: "1000",
+      maxlength: "1000",
+      rules: _vm.fieldRules,
+      "auto-grow": "",
+      rows: "1"
+    },
+    model: {
+      value: _vm.formItem.message,
+      callback: function callback($$v) {
+        _vm.$set(_vm.formItem, "message", $$v);
+      },
+      expression: "formItem.message"
+    }
+  })], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-card-actions", [_c("v-row", {
+    attrs: {
+      dense: ""
+    }
+  }, [_c("v-col", {
+    attrs: {
+      cols: "6"
+    }
+  }, [_c("v-btn", {
+    staticClass: "rounded-lg",
+    attrs: {
+      block: "",
+      color: "success",
+      disabled: !_vm.valid || _vm.isLoading,
+      loading: _vm.isLoading
+    },
+    on: {
+      click: _vm.send
+    }
+  }, [_vm._v(" Send "), _c("v-icon", {
+    attrs: {
+      right: ""
+    }
+  }, [_vm._v("fa-paper-plane")])], 1)], 1), _vm._v(" "), _c("v-col", {
+    attrs: {
+      cols: "6"
+    }
+  }, [_c("v-btn", {
+    staticClass: "rounded-lg",
+    attrs: {
+      block: "",
+      text: "",
+      color: "error"
+    },
+    on: {
+      click: _vm.clear
+    }
+  }, [_vm._v(" Clear "), _c("v-icon", {
+    attrs: {
+      right: ""
+    }
+  }, [_vm._v("fa-trash")])], 1)], 1)], 1)], 1)], 1)], 1)], 1) : _c("div", [_c("v-expansion-panels", {
     staticClass: "rounded-lg",
     attrs: {
       flat: "",
@@ -2574,7 +2765,188 @@ var render = function render() {
       text: "",
       icon: "fa-info"
     }
-  }, [_vm._v(" Due to photography being a hobby and due to my actual job timings, I don't take photography jobs outside of Suva (even Lami and Nausori is out of the way), unless it's the weekend and the requirements are not heavy. ")])], 1)], 1)], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-snackbar", {
+  }, [_vm._v(" Due to photography being a hobby and due to my actual job timings, I don't take photography jobs outside of Suva (even Lami and Nausori is out of the way), unless it's the weekend and the requirements are not heavy. ")])], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-expansion-panel", [_c("v-expansion-panel-header", {
+    staticClass: "rounded-lg",
+    attrs: {
+      "expand-icon": "fa-caret-down"
+    }
+  }, [_c("strong", [_vm._v("Contact Form")])]), _vm._v(" "), _c("v-expansion-panel-content", [_c("p", {
+    staticClass: "text-center"
+  }, [_vm._v("Fields with * are required")]), _vm._v(" "), _c("v-form", {
+    ref: "form",
+    attrs: {
+      "lazy-validation": ""
+    },
+    model: {
+      value: _vm.valid,
+      callback: function callback($$v) {
+        _vm.valid = $$v;
+      },
+      expression: "valid"
+    }
+  }, [_c("v-row", {
+    attrs: {
+      dense: ""
+    }
+  }, [_c("v-col", {
+    attrs: {
+      cols: "12"
+    }
+  }, [_c("v-text-field", {
+    staticClass: "rounded-lg",
+    attrs: {
+      label: "Name *",
+      dense: "",
+      filled: "",
+      rules: _vm.fieldRules,
+      counter: "255",
+      maxlength: "255"
+    },
+    model: {
+      value: _vm.formItem.name,
+      callback: function callback($$v) {
+        _vm.$set(_vm.formItem, "name", $$v);
+      },
+      expression: "formItem.name"
+    }
+  })], 1), _vm._v(" "), _c("v-col", {
+    attrs: {
+      cols: "12"
+    }
+  }, [_c("v-text-field", {
+    directives: [{
+      name: "mask",
+      rawName: "v-mask",
+      value: "##########",
+      expression: "'##########'"
+    }],
+    staticClass: "rounded-lg",
+    attrs: {
+      label: "Phone Number",
+      dense: "",
+      filled: "",
+      counter: "10",
+      maxlength: "10",
+      type: "tel",
+      rules: _vm.formItem.phone ? _vm.phoneRules : []
+    },
+    model: {
+      value: _vm.formItem.phone,
+      callback: function callback($$v) {
+        _vm.$set(_vm.formItem, "phone", $$v);
+      },
+      expression: "formItem.phone"
+    }
+  })], 1), _vm._v(" "), _c("v-col", {
+    attrs: {
+      cols: "12"
+    }
+  }, [_c("v-text-field", {
+    staticClass: "rounded-lg",
+    attrs: {
+      label: "Email Address *",
+      dense: "",
+      filled: "",
+      counter: "255",
+      maxlength: "255",
+      rules: _vm.emailRules
+    },
+    model: {
+      value: _vm.formItem.email,
+      callback: function callback($$v) {
+        _vm.$set(_vm.formItem, "email", $$v);
+      },
+      expression: "formItem.email"
+    }
+  })], 1), _vm._v(" "), _c("v-col", {
+    attrs: {
+      cols: "12"
+    }
+  }, [_c("v-text-field", {
+    staticClass: "rounded-lg",
+    attrs: {
+      label: "Subject *",
+      dense: "",
+      filled: "",
+      counter: "255",
+      maxlength: "255",
+      rules: _vm.fieldRules
+    },
+    model: {
+      value: _vm.formItem.subject,
+      callback: function callback($$v) {
+        _vm.$set(_vm.formItem, "subject", $$v);
+      },
+      expression: "formItem.subject"
+    }
+  })], 1), _vm._v(" "), _c("v-col", {
+    attrs: {
+      cols: "12"
+    }
+  }, [_c("v-textarea", {
+    staticClass: "rounded-lg",
+    attrs: {
+      label: "Message *",
+      dense: "",
+      filled: "",
+      counter: "1000",
+      maxlength: "1000",
+      rules: _vm.fieldRules,
+      "auto-grow": "",
+      rows: "1"
+    },
+    model: {
+      value: _vm.formItem.message,
+      callback: function callback($$v) {
+        _vm.$set(_vm.formItem, "message", $$v);
+      },
+      expression: "formItem.message"
+    }
+  })], 1)], 1)], 1), _vm._v(" "), _c("v-row", {
+    attrs: {
+      dense: ""
+    }
+  }, [_c("v-col", {
+    attrs: {
+      cols: "6"
+    }
+  }, [_c("v-btn", {
+    staticClass: "rounded-lg",
+    attrs: {
+      block: "",
+      color: "success",
+      disabled: !_vm.valid || _vm.isLoading,
+      loading: _vm.isLoading
+    },
+    on: {
+      click: function click($event) {
+        return _vm.send();
+      }
+    }
+  }, [_vm._v("\n                  Send\n                  "), _c("v-icon", {
+    attrs: {
+      right: ""
+    }
+  }, [_vm._v("fa-paper-plane")])], 1)], 1), _vm._v(" "), _c("v-col", {
+    attrs: {
+      cols: "6"
+    }
+  }, [_c("v-btn", {
+    staticClass: "rounded-lg",
+    attrs: {
+      block: "",
+      text: "",
+      color: "error"
+    },
+    on: {
+      click: _vm.clear
+    }
+  }, [_vm._v("\n                  Clear\n                  "), _c("v-icon", {
+    attrs: {
+      right: ""
+    }
+  }, [_vm._v("fa-trash")])], 1)], 1)], 1)], 1)], 1)], 1)], 1)], 1), _vm._v(" "), _c("v-snackbar", {
+    staticClass: "mt-md-6",
     attrs: {
       top: "",
       right: _vm.$vuetify.breakpoint.mdAndUp,
