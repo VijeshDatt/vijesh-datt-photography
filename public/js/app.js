@@ -64,7 +64,7 @@ __webpack_require__.r(__webpack_exports__);
       drawer: false,
       group: null,
       ripple: {
-        "class": 'primary--text'
+        "class": "primary--text"
       }
     };
   }
@@ -129,7 +129,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("v-app", [_vm.$vuetify.breakpoint.smAndDown ? _c("nav-header") : _vm._e(), _vm._v(" "), _c("nav-drawer"), _vm._v(" "), _c("v-main", {
+  return _c("v-app", [_vm.smAndDown ? _c("nav-header") : _vm._e(), _vm._v(" "), _c("nav-drawer"), _vm._v(" "), _c("v-main", {
     staticClass: "background"
   }, [_c("transition", {
     attrs: {
@@ -162,7 +162,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _vm.$vuetify.breakpoint.mdAndUp ? _c("v-navigation-drawer", {
+  return _vm.mdAndUp ? _c("v-navigation-drawer", {
     attrs: {
       app: "",
       value: true,
@@ -329,7 +329,7 @@ var render = function render() {
     }
   }, [_c("v-card-text", {
     staticClass: "py-2 text-center"
-  }, [_c("strong", [_vm._v("© 2019 - " + _vm._s(new Date().getFullYear()) + " Vijesh Datt Photography. "), _vm.$vuetify.breakpoint.smAndDown ? _c("br") : _vm._e(), _vm._v(" All rights reserved.")])])], 1)], 1);
+  }, [_c("strong", [_vm._v("© 2019 - " + _vm._s(new Date().getFullYear()) + " Vijesh Datt Photography. "), _vm.smAndDown ? _c("br") : _vm._e(), _vm._v("\n        All rights reserved.")])])], 1)], 1);
 };
 
 var staticRenderFns = [];
@@ -493,7 +493,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   genericMixin: () => (/* binding */ genericMixin)
 /* harmony export */ });
-var genericMixin = {};
+var genericMixin = {
+  computed: {
+    mdAndUp: function mdAndUp() {
+      return this.$vuetify.breakpoint.mdAndUp;
+    },
+    smAndDown: function smAndDown() {
+      return this.$vuetify.breakpoint.smAndDown;
+    }
+  }
+};
 
 /***/ }),
 

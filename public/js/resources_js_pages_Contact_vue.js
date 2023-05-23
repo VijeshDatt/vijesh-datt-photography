@@ -2149,18 +2149,18 @@ var render = function render() {
   }, [_c("h1", {
     staticClass: "mb-4",
     "class": {
-      "text-center": _vm.$vuetify.breakpoint.smAndDown
+      "text-center": _vm.smAndDown
     },
     staticStyle: {
       "font-size": "4rem",
       "font-weight": "300"
     }
-  }, [_vm._v("Contact")]), _vm._v(" "), _vm.$vuetify.breakpoint.mdAndUp ? _c("v-row", [_c("v-col", {
+  }, [_vm._v("Contact")]), _vm._v(" "), _vm.mdAndUp ? _c("v-row", [_c("v-col", {
     attrs: {
       cols: "12"
     }
   }, [_c("v-card", {
-    staticClass: "mx-md-8",
+    staticClass: "mx-md-8 mb-md-12",
     attrs: {
       rounded: "lg",
       elevation: "8"
@@ -2209,17 +2209,13 @@ var render = function render() {
     staticClass: "justify-center"
   }, [_c("h2", [_vm._v("Information")])]), _vm._v(" "), _c("v-divider", {
     staticClass: "mx-16"
-  }), _vm._v(" "), _c("v-card-text", [_c("v-row", {
-    attrs: {
-      dense: ""
-    }
-  }, [_c("v-col", {
+  }), _vm._v(" "), _c("v-card-text", [_c("v-row", [_c("v-col", {
     attrs: {
       cols: "12",
       md: "6"
     }
   }, [_c("v-alert", {
-    staticClass: "rounded-lg",
+    staticClass: "rounded-lg mb-0",
     attrs: {
       border: "left",
       elevation: "0",
@@ -2237,7 +2233,7 @@ var render = function render() {
       md: "6"
     }
   }, [_c("v-alert", {
-    staticClass: "rounded-lg",
+    staticClass: "rounded-lg mb-0",
     attrs: {
       border: "left",
       elevation: "0",
@@ -2307,7 +2303,7 @@ var render = function render() {
       cols: "12"
     }
   }, [_c("v-alert", {
-    staticClass: "rounded-lg",
+    staticClass: "rounded-lg mb-0",
     attrs: {
       border: "left",
       elevation: "0",
@@ -2326,7 +2322,7 @@ var render = function render() {
       md: "6"
     }
   }, [_c("v-alert", {
-    staticClass: "rounded-lg",
+    staticClass: "rounded-lg mb-0",
     attrs: {
       border: "left",
       elevation: "0",
@@ -2345,7 +2341,7 @@ var render = function render() {
       md: "6"
     }
   }, [_c("v-alert", {
-    staticClass: "rounded-lg",
+    staticClass: "rounded-lg mb-0",
     attrs: {
       border: "left",
       elevation: "0",
@@ -2358,7 +2354,7 @@ var render = function render() {
       cols: "12"
     }
   }, [_c("v-alert", {
-    staticClass: "rounded-lg",
+    staticClass: "rounded-lg mb-0",
     attrs: {
       border: "left",
       elevation: "0",
@@ -2540,7 +2536,7 @@ var render = function render() {
     on: {
       click: _vm.send
     }
-  }, [_vm._v(" Send "), _c("v-icon", {
+  }, [_vm._v("\n                  Send\n                  "), _c("v-icon", {
     attrs: {
       right: ""
     }
@@ -2558,7 +2554,7 @@ var render = function render() {
     on: {
       click: _vm.clear
     }
-  }, [_vm._v(" Clear "), _c("v-icon", {
+  }, [_vm._v("\n                  Clear\n                  "), _c("v-icon", {
     attrs: {
       right: ""
     }
@@ -2949,13 +2945,13 @@ var render = function render() {
     staticClass: "mt-md-6",
     attrs: {
       top: "",
-      right: _vm.$vuetify.breakpoint.mdAndUp,
+      right: _vm.mdAndUp,
       app: "",
       text: "",
       outlined: "",
       color: _vm.type,
       rounded: "lg",
-      transition: _vm.$vuetify.breakpoint.mdAndUp ? "slide-x-reverse-transition" : "slide-y-transition"
+      transition: _vm.mdAndUp ? "slide-x-reverse-transition" : "slide-y-transition"
     },
     model: {
       value: _vm.snackbar,

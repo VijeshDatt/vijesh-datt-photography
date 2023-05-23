@@ -5926,7 +5926,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     fontSize: function fontSize() {
-      return this.$vuetify.breakpoint.smAndDown ? "font-weight: 400 !important; font-size: 2rem;" : "font-weight: 300 !important; font-size: 4rem;";
+      return this.smAndDown ? "font-weight: 400 !important; font-size: 2rem;" : "font-weight: 300 !important; font-size: 4rem;";
     }
   },
   methods: {
@@ -6011,7 +6011,7 @@ var render = function render() {
     staticClass: "rounded-lg",
     attrs: {
       text: "",
-      block: _vm.$vuetify.breakpoint.smAndDown,
+      block: _vm.smAndDown,
       color: "primary"
     },
     on: {
@@ -6021,7 +6021,7 @@ var render = function render() {
         });
       }
     }
-  }, [_vm.$vuetify.breakpoint.mdAndUp ? _c("v-icon", {
+  }, [_vm.mdAndUp ? _c("v-icon", {
     attrs: {
       left: ""
     }
@@ -6072,7 +6072,7 @@ var render = function render() {
             attrs: {
               name: "scale-transition"
             }
-          }, [hover && _vm.$vuetify.breakpoint.mdAndUp ? _c("div", {
+          }, [hover && _vm.mdAndUp ? _c("div", {
             staticClass: "d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal",
             staticStyle: {
               height: "100%",

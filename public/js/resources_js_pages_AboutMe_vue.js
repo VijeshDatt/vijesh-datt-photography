@@ -5958,7 +5958,7 @@ var render = function render() {
 
   return _c("v-container", {
     "class": {
-      "fill-height": _vm.$vuetify.breakpoint.mdAndUp
+      "fill-height": _vm.mdAndUp
     },
     attrs: {
       fluid: ""
@@ -6004,7 +6004,7 @@ var render = function render() {
       md: "5"
     }
   }, [_c("v-card", {
-    style: _vm.$vuetify.breakpoint.mdAndUp ? "margin-top: -10%; margin-left: -20%;" : "margin: -10% 5% 0 5%;",
+    style: _vm.mdAndUp ? "margin-top: -10%; margin-left: -20%;" : "margin: -10% 5% 0 5%;",
     attrs: {
       elevation: "8",
       color: "#edede9",

@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-container fluid>
-      <h1 style="font-size: 4rem; font-weight: 300" :class="{ 'text-center': $vuetify.breakpoint.smAndDown }" class="mb-4">Gallery</h1>
+      <h1 style="font-size: 4rem; font-weight: 300" :class="{ 'text-center': smAndDown }" class="mb-4">Gallery</h1>
 
       <v-alert class="rounded-lg" text type="info" border="left" v-if="loaded">
         <template #prepend>
@@ -14,7 +14,7 @@
           </v-col>
 
           <v-col cols="12" md="2" class="d-flex justify-end">
-            <v-btn class="rounded-lg" depressed color="info" :block="$vuetify.breakpoint.smAndDown" href="https://vijeshdatt.picfair.com/" target="_blank">
+            <v-btn class="rounded-lg" depressed color="info" :block="smAndDown" href="https://vijeshdatt.picfair.com/" target="_blank">
               <v-icon small left>fa-link</v-icon>
               PicFair Store
             </v-btn>
@@ -37,7 +37,7 @@
                 </v-card-title>
 
                 <v-expand-transition>
-                  <div v-if="hover || $vuetify.breakpoint.smAndDown">
+                  <div v-if="hover || smAndDown">
                     <v-card-text class="pt-0 text-end">
                       <v-btn text dark class="rounded-lg" @click="$router.push({ name: 'Gallery View', params: { folder: item.path } })"> View album <v-icon right dark>fa-arrow-right</v-icon> </v-btn>
                     </v-card-text>

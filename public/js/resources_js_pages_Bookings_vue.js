@@ -37,7 +37,7 @@ var render = function render() {
   }, [_c("h1", {
     staticClass: "mb-4",
     "class": {
-      "text-center": _vm.$vuetify.breakpoint.smAndDown
+      "text-center": _vm.smAndDown
     },
     staticStyle: {
       "font-size": "4rem",

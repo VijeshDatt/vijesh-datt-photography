@@ -8047,7 +8047,7 @@ var render = function render() {
   }, [_c("h1", {
     staticClass: "mb-4",
     "class": {
-      "text-center": _vm.$vuetify.breakpoint.smAndDown
+      "text-center": _vm.smAndDown
     },
     staticStyle: {
       "font-size": "4rem",
@@ -8089,7 +8089,7 @@ var render = function render() {
     attrs: {
       depressed: "",
       color: "info",
-      block: _vm.$vuetify.breakpoint.smAndDown,
+      block: _vm.smAndDown,
       href: "https://vijeshdatt.picfair.com/",
       target: "_blank"
     }
@@ -8145,7 +8145,7 @@ var render = function render() {
             }
           }, [_c("v-card-title", [_c("span", {
             staticClass: "pb-0"
-          }, [_vm._v(_vm._s(item.name))])]), _vm._v(" "), _c("v-expand-transition", [hover || _vm.$vuetify.breakpoint.smAndDown ? _c("div", [_c("v-card-text", {
+          }, [_vm._v(_vm._s(item.name))])]), _vm._v(" "), _c("v-expand-transition", [hover || _vm.smAndDown ? _c("div", [_c("v-card-text", {
             staticClass: "pt-0 text-end"
           }, [_c("v-btn", {
             staticClass: "rounded-lg",

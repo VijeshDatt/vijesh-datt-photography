@@ -4,7 +4,7 @@
       <v-card flat color="transparent">
         <v-row dense align="center">
           <v-col cols="12" md="3">
-            <v-btn text :block="$vuetify.breakpoint.smAndDown" color="primary" class="rounded-lg" @click="$router.push({ name: 'Gallery' })"> <v-icon left v-if="$vuetify.breakpoint.mdAndUp">fa-arrow-left</v-icon> Back to Gallery </v-btn>
+            <v-btn text :block="smAndDown" color="primary" class="rounded-lg" @click="$router.push({ name: 'Gallery' })"> <v-icon left v-if="mdAndUp">fa-arrow-left</v-icon> Back to Gallery </v-btn>
           </v-col>
 
           <v-col cols="12" md="9">
@@ -20,7 +20,7 @@
               <v-hover v-slot="{ hover }">
                 <v-img contain :lazy-src="image" :src="image" :class="{ zoom: hover }" class="my-6 text-center rounded-xl transition-swing elevation-8">
                   <transition name="scale-transition">
-                    <div v-if="hover && $vuetify.breakpoint.mdAndUp" class="d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal" style="height: 100%; cursor: pointer" @click="openImage(image)">
+                    <div v-if="hover && mdAndUp" class="d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal" style="height: 100%; cursor: pointer" @click="openImage(image)">
                       <v-icon size="32" dark>fa-magnifying-glass-plus</v-icon>
                     </div>
                   </transition>
@@ -58,7 +58,7 @@ export default {
 
   computed: {
     fontSize() {
-      return this.$vuetify.breakpoint.smAndDown ? "font-weight: 400 !important; font-size: 2rem;" : "font-weight: 300 !important; font-size: 4rem;";
+      return this.smAndDown ? "font-weight: 400 !important; font-size: 2rem;" : "font-weight: 300 !important; font-size: 4rem;";
     },
   },
 

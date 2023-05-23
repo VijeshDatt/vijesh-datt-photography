@@ -1,12 +1,12 @@
 <template>
   <div>
     <v-container fluid>
-      <h1 style="font-size: 4rem; font-weight: 300" :class="{ 'text-center': $vuetify.breakpoint.smAndDown }" class="mb-4">Contact</h1>
+      <h1 style="font-size: 4rem; font-weight: 300" :class="{ 'text-center': smAndDown }" class="mb-4">Contact</h1>
 
-      <v-row v-if="$vuetify.breakpoint.mdAndUp">
+      <v-row v-if="mdAndUp">
         <!-- FAQ -->
         <v-col cols="12">
-          <v-card rounded="lg" elevation="8" class="mx-md-8">
+          <v-card rounded="lg" elevation="8" class="mx-md-8 mb-md-12">
             <v-card-title class="justify-center">
               <h2>FAQ</h2>
             </v-card-title>
@@ -55,15 +55,15 @@
             <v-divider class="mx-16"></v-divider>
 
             <v-card-text>
-              <v-row dense>
+              <v-row>
                 <v-col cols="12" md="6">
-                  <v-alert border="left" elevation="0" color="primary" text class="rounded-lg" icon="fa-envelope">
+                  <v-alert border="left" elevation="0" color="primary" text class="rounded-lg mb-0" icon="fa-envelope">
                     Email: <strong><a href="mailto:info@vijeshdatt.com">info@vijeshdatt.com</a></strong>
                   </v-alert>
                 </v-col>
 
                 <v-col cols="12" md="6">
-                  <v-alert border="left" elevation="0" color="primary" text class="rounded-lg" icon="fa-phone">
+                  <v-alert border="left" elevation="0" color="primary" text class="rounded-lg mb-0" icon="fa-phone">
                     Phone:
                     <v-menu offset-y left transition="scale" rounded="lg" origin="top center" nudgeBottom="5px">
                       <template v-slot:activator="{ on, attrs }">
@@ -83,23 +83,23 @@
                   </v-alert>
                 </v-col>
                 <v-col cols="12">
-                  <v-alert border="left" elevation="0" color="primary" text class="rounded-lg" icon="fa-facebook-f">
+                  <v-alert border="left" elevation="0" color="primary" text class="rounded-lg mb-0" icon="fa-facebook-f">
                     Facebook: <strong><a href="https://www.facebook.com/VijeshDattPhotography" target="_blank">Vijesh Datt Photography</a></strong>
                   </v-alert>
                 </v-col>
 
                 <v-col cols="12" md="6">
-                  <v-alert border="left" elevation="0" color="primary" text class="rounded-lg" icon="fa-instagram">
+                  <v-alert border="left" elevation="0" color="primary" text class="rounded-lg mb-0" icon="fa-instagram">
                     Intagram: <strong><a href="https://www.instagram.com/vijeshdatt/" target="_blank">@vijeshdatt</a></strong>
                   </v-alert>
                 </v-col>
 
                 <v-col cols="12" md="6">
-                  <v-alert border="left" elevation="0" color="primary" text class="rounded-lg" icon="fa-location-dot"> Location: <strong>Based in Suva, Fiji</strong> </v-alert>
+                  <v-alert border="left" elevation="0" color="primary" text class="rounded-lg mb-0" icon="fa-location-dot"> Location: <strong>Based in Suva, Fiji</strong> </v-alert>
                 </v-col>
 
                 <v-col cols="12">
-                  <v-alert border="left" elevation="0" type="info" class="rounded-lg" text>
+                  <v-alert border="left" elevation="0" type="info" class="rounded-lg mb-0" text>
                     <template #prepend>
                       <v-icon class="ml-4 mr-5 mt-n1 info--text">fa-info</v-icon>
                     </template>
@@ -149,11 +149,17 @@
             <v-card-actions>
               <v-row dense>
                 <v-col cols="6">
-                  <v-btn block class="rounded-lg" color="success" @click="send" :disabled="!valid || isLoading" :loading="isLoading"> Send <v-icon right>fa-paper-plane</v-icon> </v-btn>
+                  <v-btn block class="rounded-lg" color="success" @click="send" :disabled="!valid || isLoading" :loading="isLoading">
+                    Send
+                    <v-icon right>fa-paper-plane</v-icon>
+                  </v-btn>
                 </v-col>
 
                 <v-col cols="6">
-                  <v-btn block class="rounded-lg" text color="error" @click="clear"> Clear <v-icon right>fa-trash</v-icon> </v-btn>
+                  <v-btn block class="rounded-lg" text color="error" @click="clear">
+                    Clear
+                    <v-icon right>fa-trash</v-icon>
+                  </v-btn>
                 </v-col>
               </v-row>
             </v-card-actions>
@@ -306,7 +312,7 @@
       </div>
     </v-container>
 
-    <v-snackbar v-model="snackbar" top :right="$vuetify.breakpoint.mdAndUp" app text outlined :color="type" rounded="lg" :transition="$vuetify.breakpoint.mdAndUp ? 'slide-x-reverse-transition' : 'slide-y-transition'" class="mt-md-6">
+    <v-snackbar v-model="snackbar" top :right="mdAndUp" app text outlined :color="type" rounded="lg" :transition="mdAndUp ? 'slide-x-reverse-transition' : 'slide-y-transition'" class="mt-md-6">
       <v-icon left :color="type"> {{ type == "success" ? "mdi-checkbox-marked-circle-outline" : "mdi-alert-circle-outline" }} </v-icon> {{ text }}
     </v-snackbar>
   </div>

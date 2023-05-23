@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <!-- Header, only visible in mobile mode -->
-    <nav-header v-if="$vuetify.breakpoint.smAndDown"></nav-header>
+    <nav-header v-if="smAndDown"></nav-header>
 
     <!-- Drawer, visible in every mode except mobile -->
     <nav-drawer></nav-drawer>

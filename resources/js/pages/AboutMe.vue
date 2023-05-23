@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid :class="{ 'fill-height': $vuetify.breakpoint.mdAndUp }">
+  <v-container fluid :class="{ 'fill-height': mdAndUp }">
     <v-row no-gutters align="center" justify="center">
       <v-col cols="12" md="7">
         <v-card elevation="8" rounded="xl" class="ml-md-16" v-if="hasLoaded">
@@ -11,7 +11,7 @@
         </v-card>
       </v-col>
       <v-col cols="12" md="5">
-        <v-card elevation="8" color="#edede9" rounded="xl" :style="$vuetify.breakpoint.mdAndUp ? 'margin-top: -10%; margin-left: -20%;' : 'margin: -10% 5% 0 5%;'">
+        <v-card elevation="8" color="#edede9" rounded="xl" :style="mdAndUp ? 'margin-top: -10%; margin-left: -20%;' : 'margin: -10% 5% 0 5%;'">
           <v-card-title class="text-h3 justify-center"> About Me - Vijesh </v-card-title>
           <v-card-text> Born and raised in Suva, Fiji. Was always interested in photography but never had the means to pursue it. Finally saved up for a year and bought myself a basic entry level camera and have been fortunate enough to be getting opportunities to grow with this hobby. </v-card-text>
           <v-divider class="mx-16"></v-divider>

@@ -2,7 +2,7 @@
   <div>
     <v-app-bar elevate-on-scroll app color="background">
       <!-- Drawer toggle -->
-      <!-- <v-app-bar-nav-icon v-if="$vuetify.breakpoint.smAndDown"></v-app-bar-nav-icon> -->
+      <!-- <v-app-bar-nav-icon v-if="smAndDown"></v-app-bar-nav-icon> -->
       <v-spacer></v-spacer>
       <!-- Home button -->
       <v-btn icon class="mx-1" @click="goto('Home')">
@@ -34,18 +34,15 @@
 <script>
 export default {
   data() {
-    return {
-    };
+    return {};
   },
 
   methods: {
     goto(name) {
       this.$router.push({ name: name });
-    }
+    },
   },
 };
 </script>
 
-<style>
-
-</style>
+<style></style>

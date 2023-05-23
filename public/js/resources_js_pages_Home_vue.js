@@ -7979,7 +7979,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     mainSize: function mainSize() {
-      return this.$vuetify.breakpoint.mdAndUp ? "font-size: 5rem;" : "font-size: 3rem;";
+      return this.mdAndUp ? "font-size: 5rem;" : "font-size: 3rem;";
     }
   },
   watch: {},
@@ -8095,7 +8095,7 @@ var render = function render() {
             attrs: {
               name: "scale-transition"
             }
-          }, [hover && _vm.hasLoaded && _vm.$vuetify.breakpoint.mdAndUp ? _c("div", {
+          }, [hover && _vm.hasLoaded && _vm.mdAndUp ? _c("div", {
             staticClass: "d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal",
             staticStyle: {
               height: "100%",
