@@ -4,6 +4,7 @@
 /public/js
 /public/mounts
 /storage/*.key
+/storage/framework
 /vendor
 .env
 .env.backup
