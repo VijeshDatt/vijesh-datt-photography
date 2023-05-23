@@ -5,7 +5,6 @@
 /public/mounts
 /storage/*.key
 /storage/assets
-/storage/framework
 /vendor
 .env
 .env.backup
