@@ -14,8 +14,19 @@
 
         <v-divider class="mx-16"></v-divider>
 
-        <v-container fluid>
-          <masonry :cols="{ default: 3, 960: 1, 1264: 3 }" :gutter="24" v-if="images.length > 0" :key="key" ref="masonry">
+        <v-container fluid class="gallery">
+          <div class="box" v-for="(image, index) in images" :key="index">
+            <v-hover v-slot="{ hover }">
+              <v-img contain :lazy-src="image" :src="image" :class="{ zoom: hover }" class="image text-center rounded-xl transition-swing elevation-8">
+                <transition name="scale-transition">
+                  <div v-if="hover && mdAndUp" class="d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal" style="height: 100%; cursor: pointer" @click="openImage(image)">
+                    <v-icon size="32" dark>fa-magnifying-glass-plus</v-icon>
+                  </div>
+                </transition>
+              </v-img>
+            </v-hover>
+          </div>
+          <!-- <masonry :cols="{ default: 3, 960: 1, 1264: 3 }" :gutter="24" v-if="images.length > 0" :key="key" ref="masonry">
             <div v-for="(image, index) in images" :key="index">
               <v-hover v-slot="{ hover }">
                 <v-img contain :lazy-src="image" :src="image" :class="{ zoom: hover }" class="my-6 text-center rounded-xl transition-swing elevation-8">
@@ -27,7 +38,7 @@
                 </v-img>
               </v-hover>
             </div>
-          </masonry>
+          </masonry> -->
         </v-container>
       </v-card>
     </v-container>
@@ -112,5 +123,32 @@ export default {
 
 .v-dialog {
   box-shadow: none !important;
+}
+
+.gallery {
+  columns: 3;
+  column-gap: 25px;
+}
+
+.box {
+  width: 100%;
+  margin-bottom: 25px;
+  break-inside: avoid;
+}
+
+.image {
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .gallery {
+    columns: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    columns: 1;
+  }
 }
 </style>

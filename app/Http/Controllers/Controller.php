@@ -12,19 +12,9 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Mail;
 
-class Controller extends BaseController
-{
-  public function home()
-  {
-    $files = \File::allFiles(public_path());
-    $temp = array();
-    foreach ($files as $file) {
-      $temp[] = pathinfo($file);
-    }
-    return $temp;
-
-    // $path = public_path('/assets/images/home/');
-    $path = 'assets/images/home/';
+class Controller extends BaseController {
+  public function home() {
+    $path = public_path('/assets/images/home/');
     $files = File::allFiles($path);
     $data = array();
 
@@ -39,8 +29,7 @@ class Controller extends BaseController
     ];
   }
 
-  public function gallery()
-  {
+  public function gallery() {
     $path = public_path('/assets/images/gallery/');
     $subdirectories = File::directories($path);
     $data = array();
@@ -62,8 +51,7 @@ class Controller extends BaseController
     ];
   }
 
-  public function files(Request $request)
-  {
+  public function files(Request $request) {
     $dir = public_path("/assets/images/gallery/{$request->folder}/");
     $files = \File::allFiles($dir);
 
@@ -80,8 +68,7 @@ class Controller extends BaseController
     ];
   }
 
-  public function email(Request $request)
-  {
+  public function email(Request $request) {
     $data = (object)[
       'name' => $request->name,
       'phone' => $request->phone,

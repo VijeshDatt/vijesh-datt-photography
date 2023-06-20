@@ -8001,27 +8001,34 @@ __webpack_require__.r(__webpack_exports__);
         return console.log(error);
       });
     },
-    // fetchImages() {
-    //   axios
-    //     .get("/api/home")
-    //     .then((res) => {
-    //       const shuffled = res.data.images.sort(() => Math.random() - 0.5);
-    //       shuffled.forEach((e) => this.images.push({ image: `/assets/images/home/${e.name}`, width: e.width, height: e.height }));
-    //     })
-    //     .catch((e) => console.log(e));
-    // },
+    fetchImages: function fetchImages() {
+      var _this2 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get("/api/home").then(function (res) {
+        var shuffled = res.data.images.sort(function () {
+          return Math.random() - 0.5;
+        });
+        shuffled.forEach(function (e) {
+          return _this2.images.push("/assets/images/home/".concat(e));
+        });
+        _this2.hasLoaded = true;
+      })["catch"](function (e) {
+        return console.log(e);
+      });
+      console.log(this.images);
+    },
     openImage: function openImage(image) {
       this.image = image;
       this.dialog = true;
     },
     loaded: function loaded(image) {
-      var _this2 = this;
+      var _this3 = this;
 
       this.loadedImages.push(image);
 
       if (this.loadedImages.length == this.images.length) {
         setTimeout(function () {
-          return _this2.hasLoaded = true;
+          return _this3.hasLoaded = true;
         }, 1000);
       }
     }
@@ -8060,24 +8067,22 @@ var render = function render() {
       flat: "",
       color: "transparent"
     }
-  }, [_vm.hasLoaded ? _c("masonry", {
+  }, [_vm.hasLoaded ? _c("v-container", {
+    staticClass: "gallery",
     attrs: {
-      cols: {
-        "default": 3,
-        960: 1,
-        1264: 2
-      }
+      fluid: ""
     }
   }, _vm._l(_vm.images, function (image, index) {
-    return _c("v-container", {
-      key: index
+    return _c("div", {
+      key: index,
+      staticClass: "box"
     }, [_c("v-hover", {
       scopedSlots: _vm._u([{
         key: "default",
         fn: function fn(_ref) {
           var hover = _ref.hover;
           return [_c("v-img", {
-            staticClass: "transition-swing my-0 text-center rounded-xl elevation-16",
+            staticClass: "image transition-swing text-center rounded-xl elevation-16",
             "class": {
               zoom: hover
             },
@@ -8115,7 +8120,7 @@ var render = function render() {
         }
       }], null, true)
     })], 1);
-  }), 1) : _vm._e()], 1)], 1), _vm._v(" "), _c("v-dialog", {
+  }), 0) : _vm._e()], 1)], 1), _vm._v(" "), _c("v-dialog", {
     attrs: {
       "overlay-opacity": "0.8"
     },
@@ -8200,7 +8205,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.v-card--reveal {\r\n  align-items: center;\r\n  top: 0;\r\n  justify-content: center;\r\n  opacity: 0.75;\r\n  position: absolute;\r\n  width: 100%;\r\n  border-radius: 24px;\n}\n.v-dialog {\r\n  box-shadow: none !important;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.v-card--reveal {\r\n  align-items: center;\r\n  top: 0;\r\n  justify-content: center;\r\n  opacity: 0.75;\r\n  position: absolute;\r\n  width: 100%;\r\n  border-radius: 24px;\n}\n.v-dialog {\r\n  box-shadow: none !important;\n}\n.gallery {\r\n  -moz-columns: 3;\r\n       columns: 3;\r\n  -moz-column-gap: 25px;\r\n       column-gap: 25px;\n}\n.box {\r\n  width: 100%;\r\n  margin-bottom: 25px;\r\n  -moz-column-break-inside: avoid;\r\n       break-inside: avoid;\n}\n.image {\r\n  width: 100%;\n}\n@media (max-width: 1200px) {\n.gallery {\r\n    -moz-columns: 2;\r\n         columns: 2;\n}\n}\n@media (max-width: 480px) {\n.gallery {\r\n    -moz-columns: 1;\r\n         columns: 1;\n}\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

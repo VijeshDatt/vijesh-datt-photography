@@ -2,10 +2,10 @@
   <div>
     <v-container fluid class="d-flex justify-center">
       <v-card flat color="transparent">
-        <masonry :cols="{ default: 3, 960: 1, 1264: 2 }" v-if="hasLoaded">
-          <v-container v-for="(image, index) in images" :key="index">
+        <v-container fluid class="gallery" v-if="hasLoaded">
+          <div class="box" v-for="(image, index) in images" :key="index">
             <v-hover v-slot="{ hover }">
-              <v-img contain :lazy-src="image" :src="image" :class="{ zoom: hover }" class="transition-swing my-0 text-center rounded-xl elevation-16" @load="loaded(image)">
+              <v-img contain :lazy-src="image" :src="image" :class="{ zoom: hover }" class="image transition-swing text-center rounded-xl elevation-16" @load="loaded(image)">
                 <transition name="scale-transition">
                   <div v-if="hover && hasLoaded && mdAndUp" class="d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal" style="height: 100%; cursor: pointer" @click="openImage(image)">
                     <v-icon size="32" dark>fa-magnifying-glass-plus</v-icon>
@@ -13,8 +13,24 @@
                 </transition>
               </v-img>
             </v-hover>
+          </div>
+        </v-container>
+
+        <!-- <masonry :cols="{ default: 3, 960: 1, 1264: 2 }" v-if="hasLoaded">
+          <v-container v-for="(image, index) in images" :key="index" class="gallery">
+            <div class="box">
+              <v-hover v-slot="{ hover }">
+                <v-img contain :lazy-src="image" :src="image" :class="{ zoom: hover }" class="image transition-swing my-0 text-center rounded-xl elevation-16" @load="loaded(image)">
+                  <transition name="scale-transition">
+                    <div v-if="hover && hasLoaded && mdAndUp" class="d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal" style="height: 100%; cursor: pointer" @click="openImage(image)">
+                      <v-icon size="32" dark>fa-magnifying-glass-plus</v-icon>
+                    </div>
+                  </transition>
+                </v-img>
+              </v-hover>
+            </div>
           </v-container>
-        </masonry>
+        </masonry> -->
       </v-card>
     </v-container>
 
@@ -64,15 +80,17 @@ export default {
         .catch((error) => console.log(error));
     },
 
-    // fetchImages() {
-    //   axios
-    //     .get("/api/home")
-    //     .then((res) => {
-    //       const shuffled = res.data.images.sort(() => Math.random() - 0.5);
-    //       shuffled.forEach((e) => this.images.push({ image: `/assets/images/home/${e.name}`, width: e.width, height: e.height }));
-    //     })
-    //     .catch((e) => console.log(e));
-    // },
+    fetchImages() {
+      axios
+        .get("/api/home")
+        .then((res) => {
+          const shuffled = res.data.images.sort(() => Math.random() - 0.5);
+          shuffled.forEach((e) => this.images.push(`/assets/images/home/${e}`));
+          this.hasLoaded = true;
+        })
+        .catch((e) => console.log(e));
+      console.log(this.images);
+    },
 
     openImage(image) {
       this.image = image;
@@ -109,6 +127,33 @@ export default {
 
 .v-dialog {
   box-shadow: none !important;
+}
+
+.gallery {
+  columns: 3;
+  column-gap: 25px;
+}
+
+.box {
+  width: 100%;
+  margin-bottom: 25px;
+  break-inside: avoid;
+}
+
+.image {
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .gallery {
+    columns: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    columns: 1;
+  }
 }
 </style>
 
